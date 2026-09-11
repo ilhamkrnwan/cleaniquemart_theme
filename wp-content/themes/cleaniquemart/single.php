@@ -165,7 +165,7 @@ while ( have_posts() ) : the_post();
 					</div>
 
 					<!-- Social Share Buttons -->
-					<div style="display:flex;align-items:center;justify-content:space-between;padding:24px 0;margin-top:35px;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;flex-wrap:wrap;gap:14px;">
+					<div style="display:flex;align-items:center;justify-content:space-between;padding:24px 0 0 0;margin-top:35px;border-top:1px solid #e2e8f0;flex-wrap:wrap;gap:14px;">
 						<div style="font-size:14px;font-weight:700;color:#475569;">
 							Bagikan Artikel Ini:
 						</div>
@@ -201,125 +201,13 @@ while ( have_posts() ) : the_post();
 						</div>
 					</div>
 
-					<!-- Previous & Next Navigation Cards -->
-					<div class="cm-post-nav-grid">
-						<?php
-						$prev_post = get_previous_post();
-						$next_post = get_next_post();
-						?>
-						<div>
-							<?php if ( ! empty( $prev_post ) ) : 
-								$prev_thumb = has_post_thumbnail( $prev_post->ID ) ? get_the_post_thumbnail_url( $prev_post->ID, 'thumbnail' ) : $img_dir . 'omah-editt.webp';
-							?>
-								<a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" class="cm-post-nav-card">
-									<div style="width:52px;height:52px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#0f172a;">
-										<img src="<?php echo esc_url( $prev_thumb ); ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
-									</div>
-									<div style="overflow:hidden;">
-										<div style="font-size:11px;font-weight:700;color:#0c00ff;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;display:flex;align-items:center;gap:4px;">
-											&larr; Artikel Sebelumnya
-										</div>
-										<div style="font-size:13.5px;font-weight:700;color:#0f172a;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
-											<?php echo esc_html( $prev_post->post_title ); ?>
-										</div>
-									</div>
-								</a>
-							<?php endif; ?>
-						</div>
-
-						<div>
-							<?php if ( ! empty( $next_post ) ) : 
-								$next_thumb = has_post_thumbnail( $next_post->ID ) ? get_the_post_thumbnail_url( $next_post->ID, 'thumbnail' ) : $img_dir . 'omah-editt.webp';
-							?>
-								<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="cm-post-nav-card" style="justify-content:flex-end;text-align:right;">
-									<div style="overflow:hidden;">
-										<div style="font-size:11px;font-weight:700;color:#0c00ff;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;display:flex;align-items:center;justify-content:flex-end;gap:4px;">
-											Artikel Selanjutnya &rarr;
-										</div>
-										<div style="font-size:13.5px;font-weight:700;color:#0f172a;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
-											<?php echo esc_html( $next_post->post_title ); ?>
-										</div>
-									</div>
-									<div style="width:52px;height:52px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#0f172a;">
-										<img src="<?php echo esc_url( $next_thumb ); ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
-									</div>
-								</a>
-							<?php endif; ?>
-						</div>
-					</div>
-
-					<!-- Dedicated Related Articles Grid -->
-					<div class="cm-related-posts-wrap">
-						<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
-							<div>
-								<span style="font-size:11px;font-weight:800;color:#0c00ff;text-transform:uppercase;letter-spacing:1px;background:#eff6ff;padding:3px 10px;border-radius:999px;border:1px solid #dbeafe;">
-									REKOMENDASI BACAAN
-								</span>
-								<h3 style="font-family:'Lexend',sans-serif;font-size:20px;font-weight:800;color:#0f172a;margin:6px 0 0 0;">
-									Artikel Terkait Lainnya
-								</h3>
-							</div>
-							<a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" style="font-size:13px;font-weight:700;color:#0c00ff;text-decoration:none;">
-								Lihat Semua Artikel &rarr;
-							</a>
-						</div>
-
-						<div class="cm-related-grid">
-							<?php
-							$related_query_bottom = new WP_Query( array(
-								'post_type'      => 'post',
-								'posts_per_page' => 3,
-								'post__not_in'   => array( $post_id ),
-								'orderby'        => 'rand',
-							) );
-
-							if ( $related_query_bottom->have_posts() ) :
-								while ( $related_query_bottom->have_posts() ) : $related_query_bottom->the_post();
-									$rel_thumb_bottom = has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_ID(), 'medium' ) : $img_dir . 'omah-editt.webp';
-									$rel_reading_time = ceil( max( 1, str_word_count( strip_tags( get_the_content() ) ) / 200 ) ) . ' Menit Baca';
-							?>
-								<a href="<?php the_permalink(); ?>" class="cm-related-card">
-									<div style="position:relative;height:160px;overflow:hidden;background:#0f172a;">
-										<img src="<?php echo esc_url( $rel_thumb_bottom ); ?>" alt="<?php the_title_attribute(); ?>" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-										<span style="position:absolute;bottom:8px;left:8px;background:rgba(15,23,42,0.8);color:#ffffff;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;backdrop-filter:blur(3px);">
-											<?php echo esc_html( $rel_reading_time ); ?>
-										</span>
-									</div>
-									<div style="padding:16px;display:flex;flex-direction:column;justify-content:space-between;flex:1;">
-										<div>
-											<span style="font-size:11px;color:#64748b;font-weight:600;display:block;margin-bottom:6px;">
-												<?php echo esc_html( get_the_date( 'd M Y' ) ); ?>
-											</span>
-											<h4 style="font-family:'Lexend',sans-serif;font-size:14.5px;font-weight:700;color:#0f172a;line-height:1.4;margin:0 0 8px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
-												<?php the_title(); ?>
-											</h4>
-										</div>
-										<span style="font-size:12.5px;font-weight:700;color:#0c00ff;margin-top:10px;display:inline-flex;align-items:center;gap:4px;">
-											Baca Panduan &rarr;
-										</span>
-									</div>
-								</a>
-							<?php
-								endwhile;
-								wp_reset_postdata();
-							endif;
-							?>
-						</div>
-					</div>
-
-					<!-- WordPress Comments Template -->
-					<?php
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
-				</div>
+				</div> <!-- End Left Column (div_block-41-178) -->
 
 				<!-- Right Column: Sticky Sidebar (30%) -->
-				<div id="div_block-56-178" class="ct-div-block" style="width:340px;flex-shrink:0;">
+				<div id="div_block-56-178" class="ct-div-block" style="width:340px;flex-shrink:0;position:-webkit-sticky;position:sticky;top:90px;align-self:flex-start;">
 					
 					<!-- Partnership Promo Card -->
-					<div style="background:linear-gradient(135deg, #0c00ff 0%, #06007a 100%);color:#ffffff;border-radius:16px;padding:26px;margin-bottom:30px;box-shadow:0 8px 24px rgba(12,0,255,0.2);">
+					<div style="background:linear-gradient(135deg, #0c00ff 0%, #06007a 100%);color:#ffffff;border-radius:16px;padding:26px;margin-bottom:24px;box-shadow:0 8px 24px rgba(12,0,255,0.2);">
 						<span style="display:inline-block;padding:4px 12px;background:rgba(255,255,255,0.2);border-radius:6px;font-size:11px;font-weight:700;margin-bottom:12px;">
 							PELUANG USAHA 2026
 						</span>
@@ -331,23 +219,25 @@ while ( have_posts() ) : the_post();
 						</p>
 						<a 
 							href="<?php echo esc_url( home_url( '/mitra-cleanique-mart/' ) ); ?>" 
-							style="display:block;text-align:center;background:#22c55e;color:#ffffff;padding:12px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;"
+							style="display:block;text-align:center;background:#22c55e;color:#ffffff;padding:12px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;transition:background 0.2s;"
+							onmouseover="this.style.background='#1eb857'"
+							onmouseout="this.style.background='#22c55e'"
 						>
 							Lihat Jaringan Mitra &rarr;
 						</a>
 					</div>
 
-					<!-- Related Posts / Recent Articles List -->
-					<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:24px;margin-bottom:30px;box-shadow:0 4px 14px rgba(0,0,0,0.04);">
-						<h3 id="headline-57-178" class="ct-headline" style="font-family:'Lexend',sans-serif;font-size:18px;font-weight:800;color:#0f172a;margin:0 0 18px 0;padding-bottom:12px;border-bottom:1px solid #f1f5f9;">
-							Artikel Terkait Lainnya
+					<!-- Related Posts / Recent Articles List in Sidebar -->
+					<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:22px;margin-bottom:24px;box-shadow:0 4px 14px rgba(0,0,0,0.04);">
+						<h3 id="headline-57-178" class="ct-headline" style="font-family:'Lexend',sans-serif;font-size:17px;font-weight:800;color:#0f172a;margin:0 0 16px 0;padding-bottom:10px;border-bottom:1px solid #f1f5f9;">
+							Artikel Terpopuler
 						</h3>
 
-						<div id="_dynamic_list-58-178" class="oxy-dynamic-list" style="display:flex;flex-direction:column;gap:16px;">
+						<div id="_dynamic_list-58-178" class="oxy-dynamic-list" style="display:flex;flex-direction:column;gap:14px;">
 							<?php
 							$related_query = new WP_Query( array(
 								'post_type'      => 'post',
-								'posts_per_page' => 5,
+								'posts_per_page' => 4,
 								'post__not_in'   => array( $post_id ),
 								'orderby'        => 'rand',
 							) );
@@ -357,7 +247,7 @@ while ( have_posts() ) : the_post();
 									$rel_thumb = has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_ID(), 'medium' ) : $img_dir . 'omah-editt.webp';
 							?>
 								<div style="display:flex;gap:12px;align-items:center;">
-									<a href="<?php the_permalink(); ?>" style="width:72px;height:72px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#0f172a;display:block;">
+									<a href="<?php the_permalink(); ?>" style="width:68px;height:68px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#0f172a;display:block;">
 										<img 
 											src="<?php echo esc_url( $rel_thumb ); ?>" 
 											alt="<?php the_title_attribute(); ?>"
@@ -367,7 +257,7 @@ while ( have_posts() ) : the_post();
 									</a>
 									<div>
 										<span style="font-size:11px;color:#64748b;"><?php echo esc_html( get_the_date( 'd M Y' ) ); ?></span>
-										<h4 style="font-size:13.5px;font-weight:700;line-height:1.35;margin:4px 0 0 0;">
+										<h4 style="font-size:13px;font-weight:700;line-height:1.35;margin:3px 0 0 0;">
 											<a href="<?php the_permalink(); ?>" style="color:#0f172a;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0c00ff'" onmouseout="this.style.color='#0f172a'">
 												<?php echo esc_html( wp_trim_words( get_the_title(), 7 ) ); ?>
 											</a>
@@ -383,23 +273,143 @@ while ( have_posts() ) : the_post();
 					</div>
 
 					<!-- Direct CS WhatsApp Support Card -->
-					<div style="background:#f8fafc;border:1px dashed #cbd5e1;border-radius:16px;padding:22px;text-align:center;">
-						<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:8px;">Butuh Bantuan Cepat?</div>
-						<div style="font-size:15px;font-weight:700;color:#0f172a;margin-bottom:12px;">CS Online Siap Melayani Anda</div>
+					<div style="background:#f8fafc;border:1px dashed #cbd5e1;border-radius:16px;padding:20px;text-align:center;">
+						<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:6px;">Konsultasi Formula Sabun?</div>
+						<div style="font-size:14px;font-weight:700;color:#0f172a;margin-bottom:10px;">Tim CS Lab Siap Membantu Anda</div>
 						<a 
-							href="<?php echo esc_url( cleaniquemart_get_wa_url( 'Halo CS Cleanique Mart, saya butuh konsultasi produk.' ) ); ?>" 
+							href="<?php echo esc_url( cleaniquemart_get_wa_url( 'Halo CS Cleanique Mart, saya membaca blog dan butuh konsultasi produk.' ) ); ?>" 
 							target="_blank" 
 							rel="noopener noreferrer"
-							style="display:inline-flex;align-items:center;gap:6px;background:#22c55e;color:#ffffff;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;"
+							style="display:inline-flex;align-items:center;gap:6px;background:#22c55e;color:#ffffff;padding:9px 18px;border-radius:999px;font-size:12.5px;font-weight:700;text-decoration:none;box-shadow:0 3px 10px rgba(34,197,94,0.25);"
 						>
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+							<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
 							Chat CS WhatsApp
 						</a>
 					</div>
 
+				</div> <!-- End Right Column (div_block-56-178) -->
+
+			</div> <!-- END 2-Columns Layout (new_columns-40-178) -->
+
+			<!-- ==========================================================
+			     BAGIAN BAWAH FULL-WIDTH & CENTER (TANPA KOLOM KANAN-KIRI)
+			     ========================================================== -->
+
+			<!-- 1. Previous & Next Navigation Cards (Full Width 2-Column Grid across 1160px) -->
+			<div class="cm-post-nav-grid" style="margin-bottom:60px;">
+				<?php
+				$prev_post = get_previous_post();
+				$next_post = get_next_post();
+				?>
+				<div>
+					<?php if ( ! empty( $prev_post ) ) : 
+						$prev_thumb = has_post_thumbnail( $prev_post->ID ) ? get_the_post_thumbnail_url( $prev_post->ID, 'thumbnail' ) : $img_dir . 'omah-editt.webp';
+					?>
+						<a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" class="cm-post-nav-card">
+							<div style="width:60px;height:60px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#0f172a;">
+								<img src="<?php echo esc_url( $prev_thumb ); ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
+							</div>
+							<div style="overflow:hidden;">
+								<div style="font-size:11px;font-weight:700;color:#0c00ff;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;display:flex;align-items:center;gap:4px;">
+									&larr; Artikel Sebelumnya
+								</div>
+								<div style="font-size:14px;font-weight:700;color:#0f172a;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+									<?php echo esc_html( $prev_post->post_title ); ?>
+								</div>
+							</div>
+						</a>
+					<?php endif; ?>
 				</div>
 
+				<div>
+					<?php if ( ! empty( $next_post ) ) : 
+						$next_thumb = has_post_thumbnail( $next_post->ID ) ? get_the_post_thumbnail_url( $next_post->ID, 'thumbnail' ) : $img_dir . 'omah-editt.webp';
+					?>
+						<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="cm-post-nav-card" style="justify-content:flex-end;text-align:right;">
+							<div style="overflow:hidden;">
+								<div style="font-size:11px;font-weight:700;color:#0c00ff;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;display:flex;align-items:center;justify-content:flex-end;gap:4px;">
+									Artikel Selanjutnya &rarr;
+								</div>
+								<div style="font-size:14px;font-weight:700;color:#0f172a;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+									<?php echo esc_html( $next_post->post_title ); ?>
+								</div>
+							</div>
+							<div style="width:60px;height:60px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#0f172a;">
+								<img src="<?php echo esc_url( $next_thumb ); ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
+							</div>
+						</a>
+					<?php endif; ?>
+				</div>
 			</div>
+
+			<!-- 2. Dedicated Related Articles (Full Width 3-Columns Grid across 1160px) -->
+			<div class="cm-related-posts-wrap" style="margin-bottom:70px;background:#ffffff;border:1px solid #e2e8f0;border-radius:20px;padding:36px;box-shadow:0 4px 20px rgba(0,0,0,0.04);">
+				<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;border-bottom:1px solid #f1f5f9;padding-bottom:16px;">
+					<div>
+						<span style="font-size:11.5px;font-weight:800;color:#0c00ff;text-transform:uppercase;letter-spacing:1px;background:#eff6ff;padding:4px 12px;border-radius:999px;border:1px solid #dbeafe;">
+							REKOMENDASI BACAAN
+						</span>
+						<h3 style="font-family:'Lexend',sans-serif;font-size:24px;font-weight:800;color:#0f172a;margin:8px 0 0 0;">
+							Artikel Terkait Lainnya
+						</h3>
+					</div>
+					<a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" style="font-size:14px;font-weight:700;color:#0c00ff;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">
+						Lihat Semua Artikel &rarr;
+					</a>
+				</div>
+
+				<div class="cm-related-grid" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px;">
+					<?php
+					$related_query_bottom = new WP_Query( array(
+						'post_type'      => 'post',
+						'posts_per_page' => 3,
+						'post__not_in'   => array( $post_id ),
+						'orderby'        => 'rand',
+					) );
+
+					if ( $related_query_bottom->have_posts() ) :
+						while ( $related_query_bottom->have_posts() ) : $related_query_bottom->the_post();
+							$rel_thumb_bottom = has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_ID(), 'medium' ) : $img_dir . 'omah-editt.webp';
+							$rel_reading_time = ceil( max( 1, str_word_count( strip_tags( get_the_content() ) ) / 200 ) ) . ' Menit Baca';
+					?>
+						<a href="<?php the_permalink(); ?>" class="cm-related-card" style="display:flex;flex-direction:column;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.04);transition:transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.04)';">
+							<div style="position:relative;height:180px;overflow:hidden;background:#0f172a;">
+								<img src="<?php echo esc_url( $rel_thumb_bottom ); ?>" alt="<?php the_title_attribute(); ?>" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+								<span style="position:absolute;bottom:10px;left:10px;background:rgba(15,23,42,0.8);color:#ffffff;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;backdrop-filter:blur(3px);">
+									<?php echo esc_html( $rel_reading_time ); ?>
+								</span>
+							</div>
+							<div style="padding:18px;display:flex;flex-direction:column;justify-content:space-between;flex:1;">
+								<div>
+									<span style="font-size:11.5px;color:#64748b;font-weight:600;display:block;margin-bottom:6px;">
+										<?php echo esc_html( get_the_date( 'd M Y' ) ); ?>
+									</span>
+									<h4 style="font-family:'Lexend',sans-serif;font-size:15px;font-weight:700;color:#0f172a;line-height:1.45;margin:0 0 10px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+										<?php the_title(); ?>
+									</h4>
+								</div>
+								<span style="font-size:13px;font-weight:700;color:#0c00ff;margin-top:10px;display:inline-flex;align-items:center;gap:4px;">
+									Baca Panduan &rarr;
+								</span>
+							</div>
+						</a>
+					<?php
+						endwhile;
+						wp_reset_postdata();
+					endif;
+					?>
+				</div>
+			</div>
+
+			<!-- 3. WordPress Comments Section (Centered Max-Width 880px for Ideal Readability) -->
+			<div class="cm-comments-container" style="max-width:880px;margin:0 auto;">
+				<?php
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+				?>
+			</div>
+
 		</div>
 	</section>
 </main>

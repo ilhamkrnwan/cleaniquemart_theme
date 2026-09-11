@@ -92,7 +92,7 @@ $img_dir   = $theme_uri . '/assets/images/';
 				'ignore_sticky_posts' => 1,
 			) );
 			
-			// If on first page, show the Spotlight Post
+			// If on first page, show the Spotlight Section (Featured Hero + 3 Sub-Spotlight Articles)
 			if ( $paged <= 1 ) :
 				$spotlight_query = new WP_Query( array(
 					'post_type'           => 'post',
@@ -103,68 +103,175 @@ $img_dir   = $theme_uri . '/assets/images/';
 
 				if ( $spotlight_query->have_posts() ) :
 					while ( $spotlight_query->have_posts() ) : $spotlight_query->the_post();
-						$spot_thumb = has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_ID(), 'full' ) : $img_dir . 'omah-editt.webp';
+						$spot_id = get_the_ID();
+						$spot_thumb = has_post_thumbnail() ? get_the_post_thumbnail_url( $spot_id, 'full' ) : $img_dir . 'omah-editt.webp';
 						$spot_date = get_the_date( 'd F Y' );
 						$spot_words = str_word_count( strip_tags( get_the_content() ) );
 						$spot_reading_time = ceil( max( 1, $spot_words / 200 ) ) . ' Menit Baca';
+						$spot_raw_excerpt = get_the_excerpt();
+						if ( empty( $spot_raw_excerpt ) ) {
+							$spot_raw_excerpt = strip_tags( get_the_content() );
+						}
 			?>
-				<!-- Sorotan Blog (Spotlight Utama) -->
+				<!-- Sorotan Blog (Spotlight Utama & Pilihan Redaksi) -->
 				<div class="cm-blog-spotlight">
-					<div style="display:flex;align-items:center;gap:8px;margin-bottom:18px;">
-						<span style="font-size:12px;font-weight:800;color:#0c00ff;text-transform:uppercase;letter-spacing:1px;background:#eff6ff;padding:4px 14px;border-radius:999px;border:1px solid #dbeafe;">
-							SOROTAN UTAMA LAB
+					<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:8px;">
+						<div style="display:flex;align-items:center;gap:8px;">
+							<span style="font-size:12px;font-weight:800;color:#0c00ff;text-transform:uppercase;letter-spacing:1px;background:#eff6ff;padding:4px 14px;border-radius:999px;border:1px solid #dbeafe;">
+								SOROTAN UTAMA LAB
+							</span>
+							<span style="font-size:13px;color:#64748b;font-weight:600;">Artikel &amp; Panduan Pilihan Redaksi</span>
+						</div>
+						<span style="font-size:12.5px;color:#0c00ff;font-weight:700;display:inline-flex;align-items:center;gap:4px;">
+							Terupdate 2026 &bull; Rekomendasi Unggulan
 						</span>
-						<span style="font-size:13px;color:#64748b;font-weight:600;">Artikel &amp; Panduan Pilihan Redaksi</span>
 					</div>
 
+					<!-- 1. Hero Spotlight Card (Richer Content, No Empty Space) -->
 					<div class="cm-spotlight-card">
 						<a href="<?php the_permalink(); ?>" class="cm-spotlight-media" style="display:block;text-decoration:none;">
 							<img src="<?php echo esc_url( $spot_thumb ); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" />
 							<div style="position:absolute;top:16px;left:16px;background:#0c00ff;color:#ffffff;padding:5px 14px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:0.5px;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
 								Cleanique Lab Insight
 							</div>
-							<div style="position:absolute;bottom:16px;left:16px;background:rgba(15,23,42,0.8);color:#ffffff;padding:5px 12px;border-radius:8px;font-size:12px;font-weight:600;backdrop-filter:blur(4px);">
+							<div style="position:absolute;bottom:16px;left:16px;background:rgba(15,23,42,0.85);color:#ffffff;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;backdrop-filter:blur(4px);">
 								<?php echo esc_html( $spot_date ); ?> &bull; <?php echo esc_html( $spot_reading_time ); ?>
 							</div>
 						</a>
 
 						<div class="cm-spotlight-content">
 							<div>
-								<div style="display:flex;align-items:center;gap:6px;color:#64748b;font-size:13px;margin-bottom:12px;">
-									<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-									<span>Estimasi: <strong><?php echo esc_html( $spot_reading_time ); ?></strong></span>
+								<div style="display:flex;align-items:center;gap:8px;color:#64748b;font-size:12.5px;margin-bottom:10px;flex-wrap:wrap;">
+									<span style="background:#eff6ff;color:#0c00ff;padding:2px 8px;border-radius:4px;font-weight:700;font-size:11.5px;border:1px solid #dbeafe;">Pilihan Utama #1</span>
+									<span style="display:inline-flex;align-items:center;gap:4px;">
+										<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+										Estimasi: <strong><?php echo esc_html( $spot_reading_time ); ?></strong>
+									</span>
 									<span>&bull;</span>
-									<span>Oleh <strong>Tim Ahli Cleanique</strong></span>
+									<span>Oleh <strong>Tim Formulator Cleanique</strong></span>
 								</div>
 
-								<h2 style="font-family:'Lexend',sans-serif;font-size:clamp(20px, 2.5vw, 26px);font-weight:800;line-height:1.3;margin:0 0 14px 0;">
+								<h2 style="font-family:'Lexend',sans-serif;font-size:clamp(19px, 2.2vw, 24px);font-weight:800;line-height:1.35;margin:0 0 12px 0;">
 									<a href="<?php the_permalink(); ?>" style="color:#0f172a;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#0c00ff'" onmouseout="this.style.color='#0f172a'">
 										<?php the_title(); ?>
 									</a>
 								</h2>
 
-								<p style="font-size:14.5px;color:#475569;line-height:1.7;margin:0 0 20px 0;">
-									<?php echo esc_html( wp_trim_words( get_the_excerpt(), 30 ) ); ?>
+								<p style="font-size:14px;color:#475569;line-height:1.65;margin:0 0 14px 0;">
+									<?php echo esc_html( wp_trim_words( $spot_raw_excerpt, 45 ) ); ?>
 								</p>
+
+								<!-- Key Points Box (Poin Utama Formulasi) -->
+								<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px 16px;margin-bottom:18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;">
+									<div style="display:flex;align-items:flex-start;gap:7px;font-size:12px;color:#334155;line-height:1.4;">
+										<svg style="color:#22c55e;flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+										<span><strong>Konsentrat Tinggi:</strong> Cukup campur air jadi 5L siap pakai.</span>
+									</div>
+									<div style="display:flex;align-items:flex-start;gap:7px;font-size:12px;color:#334155;line-height:1.4;">
+										<svg style="color:#22c55e;flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+										<span><strong>Standar PKRT:</strong> Aman harian &amp; basmi 99.9% kuman.</span>
+									</div>
+									<div style="display:flex;align-items:flex-start;gap:7px;font-size:12px;color:#334155;line-height:1.4;">
+										<svg style="color:#22c55e;flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+										<span><strong>Hemat Ongkir:</strong> Bobot ringan ~550g efisien biaya kirim.</span>
+									</div>
+									<div style="display:flex;align-items:flex-start;gap:7px;font-size:12px;color:#334155;line-height:1.4;">
+										<svg style="color:#22c55e;flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+										<span><strong>Peluang Cuan:</strong> Cocok untuk usaha isi ulang depot laundry.</span>
+									</div>
+								</div>
 							</div>
 
-							<div style="display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #f1f5f9;flex-wrap:wrap;gap:12px;">
+							<div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid #f1f5f9;flex-wrap:wrap;gap:12px;">
 								<a 
 									href="<?php the_permalink(); ?>" 
-									style="display:inline-flex;align-items:center;gap:8px;background:#0c00ff;color:#ffffff;padding:11px 24px;border-radius:999px;font-size:13.5px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px rgba(12,0,255,0.25);transition:all 0.2s;"
+									style="display:inline-flex;align-items:center;gap:8px;background:#0c00ff;color:#ffffff;padding:10px 22px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px rgba(12,0,255,0.25);transition:all 0.2s;"
 									onmouseover="this.style.background='#0900cc';this.style.transform='translateY(-1px)';"
 									onmouseout="this.style.background='#0c00ff';this.style.transform='none';"
 								>
 									Baca Panduan Lengkap &rarr;
 								</a>
 
-								<span style="font-size:12.5px;color:#94a3b8;font-weight:500;">
-									Terverifikasi Lab Resmi
+								<span style="font-size:12px;color:#64748b;font-weight:600;display:inline-flex;align-items:center;gap:5px;">
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+									Terverifikasi Lab Formulasi
 								</span>
 							</div>
 						</div>
 					</div>
-				</div>
+
+					<!-- 2. Sub-Spotlight Grid: Tampilkan Lebih Banyak Konten Sorotan (3 Artikel Pilihan) -->
+					<?php
+					$sub_spotlight = new WP_Query( array(
+						'post_type'           => 'post',
+						'post_status'         => 'publish',
+						'posts_per_page'      => 3,
+						'post__not_in'        => array( $spot_id ),
+						'ignore_sticky_posts' => 1,
+					) );
+
+					if ( $sub_spotlight->have_posts() ) :
+					?>
+						<div style="margin-top:28px;">
+							<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
+								<div style="display:flex;align-items:center;gap:8px;">
+									<span style="font-size:11px;font-weight:800;color:#059669;text-transform:uppercase;letter-spacing:0.8px;background:#ecfdf5;padding:3px 10px;border-radius:999px;border:1px solid #a7f3d0;">
+										TRENDING REDAKSI
+									</span>
+									<h3 style="font-family:'Lexend',sans-serif;font-size:16px;font-weight:800;color:#0f172a;margin:0;">
+										Sorotan Edukasi Pilihan Lainnya
+									</h3>
+								</div>
+								<span style="font-size:12px;color:#64748b;font-weight:600;">
+									3 Topik Unggulan Minggu Ini
+								</span>
+							</div>
+
+							<div class="cm-spotlight-subgrid">
+								<?php 
+								$rank = 2;
+								while ( $sub_spotlight->have_posts() ) : $sub_spotlight->the_post(); 
+									$sub_thumb = has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_ID(), 'medium' ) : $img_dir . 'omah-editt.webp';
+									$sub_words = str_word_count( strip_tags( get_the_content() ) );
+									$sub_read = ceil( max( 1, $sub_words / 200 ) ) . ' Menit';
+								?>
+									<a href="<?php the_permalink(); ?>" class="cm-spotlight-subcard">
+										<div style="position:relative;height:165px;overflow:hidden;background:#0f172a;">
+											<img src="<?php echo esc_url( $sub_thumb ); ?>" alt="<?php the_title_attribute(); ?>" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" loading="lazy" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+											<span style="position:absolute;top:10px;left:10px;background:#0c00ff;color:#ffffff;padding:2px 8px;border-radius:6px;font-size:10.5px;font-weight:800;letter-spacing:0.3px;">
+												Sorotan #<?php echo esc_html( $rank ); ?>
+											</span>
+											<span style="position:absolute;bottom:8px;right:8px;background:rgba(15,23,42,0.8);color:#ffffff;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:600;backdrop-filter:blur(3px);">
+												<?php echo esc_html( $sub_read ); ?>
+											</span>
+										</div>
+										<div style="padding:16px;display:flex;flex-direction:column;justify-content:space-between;flex:1;">
+											<div>
+												<span style="font-size:11.5px;color:#64748b;font-weight:600;display:block;margin-bottom:6px;">
+													<?php echo esc_html( get_the_date( 'd M Y' ) ); ?>
+												</span>
+												<h4 style="font-family:'Lexend',sans-serif;font-size:14.5px;font-weight:700;color:#0f172a;line-height:1.4;margin:0 0 8px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+													<?php the_title(); ?>
+												</h4>
+												<p style="font-size:12.5px;color:#475569;line-height:1.55;margin:0 0 12px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+													<?php echo esc_html( wp_trim_words( get_the_excerpt(), 16 ) ); ?>
+												</p>
+											</div>
+											<span style="font-size:12.5px;font-weight:700;color:#0c00ff;display:inline-flex;align-items:center;gap:4px;">
+												Pelajari Panduan &rarr;
+											</span>
+										</div>
+									</a>
+								<?php 
+									$rank++;
+								endwhile; 
+								wp_reset_postdata();
+								?>
+							</div>
+						</div>
+					<?php endif; ?>
+
+				</div> <!-- End cm-blog-spotlight -->
 
 				<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;">
 					<h3 style="font-family:'Lexend',sans-serif;font-size:20px;font-weight:800;color:#0f172a;margin:0;">
