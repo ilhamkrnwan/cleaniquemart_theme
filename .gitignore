@@ -1,0 +1,51 @@
+# ==============================================================================
+# Git Ignore for Cleanique Mart WordPress Workspace
+# Only tracks custom themes, custom plugins, documentation (md), and project docs
+# ==============================================================================
+
+# WordPress Core
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/.htaccess
+
+# Sensitive Configuration & Temporary Files
+/wp-config.php
+/wp-config-sample.php
+/check_fetch.php
+/fetched_live.html
+/opcache_clear.php
+/scratch/
+/.agents/
+/skills-lock.json
+
+# WordPress Content: Uploads, Cache, Upgrades
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/languages/
+/wp-content/index.php
+
+# WordPress Default Themes (Ignore Core Themes)
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentyfive/
+/wp-content/themes/index.php
+
+# WordPress Default Plugins
+/wp-content/plugins/akismet/
+/wp-content/plugins/hello.php
+/wp-content/plugins/index.php
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+.vscode/
+.idea/

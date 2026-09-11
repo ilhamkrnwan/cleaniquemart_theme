@@ -1,0 +1,929 @@
+<?php
+/**
+ * Template Name: Direktori Mitra Cabang
+ *
+ * Authentic Oxygen Theme design with enriched content, interactive search/filter,
+ * high-resolution lightbox integration, and direct branch communication.
+ *
+ * @package CleaniqueMart
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+get_header();
+
+$theme_uri = get_template_directory_uri();
+$img_dir   = $theme_uri . '/assets/images/';
+
+$outlets = array(
+	array(
+		'id'         => 'tapos-depok',
+		'name'       => 'Cleanique Mart Tapos Depok',
+		'region'     => 'jabodetabek',
+		'region_lbl' => 'Jabodetabek',
+		'city'       => 'Kota Depok, Jawa Barat',
+		'addr'       => 'Jl. Raya Tapos 17-A depan Perumahan Permata Cimanggis, Tapos, Kota Depok, Jawa Barat 16457',
+		'landmark'   => 'Tepat di depan gerbang utama Perumahan Permata Cimanggis',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'cleanique-mart-tapos-depok.webp',
+		'maps_query' => 'Cleanique+Mart+Tapos+Depok',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Depot Isi Ulang Sabun Curah (Deterjen Matic, Softener, Cuci Piring, Karbol Lantai, Pembersih Kaca)',
+			'Koleksi Lengkap 30 Varian Bibit Parfum Laundry Grade A',
+			'Penjualan Biang Sabun Konsentrat 5 Liter Hemat Pabrik',
+			'Menerima Wadah & Jerigen Sendiri (Refill Station Ramah Lingkungan)',
+			'Layanan Antar / Delivery Order & COD Area Tapos & Sekitarnya'
+		),
+		'facilities' => array(
+			'Akses Jalan & Parkir Mobil / Motor Mudah',
+			'Pembayaran QRIS (BCA/GoPay/OVO/ShopeePay) & Tunai',
+			'Dispenser Higienis Standar PKRT Kemenkes RI',
+			'Konsultasi Gratis Pemilihan Varian Parfum & Sabun Usaha'
+		)
+	),
+	array(
+		'id'         => 'jakarta-timur',
+		'name'       => 'Cleanique Mart Jakarta Timur',
+		'region'     => 'jabodetabek',
+		'region_lbl' => 'Jabodetabek',
+		'city'       => 'DKI Jakarta',
+		'addr'       => 'Jl. Cipinang Kebembem I No. 24, RT.007/RW.7, Cipinang, Kec. Pulo Gadung, Kota Jakarta Timur, DKI Jakarta 13240',
+		'landmark'   => 'Kawasan Cipinang Kebembem I, Pulo Gadung, Jakarta Timur',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'cleanique-mart-jakarta-timur-thumbnail.webp',
+		'maps_query' => 'Cleanique+Mart+Jakarta+Timur',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Isi Ulang Sabun Curah Laundry Komersial & Rumah Tangga',
+			'30 Varian Parfum Laundry Tahan Lama Standar Hotel',
+			'Paket Biang Konsentrat Cuci Piring & Deterjen Bikin Sendiri',
+			'Refill Jerigen 5L & 20L untuk Usaha Laundry Kiloan',
+			'Layanan Antar Express Area Pulo Gadung & Cipinang'
+		),
+		'facilities' => array(
+			'Lokasi Strategis di Pusat Jakarta Timur',
+			'Menerima Pembayaran QRIS & Transfer Bank',
+			'Kran Dispenser Presisi & Higienis',
+			'Konsultasi Formulasi Langsung Tim Ahli'
+		)
+	),
+	array(
+		'id'         => 'tajem-maguwoharjo',
+		'name'       => 'Cleanique Mart Maguwoharjo',
+		'region'     => 'jateng-diy',
+		'region_lbl' => 'Jawa Tengah & DIY',
+		'city'       => 'Sleman, D.I. Yogyakarta',
+		'addr'       => 'Jl. Raya Tajem No. 6 RT/RW 02/30 Maguwoharjo, Kec. Depok, Kabupaten Sleman, D.I. Yogyakarta 55281',
+		'landmark'   => 'Jalan Raya Tajem KM 1.5, Dekat Kampus Unriyo Maguwoharjo',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Mitra-Cleanique-Mart-Tajem.webp',
+		'maps_query' => 'Cleanique+Mart+Tajem+Maguwoharjo',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Pusat Isi Ulang Sabun Curah Sleman & Jogja Timur',
+			'Parfum Laundry 30 Varian Aroma (Waterbase & Solvent Grade A)',
+			'Stok Biang Sabun 5L Siap Aduk untuk Laundry & Kos-kosan',
+			'Harga Grosir untuk Pembelian Jerigen Usaha Laundry',
+			'Layanan COD Maguwoharjo, Condongcatur & Seturan'
+		),
+		'facilities' => array(
+			'Area Parkir Luas Pinggir Jalan Raya Tajem',
+			'Pembayaran Cashless QRIS Semua Bank/E-Wallet',
+			'Kran Higienis Cepat Standar Lab Pabrik',
+			'Tersedia Sampel Tester Aroma Gratis'
+		)
+	),
+	array(
+		'id'         => 'boyolali',
+		'name'       => 'Cleanique Mart Boyolali',
+		'region'     => 'jateng-diy',
+		'region_lbl' => 'Jawa Tengah & DIY',
+		'city'       => 'Boyolali, Jawa Tengah',
+		'addr'       => 'Jalan Jinten No. 10, Kel. Pulisen, Kec. Boyolali, Kabupaten Boyolali, Jawa Tengah 57316',
+		'landmark'   => 'Pusat Kota Boyolali, Dekat Simpang Lima Boyolali',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Thumbnail-Mitra-Cleanique-Mart-Boyolali.webp',
+		'maps_query' => 'Cleanique+Mart+Boyolali',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Depot Sabun Curah Resmi Terbesar di Boyolali',
+			'Parfum Laundry Tahan Lama 30 Varian Favorit',
+			'Biang Konsentrat Hemat Biaya Operasional Laundry',
+			'Pengisian Galon & Botol Satuan Bebas Pilih Varian',
+			'Pesan Antar Wilayah Boyolali Kota & Sekitarnya'
+		),
+		'facilities' => array(
+			'Akses Mudah Kendaraan Roda 2 dan 4',
+			'Sistem Pembayaran QRIS & Tunai',
+			'Display Lengkap 8 Varian Sabun Curah & Parfum',
+			'Layanan Cepat & Ramah'
+		)
+	),
+	array(
+		'id'         => 'demak',
+		'name'       => 'Cleanique Mart Demak',
+		'region'     => 'jateng-diy',
+		'region_lbl' => 'Jawa Tengah & DIY',
+		'city'       => 'Demak, Jawa Tengah',
+		'addr'       => 'Batursari, Kec. Mranggen, Kabupaten Demak, Jawa Tengah 59567',
+		'landmark'   => 'Kawasan Batursari Mranggen, Perbatasan Demak - Semarang Timur',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Mitra-Cleanique-Mart-Demak.webp',
+		'maps_query' => 'Cleanique+Mart+Demak',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Depot Refill Sabun Laundry Matic & Busa Melimpah',
+			'30 Aroma Parfum Pakaian Standar Hotel & Laundry Kiloan',
+			'Biang Konsentrat Pembersih Lantai & Karbol Sereh',
+			'Pengadaan Kebutuhan Sabun UMKM Kuliner & Laundry',
+			'Layanan Antar Mranggen, Pucang Gading & Semarang Timur'
+		),
+		'facilities' => array(
+			'Parkir Nyaman & Akses Strategis',
+			'Pembayaran Lengkap QRIS & Tunai',
+			'Peralatan Dispenser Modern & Higienis',
+			'Bebas Bawa Botol Sendiri untuk Lebih Hemat'
+		)
+	),
+	array(
+		'id'         => 'temanggung-1',
+		'name'       => 'Cleanique Mart Temanggung 1',
+		'region'     => 'jateng-diy',
+		'region_lbl' => 'Jawa Tengah & DIY',
+		'city'       => 'Temanggung, Jawa Tengah',
+		'addr'       => 'Jl. WR. Supratman No. 34, Dongkelan Utara, Jampiroso, Kec. Temanggung, Kabupaten Temanggung, Jawa Tengah 56212',
+		'landmark'   => 'Dongkelan Utara, Jampiroso, Dekat Pusat Kota Temanggung',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Thumbnail-Mitra-Cleanique-Mart-Temanggung-1.webp',
+		'maps_query' => 'Cleanique+Mart+Temanggung+1',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Depot Sabun Curah Terlengkap Temanggung Kota',
+			'30 Varian Bibit Parfum Laundry Berkualitas',
+			'Konsentrat Sabun Cuci Piring Ekstrak Jeruk Nipis',
+			'Refill Jerigen & Botol Satuan Bebas Royalti',
+			'Layanan Pesan Antar Wilayah Temanggung Kota'
+		),
+		'facilities' => array(
+			'Akses Jalan Protokol WR Supratman',
+			'Metode Pembayaran QRIS & Cash',
+			'Display 8 Kontainer Sabun Siap Curah',
+			'Pelayanan Cepat & Bergaransi Bersih'
+		)
+	),
+	array(
+		'id'         => 'temanggung-2',
+		'name'       => 'Cleanique Mart Temanggung 2',
+		'region'     => 'jateng-diy',
+		'region_lbl' => 'Jawa Tengah & DIY',
+		'city'       => 'Temanggung, Jawa Tengah',
+		'addr'       => 'Jl. Megatan No. 4, Dusun Nglarangan RT.02/RW.04, Candi Mulyo, Kedu, Kabupaten Temanggung, Jawa Tengah 56252',
+		'landmark'   => 'Dusun Nglarangan, Kawasan Candi Mulyo Kedu',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Thumbnail-Mitra-Cleanique-Mart-Temanggung-2.webp',
+		'maps_query' => 'Cleanique+Mart+Temanggung+2',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Depot Sabun Curah Area Kedu & Parakan',
+			'Pewangi Pakaian 30 Aroma Awet Berhari-hari',
+			'Biang Deterjen Hemat Pengeluaran Rumah Tangga',
+			'Menerima Isi Ulang Galon Air untuk Usaha',
+			'Layanan Antar Sekitar Kedu & Candi Mulyo'
+		),
+		'facilities' => array(
+			'Lokasi Asri & Parkir Leluasa',
+			'Pembayaran QRIS & Tunai',
+			'Kran Dispenser Steril & Bersih',
+			'Stok Selalu Tersedia Setiap Hari'
+		)
+	),
+	array(
+		'id'         => 'karanganyar',
+		'name'       => 'Cleanique Mart Karanganyar',
+		'region'     => 'jateng-diy',
+		'region_lbl' => 'Jawa Tengah & DIY',
+		'city'       => 'Karanganyar, Jawa Tengah',
+		'addr'       => 'Jl. Alternatif Matesih, Supan, Tegalgede, Kec. Karanganyar, Kabupaten Karanganyar, Jawa Tengah 57714',
+		'landmark'   => 'Jalan Alternatif Menuju Matesih, Kawasan Supan Tegalgede',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Thumbnail-Mitra-Cleanique-Mart-Karanganyar.webp',
+		'maps_query' => 'Cleanique+Mart+Karanganyar',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Depot Isi Ulang Sabun Curah Karanganyar & Solo Raya',
+			'Parfum Laundry Grade A (30 Aroma Populer)',
+			'Biang Deterjen Cair, Softener & Karbol Lantai Wangi',
+			'Layanan Pembelian Partai Besar untuk Usaha Laundry',
+			'Pesan Antar Area Karanganyar Kota & Tegalgede'
+		),
+		'facilities' => array(
+			'Jalur Alternatif Nyaman & Parkir Luas',
+			'Support QRIS Semua Bank & E-Wallet',
+			'Dispenser Higienis Standar Kemenkes RI',
+			'Tester Varian Parfum Lengkap di Meja Kasir'
+		)
+	),
+	array(
+		'id'         => 'malang',
+		'name'       => 'Cleanique Mart Malang',
+		'region'     => 'jatim',
+		'region_lbl' => 'Jawa Timur',
+		'city'       => 'Kota Malang, Jawa Timur',
+		'addr'       => 'Jl. Mayjen Sungkono A11, Kel. Bumiayu, Kec. Kedungkandang, Kota Malang, Jawa Timur 65135',
+		'landmark'   => 'Jl. Mayjen Sungkono Dekat GOR Ken Arok & Bumiayu',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Cleanique-Mart-Malang-Depan-Toko.webp',
+		'maps_query' => 'Cleanique+Mart+Malang',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Pusat Pasokan Sabun Curah & Parfum Laundry Terbesar di Kota Malang',
+			'30 Varian Aroma Parfum Pilihan Standar Pengusaha Laundry Malang',
+			'Biang Konsentrat Ekonomis Ramah Mahasiswa & Kos-kosan',
+			'Layanan Refill Galon & Jerigen Curah Partai',
+			'Pesan Antar Kedungkandang, Sukun, Lowokwaru & Sekitarnya'
+		),
+		'facilities' => array(
+			'Parkir Mobil & Motor Lapang Pinggir Jalan Utama',
+			'Pembayaran Cashless QRIS & Tunai',
+			'Outlet Modern Full Display 8 Kran Sabun',
+			'Konsultasi Usaha Laundry Kiloan Gratis'
+		)
+	),
+	array(
+		'id'         => 'situbondo',
+		'name'       => 'Cleanique Mart Situbondo',
+		'region'     => 'jatim',
+		'region_lbl' => 'Jawa Timur',
+		'city'       => 'Situbondo, Jawa Timur',
+		'addr'       => 'Jl. Cempaka II Gg. Nusa Indah No. 1, +/- 100 m Barat Pabrik Es, Ds. Sumberkolak, Kec. Panarukan, Situbondo 68351',
+		'landmark'   => 'Kira-kira 100 meter Barat Pabrik Es Sumberkolak, Panarukan',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Cleanique-Mart-Situbondo-1.webp',
+		'maps_query' => 'Cleanique+Mart+Situbondo',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Depot Refill Sabun Curah & Pewangi Panarukan Situbondo',
+			'Parfum Laundry 30 Varian Grade A Standar Hotel',
+			'Biang Pembersih Lantai Karbol & Sabun Cuci Piring',
+			'Pengisian Jerigen 5L - 25L Lebih Hemat',
+			'Layanan Antar Area Panarukan & Situbondo Kota'
+		),
+		'facilities' => array(
+			'Akses Mudah Dekat Jalan Utama Pantura',
+			'Pembayaran QRIS & Tunai',
+			'Dispenser Higienis Bebas Debu & Kontaminasi',
+			'Pelayanan Bersahabat & Ramah'
+		)
+	),
+	array(
+		'id'         => 'palembang',
+		'name'       => 'Cleanique Mart Palembang',
+		'region'     => 'sumatera',
+		'region_lbl' => 'Sumatera',
+		'city'       => 'Palembang, Sumatera Selatan',
+		'addr'       => 'Jl. Pipa Reja No. 31C, Pipa Jaya, Kec. Kemuning, Kota Palembang, Sumatera Selatan 30128',
+		'landmark'   => 'Jalan Pipa Reja, Kawasan Pipa Jaya Kemuning',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'cleanique_mart_palembang.webp',
+		'maps_query' => 'Cleanique+Mart+Palembang',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Depot Sabun Curah Pertama & Terlengkap di Kota Palembang',
+			'30 Varian Parfum Laundry Aroma Mewah & Tahan Lama',
+			'Biang Konsentrat Sabun Ekstrak Wangi Hemat Ongkir Pabrik',
+			'Penyediaan Kebutuhan Sabun Usaha Kuliner & Hotel Melati',
+			'Layanan Pengantaran Wilayah Kemuning, Sukarami & Sekitarnya'
+		),
+		'facilities' => array(
+			'Lokasi Strategis di Pusat Kota Palembang',
+			'Mendukung Pembayaran QRIS Semua Bank/Dompet Digital',
+			'Instalasi Dispenser Curah Higienis Berizin PKRT',
+			'Tester Lengkap Aroma Parfum Siap Coba'
+		)
+	),
+	array(
+		'id'         => 'jambi',
+		'name'       => 'Cleanique Mart Jambi',
+		'region'     => 'sumatera',
+		'region_lbl' => 'Sumatera',
+		'city'       => 'Kota Jambi, Jambi',
+		'addr'       => 'Jl. Kutilang IV No. 29, RT.09, Kel. Tambak Sari, Kec. Jambi Selatan, Kota Jambi, Jambi 36131',
+		'landmark'   => 'Jl. Kutilang IV, Kawasan Tambak Sari, Jambi Selatan',
+		'phone'      => '087885590088',
+		'hours'      => 'Senin – Minggu: 08.00 – 20.00 WIB',
+		'image'      => 'Thumbnail-Mitra-Cleanique-Mart-Jambi.webp',
+		'maps_query' => 'Cleanique+Mart+Jambi',
+		'status'     => 'Mitra Resmi Terverifikasi',
+		'services'   => array(
+			'Pusat Refill Sabun Curah & Kimia Laundry Kota Jambi',
+			'30 Pilihan Varian Parfum Laundry Berkualitas Pabrik',
+			'Biang Sabun Konsentrat 5L Praktis Tinggal Tambah Air',
+			'Layanan Pasokan Rutin untuk Pengusaha Laundry Kiloan',
+			'Pesan Antar Wilayah Jambi Selatan & Kota Jambi'
+		),
+		'facilities' => array(
+			'Akses Lingkungan Nyaman & Tempat Parkir',
+			'Menerima Pembayaran QRIS & Transfer Bank',
+			'Peralatan Curah Higienis & Amanah Takaran',
+			'Konsultasi Usaha Sabun Tanpa Bagi Hasil'
+		)
+	),
+);
+?>
+
+<main id="main-content" class="oxygen-main-content">
+	<!-- Authentic Oxygen Hero Section -->
+	<section id="section-3-162" class="ct-section ct-section-with-shape-divider">
+		<div class="ct-section-inner-wrap">
+			<div id="div_block-4-162" class="ct-div-block">
+				<div class="cm-badge-glass-hero">
+					Jaringan Resmi Depot Cleanique Mart
+				</div>
+				<h1 id="headline-5-162" class="ct-headline atomic-primary-heading">Mitra Cleanique Mart</h1>
+				<p id="text_block-16-162" class="ct-text-block atomic-subheading">
+					Temukan depot isi ulang sabun curah, deterjen laundry ramah lingkungan, dan parfum pakaian berkualitas resmi di lokasi-lokasi terdekat Anda.
+				</p>
+			</div>
+
+			<!-- Shape Divider: Ocean Waves -->
+			<div id="-shape-divider-6-162" class="oxy-shape-divider">
+				<div class="oxy_shape_divider">
+					<svg viewBox="0 0 1440 320" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+						<g id="Ocean-Waves" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<path d="M60.0736562,199.999824 C74.730684,216.560111 96.1461381,227.000176 120,227.000176 C143.853862,227.000176 165.269316,216.560111 179.926344,199.999824 L180.073656,199.999824 C194.730684,216.560111 216.146138,227.000176 240,227.000176 C263.853862,227.000176 285.269316,216.560111 299.926344,199.999824 L300.073656,199.999824 C314.730684,216.560111 336.146138,227.000176 360,227.000176 C383.853862,227.000176 405.269316,216.560111 419.926344,199.999824 L420.073656,199.999824 C434.730684,216.560111 456.146138,227.000176 480,227.000176 C503.853862,227.000176 525.269316,216.560111 539.926344,199.999824 L540.073656,199.999824 C554.730684,216.560111 576.146138,227.000176 600,227.000176 C623.853862,227.000176 645.269316,216.560111 659.926344,199.999824 L660.073656,199.999824 C674.730684,216.559935 696.146138,227 720,227 C743.853862,227 765.269316,216.559935 779.926344,199.999824 L780.073656,199.999824 C794.730684,216.560111 816.146138,227.000176 840,227.000176 C863.853862,227.000176 885.269316,216.560111 899.926344,199.999824 L900.073656,199.999824 C914.730684,216.560111 936.146138,227.000176 960,227.000176 C983.853862,227.000176 1005.26932,216.560111 1019.92634,199.999824 L1020.07366,199.999824 C1034.73068,216.560111 1056.14614,227.000176 1080,227.000176 C1103.85386,227.000176 1125.26932,216.560111 1139.92634,199.999824 L1140.07366,199.999824 C1154.73068,216.560111 1176.14614,227.000176 1200,227.000176 C1223.85386,227.000176 1245.26932,216.560111 1259.92634,199.999824 L1260.07366,199.999824 C1274.73068,216.560111 1296.14614,227.000176 1320,227.000176 C1343.85386,227.000176 1365.26932,216.560111 1379.92634,199.999824 L1380.07366,199.999824 C1394.73068,216.560111 1416.14614,227.000176 1440,227.000176 L1440,319.999824 L0,319.999824 L0,227.000176 C23.8538619,227.000176 45.269316,216.560111 59.9263438,199.999824 L60.0736562,199.999824 Z" fill="currentColor"></path>
+						</g>
+					</svg>
+				</div>
+			</div>
+
+			<!-- Bubble decoration -->
+			<img id="image-7-162" alt="" src="<?php echo esc_url( $img_dir ); ?>bubble.webp" class="ct-image" />
+		</div>
+	</section>
+
+	<!-- Enriched Overview Statistics Section -->
+	<section style="background:#ffffff;padding:40px 20px 20px 20px;">
+		<div style="max-width:1160px;margin:0 auto;">
+			<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:20px;">
+				<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px;">
+					<div style="width:48px;height:48px;border-radius:12px;background:#e0e7ff;display:flex;align-items:center;justify-content:center;color:#0c00ff;flex-shrink:0;">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+					</div>
+					<div>
+						<div style="font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;">12+ Cabang</div>
+						<div style="font-size:13px;color:#64748b;margin-top:4px;">Aktif Melayani Pembelian Curah</div>
+					</div>
+				</div>
+
+				<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px;">
+					<div style="width:48px;height:48px;border-radius:12px;background:#dcfce7;display:flex;align-items:center;justify-content:center;color:#16a34a;flex-shrink:0;">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+					</div>
+					<div>
+						<div style="font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;">100% Legal PKRT</div>
+						<div style="font-size:13px;color:#64748b;margin-top:4px;">Izin Kemenkes RI &amp; Halal Resmi</div>
+					</div>
+				</div>
+
+				<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px;">
+					<div style="width:48px;height:48px;border-radius:12px;background:#fef3c7;display:flex;align-items:center;justify-content:center;color:#d97706;flex-shrink:0;">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+					</div>
+					<div>
+						<div style="font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;">3 Pulau Besar</div>
+						<div style="font-size:13px;color:#64748b;margin-top:4px;">Jawa, Sumatera, dan Terus Bertambah</div>
+					</div>
+				</div>
+
+				<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px;">
+					<div style="width:48px;height:48px;border-radius:12px;background:#e0f2fe;display:flex;align-items:center;justify-content:center;color:#0284c7;flex-shrink:0;">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+					</div>
+					<div>
+						<div style="font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;">Radius 3 Km</div>
+						<div style="font-size:13px;color:#64748b;margin-top:4px;">Proteksi Wilayah Eksklusif Mitra</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Interactive Search & Region Filter Toolbar -->
+	<section style="background:#ffffff;padding:20px 20px 30px 20px;border-bottom:1px solid #f1f5f9;">
+		<div style="max-width:1160px;margin:0 auto;">
+			<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+				<!-- Region Filter Buttons -->
+				<div class="cm-filter-group" style="display:flex;flex-wrap:wrap;gap:8px;">
+					<button type="button" class="cm-filter-btn active" data-filter="all" style="padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;border:1.5px solid #0c00ff;background:#0c00ff;color:#ffffff;cursor:pointer;transition:all 0.2s;">
+						Semua Wilayah (12)
+					</button>
+					<button type="button" class="cm-filter-btn" data-filter="jabodetabek" style="padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;border:1.5px solid #cbd5e1;background:#ffffff;color:#475569;cursor:pointer;transition:all 0.2s;">
+						Jabodetabek (2)
+					</button>
+					<button type="button" class="cm-filter-btn" data-filter="jateng-diy" style="padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;border:1.5px solid #cbd5e1;background:#ffffff;color:#475569;cursor:pointer;transition:all 0.2s;">
+						Jawa Tengah &amp; DIY (6)
+					</button>
+					<button type="button" class="cm-filter-btn" data-filter="jatim" style="padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;border:1.5px solid #cbd5e1;background:#ffffff;color:#475569;cursor:pointer;transition:all 0.2s;">
+						Jawa Timur (2)
+					</button>
+					<button type="button" class="cm-filter-btn" data-filter="sumatera" style="padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;border:1.5px solid #cbd5e1;background:#ffffff;color:#475569;cursor:pointer;transition:all 0.2s;">
+						Sumatera (2)
+					</button>
+				</div>
+
+				<!-- Live Search Box -->
+				<div style="position:relative;width:100%;max-width:320px;">
+					<input 
+						type="text" 
+						id="cm-outlet-search" 
+						placeholder="Cari kota atau nama cabang..." 
+						style="width:100%;padding:10px 16px 10px 40px;border-radius:999px;border:1.5px solid #cbd5e1;font-size:14px;outline:none;transition:border-color 0.2s;box-sizing:border-box;"
+					>
+					<svg style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#94a3b8;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Authentic Oxygen Section Grid (with Enriched Outlet Cards) -->
+	<section id="section-8-162" class="ct-section" style="padding-top:40px;padding-bottom:100px;">
+		<div class="ct-section-inner-wrap">
+			<div id="div_block-17-162" class="ct-div-block">
+				<?php foreach ( $outlets as $index => $o ) : 
+					$wa_msg = 'Halo ' . $o['name'] . ', saya ingin bertanya mengenai stok sabun isi ulang curah dan deterjen laundry di outlet Anda.';
+					$wa_url = cleaniquemart_get_wa_url( $wa_msg );
+					$gmaps_url = 'https://www.google.com/maps/search/?api=1&query=' . urlencode( $o['name'] . ' ' . $o['addr'] );
+					$img_url   = $img_dir . $o['image'];
+				?>
+					<div 
+						class="cm-outlet-item" 
+						data-region="<?php echo esc_attr( $o['region'] ); ?>" 
+						data-search="<?php echo esc_attr( strtolower( $o['name'] . ' ' . $o['city'] . ' ' . $o['addr'] ) ); ?>"
+						style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.05);display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.25s ease, box-shadow 0.25s ease;"
+					>
+						<div>
+							<!-- Outlet Photo with Hover Zoom & Lightbox Trigger -->
+							<div style="position:relative;overflow:hidden;height:220px;background:#0f172a;">
+								<a 
+									href="<?php echo esc_url( $img_url ); ?>" 
+									class="zoom-img" 
+									data-caption="<?php echo esc_attr( $o['name'] . ' — ' . $o['city'] ); ?>"
+									style="display:block;width:100%;height:100%;position:relative;"
+									title="Klik untuk memperbesar foto toko"
+								>
+									<img 
+										src="<?php echo esc_url( $img_url ); ?>" 
+										alt="<?php echo esc_attr( $o['name'] ); ?>" 
+										style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;"
+										loading="lazy"
+										onmouseover="this.style.transform='scale(1.06)'"
+										onmouseout="this.style.transform='scale(1)'"
+									/>
+									<span style="position:absolute;bottom:12px;right:12px;background:rgba(15,23,42,0.75);color:#ffffff;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:5px;backdrop-filter:blur(4px);pointer-events:none;">
+										<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+										Perbesar
+									</span>
+								</a>
+
+								<!-- Region Badge overlay -->
+								<span style="position:absolute;top:12px;left:12px;background:#0c00ff;color:#ffffff;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+									<?php echo esc_html( $o['region_lbl'] ); ?>
+								</span>
+							</div>
+
+							<!-- Card Content -->
+							<div style="padding:22px 20px 16px 20px;">
+								<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+									<span style="display:inline-flex;align-items:center;gap:4px;color:#16a34a;background:#dcfce7;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">
+										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+										Mitra Resmi Terverifikasi
+									</span>
+								</div>
+
+								<h2 style="font-family:'Lexend',sans-serif;font-size:19px;font-weight:700;color:#0f172a;margin:0 0 10px 0;line-height:1.3;">
+									<?php echo esc_html( $o['name'] ); ?>
+								</h2>
+
+								<p style="font-size:13.5px;color:#475569;line-height:1.6;margin:0 0 14px 0;display:flex;align-items:flex-start;gap:8px;">
+									<svg style="flex-shrink:0;color:#0c00ff;margin-top:2px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+									<span><?php echo esc_html( $o['addr'] ); ?></span>
+								</p>
+
+								<div style="font-size:12px;color:#64748b;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+									<span>Buka Setiap Hari: <strong>08.00 – 20.00 WIB</strong></span>
+								</div>
+
+								<!-- Quick Service Chips -->
+								<div style="display:flex;flex-wrap:wrap;gap:6px;">
+									<span class="cm-mitra-quick-badge">Isi Ulang Curah</span>
+									<span class="cm-mitra-quick-badge">30 Parfum</span>
+									<span class="cm-mitra-quick-badge">QRIS Ready</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card Actions (Always pinned to bottom) -->
+						<div style="padding:0 20px 22px 20px;display:flex;flex-direction:column;gap:10px;">
+							<button 
+								type="button" 
+								class="cm-btn-detail-mitra" 
+								data-id="<?php echo esc_attr( $o['id'] ); ?>"
+								style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:#0c00ff;color:#ffffff;padding:11px 16px;border-radius:10px;font-size:13.5px;font-weight:700;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(12,0,255,0.2);transition:all 0.2s;"
+								onmouseover="this.style.background='#0900cc';this.style.transform='translateY(-1px)';"
+								onmouseout="this.style.background='#0c00ff';this.style.transform='none';"
+							>
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+								Lihat Detail Mitra
+							</button>
+
+							<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+								<a 
+									href="<?php echo esc_url( $wa_url ); ?>" 
+									target="_blank" 
+									rel="noopener noreferrer"
+									style="display:flex;align-items:center;justify-content:center;gap:6px;background:#25D366;color:#ffffff;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;transition:background 0.2s;text-align:center;"
+									onmouseover="this.style.background='#1eb857'"
+									onmouseout="this.style.background='#25D366'"
+								>
+									<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+									Chat WA
+								</a>
+
+								<a 
+									href="<?php echo esc_url( $gmaps_url ); ?>" 
+									target="_blank" 
+									rel="noopener noreferrer"
+									style="display:flex;align-items:center;justify-content:center;gap:6px;background:#ffffff;border:1.5px solid #0c00ff;color:#0c00ff;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;transition:all 0.2s;text-align:center;"
+									onmouseover="this.style.background='#0c00ff';this.style.color='#ffffff';"
+									onmouseout="this.style.background='#ffffff';this.style.color='#0c00ff';"
+								>
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+									Petunjuk
+								</a>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+
+			<!-- No Results Found Message (hidden by default) -->
+			<div id="cm-no-results" style="display:none;text-align:center;padding:60px 20px;background:#ffffff;border:1px dashed #cbd5e1;border-radius:16px;margin-top:30px;">
+				<div style="font-size:40px;margin-bottom:12px;">🔍</div>
+				<h3 style="font-size:20px;font-weight:700;color:#0f172a;margin-bottom:8px;">Cabang Tidak Ditemukan</h3>
+				<p style="color:#64748b;font-size:15px;max-width:500px;margin:0 auto 20px auto;">
+					Kota yang Anda cari belum memiliki mitra resmi Cleanique Mart. Ini adalah kesempatan terbaik Anda untuk menjadi pelopor pertama di kota Anda!
+				</p>
+				<a href="<?php echo esc_url( cleaniquemart_get_wa_url('Halo cleaniquemart.com, saya ingin membuka cabang baru di kota saya.') ); ?>" target="_blank" class="ct-link-button" style="display:inline-block;background:#0c00ff;color:#ffffff;padding:12px 28px;border-radius:999px;font-weight:700;text-decoration:none;">
+					Buka Cabang Baru di Kota Anda &rarr;
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Enriched Bottom Call-To-Action: Open a New Branch -->
+	<section style="background:linear-gradient(135deg, #0c00ff 0%, #06007a 100%);padding:80px 20px;color:#ffffff;position:relative;overflow:hidden;">
+		<div style="max-width:960px;margin:0 auto;text-align:center;position:relative;z-index:2;">
+			<div style="display:inline-block;padding:6px 18px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:999px;color:#ffffff;font-size:13px;font-weight:700;margin-bottom:20px;letter-spacing:0.5px;">
+				PELUANG DISTRIBUTOR TUNGGAL KOTA
+			</div>
+
+			<h2 style="font-family:'Lexend',sans-serif;font-size:36px;font-weight:800;color:#ffffff;line-height:1.25;margin:0 0 20px 0;">
+				Kota Anda Belum Memiliki Depot Cleanique Mart?
+			</h2>
+
+			<p style="font-size:18px;color:#e0e7ff;line-height:1.65;max-width:760px;margin:0 auto 35px auto;">
+				Jadilah yang pertama membuka pusat isi ulang sabun curah legal Kemenkes di kecamatan Anda. Dapatkan <strong>proteksi radius eksklusif 3 km</strong>, tanpa bagi hasil royalti fee selamanya, dan pasokan langsung dari pabrik PT Indotech Berkah Abadi.
+			</p>
+
+			<div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-bottom:35px;">
+				<div style="background:rgba(255,255,255,0.1);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:10px 20px;font-size:14px;font-weight:600;">
+					✓ 100% Laba Milik Anda (0% Royalti)
+				</div>
+				<div style="background:rgba(255,255,255,0.1);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:10px 20px;font-size:14px;font-weight:600;">
+					✓ Fasilitas Rak 8 Kontainer Siap Jual
+				</div>
+				<div style="background:rgba(255,255,255,0.1);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:10px 20px;font-size:14px;font-weight:600;">
+					✓ Didampingi Sampai Buka Toko
+				</div>
+			</div>
+
+			<div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+				<a 
+					href="<?php echo esc_url( cleaniquemart_get_wa_url( 'Halo Admin Cleanique Mart, saya tertarik membuka cabang baru di kota/kecamatan saya. Mohon informasi kuota wilayah dan paket kemitraan.' ) ); ?>" 
+					target="_blank" 
+					rel="noopener noreferrer"
+					style="display:inline-flex;align-items:center;gap:10px;background:#22c55e;color:#ffffff;padding:16px 36px;border-radius:999px;font-size:16px;font-weight:800;text-decoration:none;box-shadow:0 10px 25px rgba(34,197,94,0.4);transition:transform 0.2s ease, box-shadow 0.2s ease;"
+					onmouseover="this.style.transform='translateY(-2px)'"
+					onmouseout="this.style.transform='translateY(0)'"
+				>
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+					Cek Kuota Wilayah Anda via WhatsApp
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Interactive Mitra Detail Modal -->
+	<div id="cm-mitra-detail-modal" class="cm-mitra-modal" aria-hidden="true" role="dialog">
+		<div class="cm-mitra-modal-backdrop"></div>
+		<div class="cm-mitra-modal-card">
+			<button type="button" class="cm-modal-close-btn" id="cm-close-mitra-modal" aria-label="Tutup Detail Mitra">
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+			</button>
+
+			<div class="cm-modal-header-hero">
+				<img id="cm-modal-img" src="" alt="Outlet Cleanique Mart">
+				<div class="cm-modal-header-overlay">
+					<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+						<span id="cm-modal-region" style="background:#0c00ff;color:#ffffff;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;"></span>
+						<span style="background:rgba(22,163,74,0.9);color:#ffffff;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;display:inline-flex;align-items:center;gap:4px;">
+							<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+							Mitra Resmi Terverifikasi
+						</span>
+						<span style="background:rgba(255,255,255,0.25);color:#ffffff;backdrop-filter:blur(4px);padding:4px 12px;border-radius:999px;font-size:11px;font-weight:600;">
+							Izin PKRT Kemenkes RI
+						</span>
+					</div>
+					<h2 id="cm-modal-title" style="font-family:'Lexend',sans-serif;font-size:26px;font-weight:800;color:#ffffff;margin:0 0 4px 0;line-height:1.25;"></h2>
+					<div id="cm-modal-city" style="color:#cbd5e1;font-size:14px;font-weight:500;"></div>
+				</div>
+			</div>
+
+			<div class="cm-modal-body">
+				<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px;">
+					<!-- Left: Location & Operational Info -->
+					<div>
+						<div style="margin-bottom:20px;">
+							<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px;">
+								<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0c00ff" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+								Alamat Lengkap Depot
+							</div>
+							<p id="cm-modal-address" style="font-size:14px;color:#1e293b;line-height:1.6;margin:0 0 10px 0;font-weight:500;"></p>
+							<div id="cm-modal-landmark" style="font-size:12.5px;color:#475569;background:#f1f5f9;padding:8px 12px;border-radius:8px;margin-bottom:12px;"></div>
+							
+							<button 
+								type="button" 
+								id="cm-btn-copy-address" 
+								style="display:inline-flex;align-items:center;gap:6px;background:#ffffff;border:1.5px solid #cbd5e1;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;color:#334155;cursor:pointer;transition:all 0.2s;"
+								onmouseover="this.style.borderColor='#0c00ff';this.style.color='#0c00ff';"
+								onmouseout="this.style.borderColor='#cbd5e1';this.style.color='#334155';"
+							>
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+								Salin Alamat Lengkap
+							</button>
+						</div>
+
+						<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;">
+							<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px;">
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+								Jam Operasional Outlet
+							</div>
+							<div id="cm-modal-hours" style="font-size:13.5px;font-weight:700;color:#0f172a;"></div>
+						</div>
+					</div>
+
+					<!-- Right: Services & Facilities -->
+					<div>
+						<div style="margin-bottom:20px;">
+							<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:10px;">
+								Layanan &amp; Produk Tersedia:
+							</div>
+							<ul id="cm-modal-services" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;"></ul>
+						</div>
+
+						<div>
+							<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:10px;">
+								Fasilitas Depot:
+							</div>
+							<ul id="cm-modal-facilities" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;"></ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Action Buttons Row -->
+				<div style="display:flex;gap:12px;border-top:1px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
+					<a 
+						id="cm-modal-wa-btn" 
+						href="" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						style="flex:1;min-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#ffffff;padding:13px 20px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;text-align:center;box-shadow:0 4px 14px rgba(37,211,102,0.3);transition:background 0.2s;"
+						onmouseover="this.style.background='#1eb857'"
+						onmouseout="this.style.background='#25D366'"
+					>
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+						Hubungi WhatsApp Outlet
+					</a>
+
+					<a 
+						id="cm-modal-maps-btn" 
+						href="" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						style="flex:1;min-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;background:#0c00ff;color:#ffffff;padding:13px 20px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;text-align:center;box-shadow:0 4px 14px rgba(12,0,255,0.25);transition:background 0.2s;"
+						onmouseover="this.style.background='#0900cc'"
+						onmouseout="this.style.background='#0c00ff'"
+					>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+						Buka Petunjuk Arah Google Maps
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Copy Feedback Toast -->
+	<div id="cm-mitra-toast" class="cm-toast">Alamat cabang berhasil disalin ke clipboard!</div>
+</main>
+
+<script>
+jQuery(document).ready(function($) {
+	// Raw outlet data
+	var cmOutlets = <?php echo wp_json_encode( $outlets ); ?>;
+	var imgDir = <?php echo wp_json_encode( $img_dir ); ?>;
+
+	// Interactive Filter Tabs
+	$('.cm-filter-btn').on('click', function() {
+		$('.cm-filter-btn').removeClass('active').css({
+			'background': '#ffffff',
+			'color': '#475569',
+			'border-color': '#cbd5e1'
+		});
+		$(this).addClass('active').css({
+			'background': '#0c00ff',
+			'color': '#ffffff',
+			'border-color': '#0c00ff'
+		});
+
+		var filter = $(this).data('filter');
+		var searchTerm = $('#cm-outlet-search').val().toLowerCase().trim();
+		filterOutlets(filter, searchTerm);
+	});
+
+	// Live Search Input
+	$('#cm-outlet-search').on('input', function() {
+		var searchTerm = $(this).val().toLowerCase().trim();
+		var activeFilter = $('.cm-filter-btn.active').data('filter');
+		filterOutlets(activeFilter, searchTerm);
+	});
+
+	function filterOutlets(region, search) {
+		var visibleCount = 0;
+		$('.cm-outlet-item').each(function() {
+			var itemRegion = $(this).data('region');
+			var itemSearch = $(this).data('search');
+
+			var matchRegion = (region === 'all' || itemRegion === region);
+			var matchSearch = (!search || itemSearch.indexOf(search) > -1);
+
+			if (matchRegion && matchSearch) {
+				$(this).fadeIn(200);
+				visibleCount++;
+			} else {
+				$(this).hide();
+			}
+		});
+
+		if (visibleCount === 0) {
+			$('#cm-no-results').fadeIn(200);
+		} else {
+			$('#cm-no-results').hide();
+		}
+	}
+
+	// ── MODAL DETAIL MITRA HANDLERS ─────────────────────────────────
+	function openMitraModal(outletId) {
+		var outlet = cmOutlets.find(function(item) {
+			return item.id === outletId;
+		});
+
+		if (!outlet) return;
+
+		$('#cm-modal-img').attr('src', imgDir + outlet.image).attr('alt', outlet.name);
+		$('#cm-modal-region').text(outlet.region_lbl);
+		$('#cm-modal-title').text(outlet.name);
+		$('#cm-modal-city').text(outlet.city);
+		$('#cm-modal-address').text(outlet.addr);
+		$('#cm-modal-landmark').html('<strong>Patokan:</strong> ' + (outlet.landmark || 'Pusat area strategis cabang Cleanique Mart'));
+		$('#cm-modal-hours').text(outlet.hours || 'Setiap Hari: 08.00 – 20.00 WIB');
+
+		// Services list
+		var servicesHtml = '';
+		if (outlet.services && outlet.services.length) {
+			outlet.services.forEach(function(s) {
+				servicesHtml += '<li style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#334155;line-height:1.45;">' +
+					'<svg style="flex-shrink:0;color:#16a34a;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>' +
+					'<span>' + s + '</span>' +
+					'</li>';
+			});
+		}
+		$('#cm-modal-services').html(servicesHtml);
+
+		// Facilities list
+		var facilitiesHtml = '';
+		if (outlet.facilities && outlet.facilities.length) {
+			outlet.facilities.forEach(function(f) {
+				facilitiesHtml += '<li style="display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:#475569;line-height:1.4;">' +
+					'<span style="color:#0c00ff;font-weight:bold;">&bull;</span>' +
+					'<span>' + f + '</span>' +
+					'</li>';
+			});
+		}
+		$('#cm-modal-facilities').html(facilitiesHtml);
+
+		// WhatsApp & Google Maps URLs
+		var waMsg = 'Halo ' + outlet.name + ', saya ingin bertanya mengenai stok sabun isi ulang curah dan deterjen laundry di outlet Anda.';
+		var waUrl = 'https://api.whatsapp.com/send/?phone=6287885590088&text=' + encodeURIComponent(waMsg) + '&type=phone_number&app_absent=0';
+		var mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(outlet.name + ' ' + outlet.addr);
+
+		$('#cm-modal-wa-btn').attr('href', waUrl);
+		$('#cm-modal-maps-btn').attr('href', mapsUrl);
+
+		// Copy button binding
+		$('#cm-btn-copy-address').off('click').on('click', function() {
+			if (navigator.clipboard) {
+				navigator.clipboard.writeText(outlet.name + ' - ' + outlet.addr).then(function() {
+					showToast('Alamat cabang berhasil disalin ke clipboard!');
+				});
+			} else {
+				showToast('Alamat: ' + outlet.addr);
+			}
+		});
+
+		// Open modal
+		$('#cm-mitra-detail-modal').addClass('active').attr('aria-hidden', 'false');
+		$('body').addClass('cm-modal-open');
+
+		// URL Hash without scrolling
+		if (history.replaceState) {
+			history.replaceState(null, null, '#mitra-' + outlet.id);
+		}
+	}
+
+	function closeMitraModal() {
+		$('#cm-mitra-detail-modal').removeClass('active').attr('aria-hidden', 'true');
+		$('body').removeClass('cm-modal-open');
+		if (history.replaceState) {
+			history.replaceState(null, null, window.location.pathname + window.location.search);
+		}
+	}
+
+	function showToast(msg) {
+		var $toast = $('#cm-mitra-toast');
+		$toast.text(msg).addClass('show');
+		setTimeout(function() {
+			$toast.removeClass('show');
+		}, 2600);
+	}
+
+	// Trigger open detail
+	$(document).on('click', '.cm-btn-detail-mitra', function(e) {
+		e.preventDefault();
+		var outletId = $(this).data('id');
+		openMitraModal(outletId);
+	});
+
+	// Trigger close
+	$('#cm-close-mitra-modal, .cm-mitra-modal-backdrop').on('click', function() {
+		closeMitraModal();
+	});
+
+	// ESC Key to close
+	$(document).on('keydown', function(e) {
+		if (e.key === 'Escape' && $('#cm-mitra-detail-modal').hasClass('active')) {
+			closeMitraModal();
+		}
+	});
+
+	// Check on load if hash or param is present
+	var hash = window.location.hash;
+	if (hash && hash.indexOf('#mitra-') === 0) {
+		var hashId = hash.replace('#mitra-', '');
+		openMitraModal(hashId);
+	} else {
+		var urlParams = new URLSearchParams(window.location.search);
+		var paramMitra = urlParams.get('mitra');
+		if (paramMitra) {
+			openMitraModal(paramMitra);
+		}
+	}
+});
+</script>
+
+<?php
+get_footer();
