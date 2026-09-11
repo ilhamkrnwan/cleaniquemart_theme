@@ -401,8 +401,8 @@ while ( have_posts() ) : the_post();
 				</div>
 			</div>
 
-			<!-- 3. WordPress Comments Section (Centered Max-Width 880px for Ideal Readability) -->
-			<div class="cm-comments-container" style="max-width:880px;margin:0 auto;">
+			<!-- 3. WordPress Comments Section (2-Column: Kiri = Daftar Komentar | Kanan = Form) -->
+			<div class="cm-comments-container">
 				<?php
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();

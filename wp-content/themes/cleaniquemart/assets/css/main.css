@@ -3806,22 +3806,60 @@ mark.cm-highlight-cyan { color: var(--cm-cyan-600); }
   border-color: #cbd5e1;
 }
 
-/* Comments Section */
+/* Comments Section — 2-Column Layout */
 .cm-comments-area {
   margin-top: 55px;
   padding-top: 45px;
   border-top: 1px solid #e2e8f0;
 }
 
+/* 2-Col Grid: komentar kiri | form kanan */
+.cm-comments-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .cm-comments-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Kolom Kiri: Daftar Komentar */
+.cm-comments-left {
+  min-width: 0;
+}
+
+/* Kolom Kanan: Form Komentar — sticky */
+.cm-comments-right {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+
+/* Empty state */
+.cm-no-comments {
+  text-align: center;
+  padding: 36px 20px;
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 16px;
+}
+
 .cm-comments-title {
   font-family: 'Lexend', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   color: #0f172a;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .comment-list {
