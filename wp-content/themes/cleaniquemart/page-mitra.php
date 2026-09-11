@@ -539,17 +539,16 @@ $outlets = array(
 
 						<!-- Card Actions (Always pinned to bottom) -->
 						<div style="padding:0 20px 22px 20px;display:flex;flex-direction:column;gap:10px;">
-							<button 
-								type="button" 
-								class="cm-btn-detail-mitra" 
-								data-id="<?php echo esc_attr( $o['id'] ); ?>"
-								style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:#0c00ff;color:#ffffff;padding:11px 16px;border-radius:10px;font-size:13.5px;font-weight:700;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(12,0,255,0.2);transition:all 0.2s;"
+							<a 
+								href="<?php echo esc_url( home_url( '/detail-mitra/?mitra=' . $o['id'] ) ); ?>"
+								class="cm-btn-detail-mitra"
+								style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:#0c00ff;color:#ffffff;padding:11px 16px;border-radius:10px;font-size:13.5px;font-weight:700;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(12,0,255,0.2);transition:all 0.2s;text-decoration:none;box-sizing:border-box;"
 								onmouseover="this.style.background='#0900cc';this.style.transform='translateY(-1px)';"
 								onmouseout="this.style.background='#0c00ff';this.style.transform='none';"
 							>
 								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
 								Lihat Detail Mitra
-							</button>
+							</a>
 
 							<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
 								<a 
@@ -638,122 +637,13 @@ $outlets = array(
 		</div>
 	</section>
 
-	<!-- Interactive Mitra Detail Modal -->
-	<div id="cm-mitra-detail-modal" class="cm-mitra-modal" aria-hidden="true" role="dialog">
-		<div class="cm-mitra-modal-backdrop"></div>
-		<div class="cm-mitra-modal-card">
-			<button type="button" class="cm-modal-close-btn" id="cm-close-mitra-modal" aria-label="Tutup Detail Mitra">
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-			</button>
-
-			<div class="cm-modal-header-hero">
-				<img id="cm-modal-img" src="" alt="Outlet Cleanique Mart">
-				<div class="cm-modal-header-overlay">
-					<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
-						<span id="cm-modal-region" style="background:#0c00ff;color:#ffffff;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;"></span>
-						<span style="background:rgba(22,163,74,0.9);color:#ffffff;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;display:inline-flex;align-items:center;gap:4px;">
-							<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-							Mitra Resmi Terverifikasi
-						</span>
-						<span style="background:rgba(255,255,255,0.25);color:#ffffff;backdrop-filter:blur(4px);padding:4px 12px;border-radius:999px;font-size:11px;font-weight:600;">
-							Izin PKRT Kemenkes RI
-						</span>
-					</div>
-					<h2 id="cm-modal-title" style="font-family:'Lexend',sans-serif;font-size:26px;font-weight:800;color:#ffffff;margin:0 0 4px 0;line-height:1.25;"></h2>
-					<div id="cm-modal-city" style="color:#cbd5e1;font-size:14px;font-weight:500;"></div>
-				</div>
-			</div>
-
-			<div class="cm-modal-body">
-				<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px;">
-					<!-- Left: Location & Operational Info -->
-					<div>
-						<div style="margin-bottom:20px;">
-							<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px;">
-								<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0c00ff" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-								Alamat Lengkap Depot
-							</div>
-							<p id="cm-modal-address" style="font-size:14px;color:#1e293b;line-height:1.6;margin:0 0 10px 0;font-weight:500;"></p>
-							<div id="cm-modal-landmark" style="font-size:12.5px;color:#475569;background:#f1f5f9;padding:8px 12px;border-radius:8px;margin-bottom:12px;"></div>
-							
-							<button 
-								type="button" 
-								id="cm-btn-copy-address" 
-								style="display:inline-flex;align-items:center;gap:6px;background:#ffffff;border:1.5px solid #cbd5e1;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;color:#334155;cursor:pointer;transition:all 0.2s;"
-								onmouseover="this.style.borderColor='#0c00ff';this.style.color='#0c00ff';"
-								onmouseout="this.style.borderColor='#cbd5e1';this.style.color='#334155';"
-							>
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-								Salin Alamat Lengkap
-							</button>
-						</div>
-
-						<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;">
-							<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px;">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-								Jam Operasional Outlet
-							</div>
-							<div id="cm-modal-hours" style="font-size:13.5px;font-weight:700;color:#0f172a;"></div>
-						</div>
-					</div>
-
-					<!-- Right: Services & Facilities -->
-					<div>
-						<div style="margin-bottom:20px;">
-							<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:10px;">
-								Layanan &amp; Produk Tersedia:
-							</div>
-							<ul id="cm-modal-services" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;"></ul>
-						</div>
-
-						<div>
-							<div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:10px;">
-								Fasilitas Depot:
-							</div>
-							<ul id="cm-modal-facilities" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;"></ul>
-						</div>
-					</div>
-				</div>
-
-				<!-- Action Buttons Row -->
-				<div style="display:flex;gap:12px;border-top:1px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
-					<a 
-						id="cm-modal-wa-btn" 
-						href="" 
-						target="_blank" 
-						rel="noopener noreferrer"
-						style="flex:1;min-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#ffffff;padding:13px 20px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;text-align:center;box-shadow:0 4px 14px rgba(37,211,102,0.3);transition:background 0.2s;"
-						onmouseover="this.style.background='#1eb857'"
-						onmouseout="this.style.background='#25D366'"
-					>
-						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-						Hubungi WhatsApp Outlet
-					</a>
-
-					<a 
-						id="cm-modal-maps-btn" 
-						href="" 
-						target="_blank" 
-						rel="noopener noreferrer"
-						style="flex:1;min-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;background:#0c00ff;color:#ffffff;padding:13px 20px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;text-align:center;box-shadow:0 4px 14px rgba(12,0,255,0.25);transition:background 0.2s;"
-						onmouseover="this.style.background='#0900cc'"
-						onmouseout="this.style.background='#0c00ff'"
-					>
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
-						Buka Petunjuk Arah Google Maps
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- Copy Feedback Toast -->
 	<div id="cm-mitra-toast" class="cm-toast">Alamat cabang berhasil disalin ke clipboard!</div>
 </main>
 
 <script>
 jQuery(document).ready(function($) {
-	// Raw outlet data
+	// Raw outlet data (untuk filter & search)
 	var cmOutlets = <?php echo wp_json_encode( $outlets ); ?>;
 	var imgDir = <?php echo wp_json_encode( $img_dir ); ?>;
 
@@ -805,123 +695,58 @@ jQuery(document).ready(function($) {
 			$('#cm-no-results').hide();
 		}
 	}
+});
+</script>
 
-	// ── MODAL DETAIL MITRA HANDLERS ─────────────────────────────────
-	function openMitraModal(outletId) {
-		var outlet = cmOutlets.find(function(item) {
-			return item.id === outletId;
+	// Interactive Filter Tabs
+	$('.cm-filter-btn').on('click', function() {
+		$('.cm-filter-btn').removeClass('active').css({
+			'background': '#ffffff',
+			'color': '#475569',
+			'border-color': '#cbd5e1'
+		});
+		$(this).addClass('active').css({
+			'background': '#0c00ff',
+			'color': '#ffffff',
+			'border-color': '#0c00ff'
 		});
 
-		if (!outlet) return;
+		var filter = $(this).data('filter');
+		var searchTerm = $('#cm-outlet-search').val().toLowerCase().trim();
+		filterOutlets(filter, searchTerm);
+	});
 
-		$('#cm-modal-img').attr('src', imgDir + outlet.image).attr('alt', outlet.name);
-		$('#cm-modal-region').text(outlet.region_lbl);
-		$('#cm-modal-title').text(outlet.name);
-		$('#cm-modal-city').text(outlet.city);
-		$('#cm-modal-address').text(outlet.addr);
-		$('#cm-modal-landmark').html('<strong>Patokan:</strong> ' + (outlet.landmark || 'Pusat area strategis cabang Cleanique Mart'));
-		$('#cm-modal-hours').text(outlet.hours || 'Setiap Hari: 08.00 – 20.00 WIB');
+	// Live Search Input
+	$('#cm-outlet-search').on('input', function() {
+		var searchTerm = $(this).val().toLowerCase().trim();
+		var activeFilter = $('.cm-filter-btn.active').data('filter');
+		filterOutlets(activeFilter, searchTerm);
+	});
 
-		// Services list
-		var servicesHtml = '';
-		if (outlet.services && outlet.services.length) {
-			outlet.services.forEach(function(s) {
-				servicesHtml += '<li style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#334155;line-height:1.45;">' +
-					'<svg style="flex-shrink:0;color:#16a34a;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>' +
-					'<span>' + s + '</span>' +
-					'</li>';
-			});
-		}
-		$('#cm-modal-services').html(servicesHtml);
+	function filterOutlets(region, search) {
+		var visibleCount = 0;
+		$('.cm-outlet-item').each(function() {
+			var itemRegion = $(this).data('region');
+			var itemSearch = $(this).data('search');
 
-		// Facilities list
-		var facilitiesHtml = '';
-		if (outlet.facilities && outlet.facilities.length) {
-			outlet.facilities.forEach(function(f) {
-				facilitiesHtml += '<li style="display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:#475569;line-height:1.4;">' +
-					'<span style="color:#0c00ff;font-weight:bold;">&bull;</span>' +
-					'<span>' + f + '</span>' +
-					'</li>';
-			});
-		}
-		$('#cm-modal-facilities').html(facilitiesHtml);
+			var matchRegion = (region === 'all' || itemRegion === region);
+			var matchSearch = (!search || itemSearch.indexOf(search) > -1);
 
-		// WhatsApp & Google Maps URLs
-		var waMsg = 'Halo ' + outlet.name + ', saya ingin bertanya mengenai stok sabun isi ulang curah dan deterjen laundry di outlet Anda.';
-		var waUrl = 'https://api.whatsapp.com/send/?phone=6287885590088&text=' + encodeURIComponent(waMsg) + '&type=phone_number&app_absent=0';
-		var mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(outlet.name + ' ' + outlet.addr);
-
-		$('#cm-modal-wa-btn').attr('href', waUrl);
-		$('#cm-modal-maps-btn').attr('href', mapsUrl);
-
-		// Copy button binding
-		$('#cm-btn-copy-address').off('click').on('click', function() {
-			if (navigator.clipboard) {
-				navigator.clipboard.writeText(outlet.name + ' - ' + outlet.addr).then(function() {
-					showToast('Alamat cabang berhasil disalin ke clipboard!');
-				});
+			if (matchRegion && matchSearch) {
+				$(this).fadeIn(200);
+				visibleCount++;
 			} else {
-				showToast('Alamat: ' + outlet.addr);
+				$(this).hide();
 			}
 		});
 
-		// Open modal
-		$('#cm-mitra-detail-modal').addClass('active').attr('aria-hidden', 'false');
-		$('body').addClass('cm-modal-open');
-
-		// URL Hash without scrolling
-		if (history.replaceState) {
-			history.replaceState(null, null, '#mitra-' + outlet.id);
+		if (visibleCount === 0) {
+			$('#cm-no-results').fadeIn(200);
+		} else {
+			$('#cm-no-results').hide();
 		}
 	}
 
-	function closeMitraModal() {
-		$('#cm-mitra-detail-modal').removeClass('active').attr('aria-hidden', 'true');
-		$('body').removeClass('cm-modal-open');
-		if (history.replaceState) {
-			history.replaceState(null, null, window.location.pathname + window.location.search);
-		}
-	}
-
-	function showToast(msg) {
-		var $toast = $('#cm-mitra-toast');
-		$toast.text(msg).addClass('show');
-		setTimeout(function() {
-			$toast.removeClass('show');
-		}, 2600);
-	}
-
-	// Trigger open detail
-	$(document).on('click', '.cm-btn-detail-mitra', function(e) {
-		e.preventDefault();
-		var outletId = $(this).data('id');
-		openMitraModal(outletId);
-	});
-
-	// Trigger close
-	$('#cm-close-mitra-modal, .cm-mitra-modal-backdrop').on('click', function() {
-		closeMitraModal();
-	});
-
-	// ESC Key to close
-	$(document).on('keydown', function(e) {
-		if (e.key === 'Escape' && $('#cm-mitra-detail-modal').hasClass('active')) {
-			closeMitraModal();
-		}
-	});
-
-	// Check on load if hash or param is present
-	var hash = window.location.hash;
-	if (hash && hash.indexOf('#mitra-') === 0) {
-		var hashId = hash.replace('#mitra-', '');
-		openMitraModal(hashId);
-	} else {
-		var urlParams = new URLSearchParams(window.location.search);
-		var paramMitra = urlParams.get('mitra');
-		if (paramMitra) {
-			openMitraModal(paramMitra);
-		}
-	}
 });
 </script>
 
