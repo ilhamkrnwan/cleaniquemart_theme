@@ -1,0 +1,692 @@
+/**
+ * Cleanique Mart - Dedicated Landing Page Visual Enhancements
+ * Applied to:
+ * - /ide-bisnis-yang-menguntungkan-2026/
+ * - /ide-usaha-yang-menjanjikan-2026/
+ * - /usaha-sampingan-yang-menjanjikan-2026/
+ * - /kemitraan-cleanique-mart/
+ *
+ * Polishes typography, cards, hero, countdown, badges, and mobile responsiveness
+ */
+
+/* ==========================================================================
+   GLOBAL RESET & TYPOGRAPHY
+   ========================================================================== */
+.cm-landing-page-wrap {
+    font-family: 'DM Sans', 'Open Sans', sans-serif;
+    color: #1e293b;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.cm-landing-page-wrap h1,
+.cm-landing-page-wrap h2,
+.cm-landing-page-wrap h3,
+.cm-landing-page-wrap h4,
+.cm-landing-page-wrap h5,
+.cm-landing-page-wrap h6,
+.cm-landing-page-wrap .atomic-primary-heading,
+.cm-landing-page-wrap .atomic-secondary-heading {
+    font-family: 'Lexend', sans-serif !important;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (#section-3-472)
+   ========================================================================== */
+#section-3-472 {
+    background: radial-gradient(circle farthest-side at top center, #1000ff 0%, #08009c 70%, #05006b 100%) !important;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px !important;
+    padding-bottom: 260px !important;
+}
+
+#section-3-472 .ct-section-inner-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Modern Glass Badge in Hero */
+#section-3-472 .cm-badge-glass-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 24px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 9999px;
+    color: #ffffff;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14.5px;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin: 0 auto 18px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#section-3-472 .cm-badge-glass-hero:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+/* Hero Heading */
+#section-3-472 h1.atomic-primary-heading {
+    font-size: clamp(28px, 4.2vw, 48px) !important;
+    line-height: 1.25 !important;
+    color: #ffffff !important;
+    margin: 0 auto 16px !important;
+    max-width: 980px;
+}
+
+#section-3-472 #span-7-472 {
+    color: #ffeb3b !important;
+    text-shadow: 0 0 20px rgba(255, 235, 59, 0.4);
+    display: inline-block;
+}
+
+/* Hero Decorative underline GIF */
+#section-3-472 #image-8-472 {
+    max-width: 260px;
+    height: auto;
+    margin: 8px auto 30px;
+    display: block;
+}
+
+/* Hero Gallery Outlets Grid */
+#section-3-472 #_gallery-9-472,
+#section-3-472 #_gallery-1106-532,
+#section-3-472 .oxy-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    max-width: 1040px !important;
+    margin: 30px auto 0 !important;
+    padding: 16px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+}
+
+#section-3-472 .oxy-gallery-item {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease !important;
+    cursor: pointer;
+    background: #000;
+}
+
+#section-3-472 .oxy-gallery-item:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+#section-3-472 .oxy-gallery-item img {
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    max-height: 220px;
+    transition: transform 0.4s ease;
+}
+
+#section-3-472 .oxy-gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Ocean Wave Shape Divider */
+#section-3-472 .oxy-shape-divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 6;
+    pointer-events: none;
+}
+
+#section-3-472 .oxy-shape-divider svg {
+    width: 100%;
+    height: 90px;
+    display: block;
+    fill: #ffffff;
+}
+
+/* Floating bubble decor */
+#section-3-472 #image-390-100 {
+    position: absolute;
+    top: 20px;
+    right: 2%;
+    width: 180px;
+    height: auto;
+    opacity: 0.75;
+    pointer-events: none;
+    animation: floatBubble 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatBubble {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* ==========================================================================
+   2. COUNTDOWN BANNER CARD (#section-16-472)
+   ========================================================================== */
+#section-16-472 {
+    position: relative;
+    z-index: 20;
+    padding-top: 0 !important;
+    padding-bottom: 80px !important;
+}
+
+#section-16-472 #div_block-17-472 {
+    background: linear-gradient(135deg, #091353 0%, #03082b 100%) !important;
+    border: 2px solid rgba(255, 235, 59, 0.3) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 25px 60px rgba(9, 19, 83, 0.35) !important;
+    padding: 36px 32px !important;
+    max-width: 520px !important;
+    width: 92% !important;
+    margin: -160px auto 40px !important;
+    top: 0 !important;
+    position: relative !important;
+    text-align: center !important;
+    height: auto !important;
+}
+
+#section-16-472 #headline-18-472 {
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin: 0 0 16px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Countdown digits */
+#cm-promo-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px 0 24px;
+}
+
+#cm-promo-countdown > div {
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    border-radius: 14px !important;
+    padding: 12px 10px !important;
+    min-width: 72px !important;
+    text-align: center !important;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1), 0 4px 10px rgba(0,0,0,0.2) !important;
+}
+
+#cm-promo-countdown span:first-child {
+    font-family: 'Lexend', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    line-height: 1 !important;
+}
+
+#cm-promo-countdown #cm-seconds {
+    color: #ffeb3b !important;
+}
+
+#cm-promo-countdown span:last-child {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    text-transform: uppercase !important;
+    margin-top: 4px !important;
+    display: block !important;
+}
+
+/* Tombol Ambil Promo Button */
+#section-16-472 #link-20-472 {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 16px 36px !important;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
+    color: #ffffff !important;
+    font-family: 'Lexend', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.45) !important;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+#section-16-472 #link-20-472:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 16px 35px rgba(22, 163, 74, 0.6) !important;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%) !important;
+}
+
+/* ==========================================================================
+   3. VIDEO TESTIMONI (#section-63-472)
+   ========================================================================== */
+#section-63-472 {
+    background: #f0f7fc !important;
+    padding: 90px 20px !important;
+}
+
+#section-63-472 h2.atomic-secondary-heading {
+    font-size: clamp(26px, 3.5vw, 38px) !important;
+    color: #0f172a !important;
+    margin-bottom: 16px !important;
+    text-align: center;
+}
+
+#section-63-472 #text_block-66-472 {
+    max-width: 760px;
+    margin: 0 auto 36px;
+    font-size: 16.5px;
+    color: #475569;
+    text-align: center;
+    line-height: 1.7;
+}
+
+#section-63-472 .ct-video,
+#section-63-472 .oxygen-vsb-responsive-video-wrapper {
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 45px rgba(12, 0, 255, 0.12) !important;
+    border: 4px solid #ffffff !important;
+}
+
+/* ==========================================================================
+   4. SHOWCASE MITRA (#section-72-472)
+   ========================================================================== */
+#section-72-472 {
+    padding: 90px 20px !important;
+    background: #ffffff !important;
+}
+
+#section-72-472 h2.atomic-secondary-heading {
+    font-size: clamp(28px, 3.8vw, 42px) !important;
+    color: #0f172a !important;
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+#section-72-472 #div_block-75-472 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 28px !important;
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+}
+
+#section-72-472 #div_block-75-472 > .ct-div-block {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 20px !important;
+    padding: 18px !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#section-72-472 #div_block-75-472 > .ct-div-block:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 18px 36px rgba(12, 0, 255, 0.1) !important;
+    border-color: rgba(12, 0, 255, 0.25) !important;
+}
+
+#section-72-472 #div_block-75-472 img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 14px !important;
+    margin-bottom: 16px !important;
+}
+
+#section-72-472 h3.atomic-secondary-heading {
+    font-size: 19px !important;
+    color: #0f172a !important;
+    margin: 0 0 8px !important;
+    font-weight: 700 !important;
+}
+
+#section-72-472 p.atomic-subheading {
+    font-size: 14px !important;
+    color: #64748b !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+/* ==========================================================================
+   5. BUKTI TESTIMONI WHATSAPP (#section-131-472)
+   ========================================================================== */
+#section-131-472 {
+    background: linear-gradient(135deg, #15803d 0%, #16a34a 100%) !important;
+    padding: 90px 20px !important;
+    color: #ffffff !important;
+}
+
+#section-131-472 h2.atomic-secondary-heading {
+    font-size: clamp(26px, 3.6vw, 40px) !important;
+    color: #ffffff !important;
+    text-align: center;
+    margin-bottom: 14px !important;
+}
+
+#section-131-472 .atomic-subheading {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+#section-131-472 #_gallery-61-472 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 18px !important;
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+}
+
+#section-131-472 .oxy-gallery-item {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 3px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    cursor: zoom-in !important;
+    background: #ffffff !important;
+}
+
+#section-131-472 .oxy-gallery-item:hover {
+    transform: translateY(-6px) scale(1.03) !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35) !important;
+}
+
+#section-131-472 .oxy-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* ==========================================================================
+   6. BENTO CARDS - MENGAPA LAYAK DIPILIH (#section-158-472)
+   ========================================================================== */
+#section-158-472 {
+    padding: 90px 20px !important;
+    background: #ffffff !important;
+}
+
+#section-158-472 h2.atomic-secondary-heading {
+    font-size: clamp(28px, 3.8vw, 42px) !important;
+    color: #0f172a !important;
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+#section-158-472 #div_block-161-472 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    max-width: 1080px !important;
+    margin: 0 auto !important;
+}
+
+#section-158-472 #div_block-161-472 > .ct-div-block {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    border-radius: 20px !important;
+    padding: 36px 32px !important;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    color: #ffffff !important;
+}
+
+#section-158-472 #div_block-161-472 > .ct-div-block:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 20px 45px rgba(12, 0, 255, 0.15) !important;
+}
+
+/* ==========================================================================
+   7. VARIAN PRODUK 25L (#section-249-472)
+   ========================================================================== */
+#section-249-472 {
+    padding: 90px 20px !important;
+    background: #ffffff !important;
+}
+
+#section-249-472 h2.atomic-secondary-heading {
+    font-size: clamp(28px, 3.8vw, 42px) !important;
+    color: #0f172a !important;
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+#section-249-472 #div_block-254-472 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+}
+
+#section-249-472 #div_block-254-472 > .ct-div-block {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 18px !important;
+    padding: 20px 16px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.3s ease !important;
+}
+
+#section-249-472 #div_block-254-472 > .ct-div-block:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 16px 32px rgba(12, 0, 255, 0.1) !important;
+    border-color: rgba(12, 0, 255, 0.3) !important;
+    background: #ffffff !important;
+}
+
+#section-249-472 #div_block-254-472 img {
+    max-height: 180px !important;
+    width: auto !important;
+    margin: 0 auto 14px !important;
+    display: block !important;
+    transition: transform 0.3s ease !important;
+}
+
+#section-249-472 #div_block-254-472 > .ct-div-block:hover img {
+    transform: scale(1.06) !important;
+}
+
+/* ==========================================================================
+   8. PRICING PACKAGES (#section-332-472)
+   ========================================================================== */
+#section-332-472 {
+    padding: 100px 20px !important;
+    background: #f8fafc !important;
+}
+
+#section-332-472 #div_block-337-472 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+    max-width: 980px !important;
+    margin: 40px auto 0 !important;
+}
+
+#section-332-472 #div_block-338-472,
+#section-332-472 #div_block-387-472 {
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    padding: 40px 36px !important;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06) !important;
+    border: 2px solid #e2e8f0 !important;
+    position: relative !important;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#section-332-472 #div_block-387-472 {
+    border-color: #0c00ff !important;
+    box-shadow: 0 15px 45px rgba(12, 0, 255, 0.15) !important;
+}
+
+#section-332-472 #div_block-338-472:hover,
+#section-332-472 #div_block-387-472:hover {
+    transform: translateY(-8px) !important;
+}
+
+#section-332-472 h2.ct-headline {
+    font-size: 26px !important;
+    color: #0f172a !important;
+    font-weight: 800 !important;
+    margin-bottom: 12px !important;
+}
+
+#section-332-472 .ct-text-block h5,
+#section-332-472 #text_block-344-472,
+#section-332-472 #text_block-393-472 {
+    font-family: 'Lexend', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    color: #0c00ff !important;
+    margin: 8px 0 20px !important;
+}
+
+#section-332-472 .oxel_icon_button__container {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 16px 32px !important;
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
+    color: #ffffff !important;
+    font-family: 'Lexend', sans-serif !important;
+    font-size: 15.5px !important;
+    font-weight: 700 !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.35) !important;
+    transition: all 0.3s ease !important;
+    margin-top: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#section-332-472 .oxel_icon_button__container:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 14px 30px rgba(22, 163, 74, 0.5) !important;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%) !important;
+}
+
+/* ==========================================================================
+   9. FINAL CTA SECTION (#section-449-472)
+   ========================================================================== */
+#section-449-472 {
+    background: radial-gradient(circle at center, #0f172a 0%, #020617 100%) !important;
+    padding: 90px 20px !important;
+    color: #ffffff !important;
+    text-align: center;
+}
+
+#section-449-472 h2.atomic-secondary-heading {
+    color: #ffffff !important;
+    font-size: clamp(26px, 3.6vw, 38px) !important;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* ==========================================================================
+   10. MOBILE & TABLET RESPONSIVE FIXES
+   ========================================================================== */
+@media (max-width: 991px) {
+    #section-3-472 #_gallery-9-472,
+    #section-3-472 #_gallery-1106-532 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    #section-72-472 #div_block-75-472 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    #section-131-472 #_gallery-61-472 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    #section-249-472 #div_block-254-472 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    #section-3-472 {
+        padding-top: 30px !important;
+        padding-bottom: 220px !important;
+    }
+    
+    #section-3-472 #_gallery-9-472,
+    #section-3-472 #_gallery-1106-532 {
+        grid-template-columns: 1fr !important;
+        padding: 10px !important;
+    }
+
+    #section-16-472 #div_block-17-472 {
+        margin-top: -120px !important;
+        padding: 24px 18px !important;
+    }
+
+    #cm-promo-countdown > div {
+        min-width: 58px !important;
+        padding: 8px 6px !important;
+    }
+
+    #cm-promo-countdown span:first-child {
+        font-size: 24px !important;
+    }
+
+    #section-72-472 #div_block-75-472 {
+        grid-template-columns: 1fr !important;
+    }
+
+    #section-131-472 #_gallery-61-472 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    #section-158-472 #div_block-161-472 {
+        grid-template-columns: 1fr !important;
+    }
+
+    #section-249-472 #div_block-254-472 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    #section-332-472 #div_block-337-472 {
+        grid-template-columns: 1fr !important;
+    }
+}

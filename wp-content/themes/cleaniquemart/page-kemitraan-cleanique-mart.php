@@ -1,6 +1,9 @@
 <?php
 /**
- * Template Name: Halaman Kemitraan Master
+ * Template Name: LP - Kemitraan Cleanique Mart
+ *
+ * Dedicated landing page template for:
+ * https://cleaniquemart.com/kemitraan-cleanique-mart/
  *
  * @package CleaniqueMart
  */
