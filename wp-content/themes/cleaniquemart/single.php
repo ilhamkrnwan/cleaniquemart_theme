@@ -95,24 +95,29 @@ while ( have_posts() ) : the_post();
 	<section id="section-12-178" class="ct-section" style="padding-top:50px;padding-bottom:120px;">
 		<div class="ct-section-inner-wrap" style="max-width:1160px;margin:0 auto;">
 			
-			<!-- Featured Image with Lightbox Trigger -->
+			<!-- Featured Image with Lightbox Trigger (Full Width, Large & High Impact) -->
 			<?php if ( has_post_thumbnail() ) : ?>
-				<div style="position:relative;border-radius:16px;overflow:hidden;margin-bottom:45px;box-shadow:0 8px 24px rgba(0,0,0,0.08);background:#0f172a;">
+				<div style="position:relative;border-radius:18px;overflow:hidden;margin-bottom:45px;box-shadow:0 10px 30px rgba(0,0,0,0.08);background:#ffffff;border:1px solid #e2e8f0;width:100%;">
 					<a 
 						href="<?php echo esc_url( $thumb_url ); ?>" 
 						class="zoom-img" 
 						data-caption="<?php echo esc_attr( $post_title ); ?>"
-						style="display:block;width:100%;max-height:520px;overflow:hidden;"
+						style="display:block;width:100%;position:relative;"
+						title="Klik untuk memperbesar gambar"
 					>
 						<img 
 							id="image-38-178" 
 							src="<?php echo esc_url( $thumb_url ); ?>" 
 							alt="<?php echo esc_attr( $post_title ); ?>" 
 							class="ct-image"
-							style="width:100%;height:auto;max-height:520px;object-fit:cover;display:block;transition:transform 0.4s ease;"
-							onmouseover="this.style.transform='scale(1.02)'"
+							style="width:100%;height:auto;display:block;transition:transform 0.4s ease;"
+							onmouseover="this.style.transform='scale(1.01)'"
 							onmouseout="this.style.transform='scale(1)'"
 						/>
+						<span style="position:absolute;bottom:16px;right:16px;background:rgba(15,23,42,0.75);color:#ffffff;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;backdrop-filter:blur(4px);pointer-events:none;">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+							Klik untuk Perbesar
+						</span>
 					</a>
 				</div>
 			<?php endif; ?>
