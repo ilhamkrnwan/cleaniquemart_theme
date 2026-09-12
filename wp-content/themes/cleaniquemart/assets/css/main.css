@@ -2535,65 +2535,288 @@ mark.cm-highlight-cyan { color: var(--cm-cyan-600); }
 
 /* ── Review Produk Custom Gallery ── */
 .cm-review-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  margin: 2rem 0;
+  margin: 2.5rem 0 3rem;
   width: 100%;
   box-sizing: border-box;
 }
 
+@media (max-width: 1100px) {
+  .cm-review-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Mobile Slideover: horizontal swipe carousel */
+@media (max-width: 768px) {
+  .cm-review-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    margin: 0.75rem 0 1.75rem 0 !important;
+    padding: 8px 4px 22px 4px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .cm-review-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .cm-review-item {
+    flex: 0 0 260px !important;
+    width: 260px !important;
+    max-width: 76vw !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cm-review-item {
+    flex: 0 0 240px !important;
+    width: 240px !important;
+    max-width: 78vw !important;
+  }
+}
+
 .cm-review-item {
-  flex: 0 0 calc(25% - 1.125rem);
-  width: calc(25% - 1.125rem);
-  max-width: calc(25% - 1.125rem);
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
-  border-radius: 16px;
+  background: #ffffff;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
   box-sizing: border-box;
-  background: transparent;
+  height: 100%;
+  cursor: pointer;
 }
 
 .cm-review-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 36px rgba(0,0,0,0.28);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
 .cm-review-figure {
   margin: 0;
   padding: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
+}
+
+.cm-review-img-wrap {
+  position: relative;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 1.25rem 1rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .cm-review-img-full {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+.cm-review-item:hover .cm-review-img-full {
+  transform: scale(1.03);
+}
+
+.cm-review-zoom-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+
+.cm-review-item:hover .cm-review-zoom-badge {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cm-review-caption {
-  display: none;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 1rem 1.15rem 1.15rem;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  text-align: left;
 }
 
-/* Mobile: 2 kolom */
-@media (max-width: 767px) {
-  .cm-testimoni-item {
-    flex: 0 0 calc(50% - 0.625rem);
-    width: calc(50% - 0.625rem);
-    max-width: calc(50% - 0.625rem);
+.cm-review-rating-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cm-review-stars {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.cm-review-rating-score {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cm-review-title {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+.cm-review-desc {
+  margin: 0;
+  font-size: 0.825rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.cm-review-cta {
+  margin-top: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ea580c;
+  transition: color 0.15s ease;
+}
+
+.cm-review-item:hover .cm-review-cta {
+  color: #c2410c;
+}
+
+@media (max-width: 768px) {
+  .cm-review-img-wrap {
+    padding: 0.85rem 0.65rem 0.4rem;
   }
-  .cm-review-item {
-    flex: 0 0 calc(50% - 0.75rem);
-    width: calc(50% - 0.75rem);
-    max-width: calc(50% - 0.75rem);
+  .cm-review-caption {
+    padding: 0.85rem 0.9rem 1rem;
+  }
+  .cm-review-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+  .cm-review-desc {
+    font-size: 0.78rem;
+    line-height: 1.42;
+  }
+  .cm-review-rating-score {
+    font-size: 0.72rem;
+    padding: 2px 7px;
+  }
+  .cm-review-cta {
+    margin-top: 0.6rem;
+    font-size: 0.75rem;
   }
 }
+
+/* Mobile Slideover Controls & Hints */
+.cm-review-controls-mobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  padding: 0 4px;
+}
+
+.cm-review-slide-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.cm-review-arrows-wrap {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.cm-review-arrow-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: background 0.18s ease, transform 0.18s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cm-review-arrow-btn:active {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0.92);
+}
+
+@media (max-width: 768px) {
+  .cm-review-controls-mobile {
+    display: flex;
+  }
+}
+
 
 .cm-section-action {
   display: flex;
@@ -4369,6 +4592,59 @@ mark.cm-highlight-cyan { color: var(--cm-cyan-600); }
   .cm-filter-btn {
     padding: 6px 12px !important;
     font-size: 12px !important;
+  }
+}
+
+/* ==========================================================================
+   Hero Shape Divider (#section-3-100) — Sama Persis Seperti Halaman About Us
+   ========================================================================== */
+.oxy_shape_divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  pointer-events: none;
+}
+.oxy_shape_divider > svg {
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  transform-origin: bottom center;
+}
+.oxy_shape_divider_top {
+  top: -1px;
+  bottom: initial;
+}
+.oxy_shape_divider_flipped {
+  transform: scaleX(-1);
+}
+#-shape-divider-10-100 .oxy_shape_divider {
+  color: #ffffff !important;
+}
+
+#image-390-100 {
+  position: absolute;
+  width: 300px;
+  right: -60px;
+  bottom: 130px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+@media (max-width: 991px) {
+  #image-390-100 {
+    opacity: 0.4;
+  }
+}
+@media (max-width: 767px) {
+  #image-390-100 {
+    opacity: 0.3;
+  }
+}
+@media (max-width: 479px) {
+  #image-390-100 {
+    opacity: 0.2;
   }
 }
 

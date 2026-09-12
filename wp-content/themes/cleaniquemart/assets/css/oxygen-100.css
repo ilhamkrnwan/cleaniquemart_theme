@@ -719,10 +719,16 @@ html, body {
 
 #div_block-1494-100 img {
   width: 100% !important;
-  height: 220px !important;
+  height: 330px !important;
+  max-height: 360px !important;
   object-fit: contain !important;
-  padding: 16px 16px 8px 16px !important;
+  padding: 20px 16px 12px 16px !important;
   box-sizing: border-box !important;
+  transition: transform 0.28s ease !important;
+}
+
+#div_block-1494-100 > .ct-div-block:hover img {
+  transform: scale(1.03) !important;
 }
 
 #div_block-1494-100 > .ct-div-block > .ct-div-block {

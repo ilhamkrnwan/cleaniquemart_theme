@@ -318,6 +318,71 @@ $theme_uri = get_template_directory_uri();
 		<div id="div_block-690-100" class="ct-div-block">
 			<h2 id="headline-692-100" class="ct-headline atomic-secondary-heading">Varian Produk&nbsp;<br>Ukuran Lengkap</h2>
 			<style>
+				/* Desktop Varian Produk Card Grid */
+				#div_block-1494-100 {
+					display: grid !important;
+					grid-template-columns: repeat(4, 1fr) !important;
+					gap: 22px !important;
+					width: 100% !important;
+					margin: 30px auto 0 auto !important;
+				}
+				#div_block-1494-100 > .ct-div-block {
+					background: #ffffff !important;
+					border-radius: 16px !important;
+					box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+					border: 1px solid #e2e8f0 !important;
+					overflow: hidden !important;
+					display: flex !important;
+					flex-direction: column !important;
+					align-items: center !important;
+					justify-content: space-between !important;
+					transition: transform 0.28s ease, box-shadow 0.28s ease !important;
+				}
+				#div_block-1494-100 > .ct-div-block:hover {
+					transform: translateY(-5px) !important;
+					box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14) !important;
+				}
+				#div_block-1494-100 img {
+					width: 100% !important;
+					height: 330px !important;
+					max-height: 360px !important;
+					object-fit: contain !important;
+					padding: 20px 16px 12px 16px !important;
+					box-sizing: border-box !important;
+					transition: transform 0.28s ease !important;
+				}
+				#div_block-1494-100 > .ct-div-block:hover img {
+					transform: scale(1.03) !important;
+				}
+				#div_block-1494-100 > .ct-div-block > .ct-div-block {
+					width: 100% !important;
+					background: #0047a5 !important;
+					padding: 12px 8px !important;
+					min-height: 48px !important;
+					display: flex !important;
+					align-items: center !important;
+					justify-content: center !important;
+					text-align: center !important;
+					box-sizing: border-box !important;
+				}
+				#div_block-1494-100 .ct-text-block {
+					font-size: 15px !important;
+					font-weight: 700 !important;
+					color: #ffffff !important;
+					line-height: 1.25 !important;
+					margin: 0 !important;
+					text-align: center !important;
+				}
+				@media (max-width: 1024px) and (min-width: 768px) {
+					#div_block-1494-100 {
+						grid-template-columns: repeat(3, 1fr) !important;
+						gap: 18px !important;
+					}
+					#div_block-1494-100 img {
+						height: 280px !important;
+						padding: 16px 14px 10px 14px !important;
+					}
+				}
 				@media (max-width: 767px) {
 					#section-528-100 > .ct-section-inner-wrap {
 						padding-left: 14px !important;
@@ -731,48 +796,174 @@ $theme_uri = get_template_directory_uri();
             #_gallery-918-100.oxy-gallery-captions .oxy-gallery-item:hover .oxy-gallery-item-contents figcaption {
                 opacity: 1;
             }
-            @media (min-width: 768px) {
-                #slider-1303-100 {
-                    display: none !important;
-                }
-                #div_block-1302-100 {
-                    display: block !important;
-                }
+            #div_block-1302-100 {
+                display: block !important;
+                width: 100% !important;
             }
-            @media (max-width: 767px) {
-                #div_block-1302-100 {
-                    display: none !important;
-                }
-                #slider-1303-100 {
-                    display: block !important;
-                }
+            #slider-1303-100 {
+                display: none !important;
             }
         </style>
+		<div class="cm-review-controls-mobile">
+			<span class="cm-review-slide-hint">👉 Geser 15 Review Produk 👈</span>
+			<div class="cm-review-arrows-wrap">
+				<button type="button" class="cm-review-arrow-btn cm-review-prev-btn" aria-label="Sebelumnya">‹</button>
+				<button type="button" class="cm-review-arrow-btn cm-review-next-btn" aria-label="Selanjutnya">›</button>
+			</div>
+		</div>
 		<div id="cm-gallery-review" class="cm-review-grid">
 			<?php
 			$review_images = [
-				['file' => 'review-determart.webp', 'label' => 'Review Determart'],
-				['file' => 'review-essenz.webp', 'label' => 'Review Essenz'],
-				['file' => 'review-soft-sense.webp', 'label' => 'Review Soft Sense'],
-				['file' => 'review-pelicin-setrika.webp', 'label' => 'Review Pelicin Setrika'],
-				['file' => 'review-malabeez.webp', 'label' => 'Review Malabeez'],
-				['file' => 'review-oclean.webp', 'label' => 'Review O Clean'],
-				['file' => 'review-pel-lantai.webp', 'label' => 'Review Pel Lantai'],
-				['file' => 'review-athari.webp', 'label' => 'Review Athari'],
-				['file' => 'review-arai.webp', 'label' => 'Review Arai'],
+				[
+					'file'    => 'review determat matic.png',
+					'title'   => 'DeterMat Matic',
+					'desc'    => 'Biang Deterjen Cair Mesin Cuci Laundry (Rendah Busa)',
+					'rating'  => '4.9',
+					'reviews' => '1rb+ Penilaian',
+				],
+				[
+					'file'    => 'review determat busa.png',
+					'title'   => 'DeterMat Extra Busa',
+					'desc'    => 'Bahan Deterjen Cair Cuci Manual (Hasil Jadi 20L)',
+					'rating'  => '4.8',
+					'reviews' => '400 Penilaian',
+				],
+				[
+					'file'    => 'review determat eco.png',
+					'title'   => 'DeterMat Eco',
+					'desc'    => 'Bahan Sabun Cuci Cair Ekonomis Ramah Lingkungan',
+					'rating'  => '4.8',
+					'reviews' => '5,9rb Penilaian',
+				],
+				[
+					'file'    => 'review softsense.png',
+					'title'   => 'SoftSense',
+					'desc'    => 'Paket Biang Softener & Pelembut Wangi Pakaian',
+					'rating'  => '4.8',
+					'reviews' => '1,3rb Penilaian',
+				],
+				[
+					'file'    => 'review softa.png',
+					'title'   => 'Softa Softener Pasta',
+					'desc'    => 'Biang Pelembut & Pewangi Pakaian Pasta (Hasil Jadi 5L)',
+					'rating'  => '4.9',
+					'reviews' => '1,4rb Penilaian',
+				],
+				[
+					'file'    => 'review essenz.png',
+					'title'   => 'Essenz Waterbase',
+					'desc'    => 'Bahan Parfum Laundry Pewangi Waterbase (Hasil 8L)',
+					'rating'  => '4.9',
+					'reviews' => '299 Penilaian',
+				],
+				[
+					'file'    => 'review konsentrat parfum alkoholbase.png',
+					'title'   => 'Parfum Alkoholbase',
+					'desc'    => 'Konsentrat Parfum Laundry Alkoholbase Awet (Hasil 10L)',
+					'rating'  => '4.9',
+					'reviews' => '43 Penilaian',
+				],
+				[
+					'file'    => 'review biang karbol.png',
+					'title'   => 'Biang Karbol Wangi',
+					'desc'    => 'Karbol Anti Kuman Aroma Sereh Pinus Kamar Mandi (5L)',
+					'rating'  => '4.9',
+					'reviews' => '322 Penilaian',
+				],
+				[
+					'file'    => 'review biang pel lantai.png',
+					'title'   => 'Biang Pel Lantai',
+					'desc'    => 'Pembersih Lantai 5L Antibacterial Fresh Fragrance',
+					'rating'  => '4.9',
+					'reviews' => '124 Penilaian',
+				],
+				[
+					'file'    => 'review o_clean.png',
+					'title'   => 'O-Clean Cuci Piring',
+					'desc'    => 'Bahan Cairan Sabun Cuci Piring Refill (Hasil Jadi 10L)',
+					'rating'  => '4.8',
+					'reviews' => '1,2rb Penilaian',
+				],
+				[
+					'file'    => 'review octa+.png',
+					'title'   => 'Octa+ Cuci Piring',
+					'desc'    => 'Biang Sabun Cuci Piring Kesat Aroma Jeruk Nipis (5L)',
+					'rating'  => '4.8',
+					'reviews' => '2,3rb Penilaian',
+				],
+				[
+					'file'    => 'review detta +.png',
+					'title'   => 'Detta+ Deterjen',
+					'desc'    => 'Konsentrat Biang Detergent Cair Laundry Hemat (5L)',
+					'rating'  => '4.8',
+					'reviews' => '1,7rb Penilaian',
+				],
+				[
+					'file'    => 'review shabil.png',
+					'title'   => 'Shabil Shampo Mobil',
+					'desc'    => 'Biang Sabun Cuci Mobil Snow Wash Busa Melimpah (5L)',
+					'rating'  => '5.0',
+					'reviews' => 'Penilaian Sempurna',
+				],
+				[
+					'file'    => 'review athari.png',
+					'title'   => 'Athari Body Wash',
+					'desc'    => 'Biang Sabun Mandi Cair Lembut & Harum di Kulit (3L)',
+					'rating'  => '4.8',
+					'reviews' => '752 Penilaian',
+				],
+				[
+					'file'    => 'review arai.png',
+					'title'   => 'Arai Hand Soap',
+					'desc'    => 'Paket Bahan Sabun Cuci Tangan Lembut Higienis (15L)',
+					'rating'  => '4.9',
+					'reviews' => '85 Penilaian',
+				],
 			];
 			foreach ( $review_images as $rv ) :
-				$rv_url = esc_url($theme_uri . '/assets/images/' . $rv['file']);
+				$rv_url = esc_url($theme_uri . '/assets/images/testimoni/' . rawurlencode($rv['file']));
 			?>
-				<a href="<?php echo $rv_url; ?>" class="cm-review-item" target="_blank" rel="noopener">
+				<a href="<?php echo $rv_url; ?>" class="cm-review-item cm-review-lightbox-trigger" data-title="<?php echo esc_attr($rv['title']); ?>" data-desc="<?php echo esc_attr($rv['desc']); ?>" target="_blank" rel="noopener">
 					<figure class="cm-review-figure">
-						<img src="<?php echo $rv_url; ?>" alt="<?php echo esc_attr($rv['label']); ?>" loading="lazy" class="cm-review-img-full">
-						<figcaption class="cm-review-caption"><?php echo esc_html($rv['label']); ?></figcaption>
+						<div class="cm-review-img-wrap">
+							<img src="<?php echo $rv_url; ?>" alt="Review <?php echo esc_attr($rv['title']); ?>" loading="lazy" class="cm-review-img-full">
+							<span class="cm-review-zoom-badge">
+								<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+								Perbesar
+							</span>
+						</div>
+						<figcaption class="cm-review-caption">
+							<div class="cm-review-rating-row">
+								<span class="cm-review-stars">★★★★★</span>
+								<span class="cm-review-rating-score">⭐ <?php echo esc_html($rv['rating']); ?></span>
+							</div>
+							<h4 class="cm-review-title"><?php echo esc_html($rv['title']); ?></h4>
+							<p class="cm-review-desc"><?php echo esc_html($rv['desc']); ?></p>
+							<div class="cm-review-cta">
+								<span>Lihat Ulasan</span>
+								<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+							</div>
+						</figcaption>
 					</figure>
 				</a>
 			<?php endforeach; ?>
-		</div>
-            </div><link rel='stylesheet' id='oxygen-unslider-css'  href='<?php echo esc_url($theme_uri); ?>/assets/css/unslider.css' type='text/css' media='all'/><div id="slider-1303-100" class="ct-slider ct_unique_slider_1958" ><div class="oxygen-unslider-container"><ul><li><div id="slide-1304-100" class="ct-slide" ><img  id="image-1305-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-determart.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-determart.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-determart-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li><li><div id="slide-1306-100" class="ct-slide" ><img  id="image-1307-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-essenz.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-essenz.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-essenz-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li><li><div id="slide-1308-100" class="ct-slide" ><img  id="image-1309-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-soft-sense.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-soft-sense.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-soft-sense-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li><li><div id="slide-1310-100" class="ct-slide" ><img  id="image-1311-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-pelicin-setrika.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-pelicin-setrika.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-pelicin-setrika-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li><li><div id="slide-1312-100" class="ct-slide" ><img  id="image-1313-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-malabeez.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-malabeez.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-malabeez-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li><li><div id="slide-1314-100" class="ct-slide" ><img  id="image-1315-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-oclean.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-oclean.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-oclean-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li><li><div id="slide-1316-100" class="ct-slide" ><img  id="image-1317-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-pel-lantai.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-pel-lantai.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-pel-lantai-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li><li><div id="slide-1318-100" class="ct-slide" ><img  id="image-1319-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-athari.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-athari.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-athari-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li><li><div id="slide-1320-100" class="ct-slide" ><img  id="image-1321-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/review-arai.webp" class="ct-image" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/review-arai.webp 460w, <?php echo esc_url($theme_uri); ?>/assets/images/review-arai-155x300.webp 155w" sizes="(max-width: 460px) 100vw, 460px" /></div></li></ul></div></div><script class="ct-slider-script">jQuery(document).ready(function($){$('#slider-1303-100.ct_unique_slider_1958 .oxygen-unslider-container:not(.unslider-horizontal,.unslider-fade)').unslider({autoplay: true, delay: 3000, animation: 'horizontal', speed : 750, arrows: true, nav: true, infinite: true})});</script><a id="link-1348-100" class="ct-link oxel_icon_button__container" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mau+Minta+Informasi+Tentang+Mitra+Cleanique+Mart%2A&#038;type=phone_number&#038;app_absent=0" target="_self" rel="nofollow"  role="button"><div id="fancy_icon-1349-100" class="ct-fancy-icon oxel_icon_button_icon" ><svg id="svg-fancy_icon-1349-100"><use xlink:href="#FontAwesomeicon-whatsapp"></use></svg></div><div id="text_block-1350-100" class="ct-text-block oxel_icon_button_text" >HUBUNGI KAMI</div></a></div></section><section id="section-908-100" class=" ct-section" ><div class="ct-section-inner-wrap"><div id="div_block-763-100" class="ct-div-block" ><h2 id="headline-764-100" class="ct-headline atomic-secondary-heading">Pilihan Paket&nbsp;<br>Yang Kami Tawarkan</h2><div id="div_block-798-100" class="ct-div-block" ><div id="div_block-799-100" class="ct-div-block" ><h2 id="headline-800-100" class="ct-headline">PAKET STARTER</h2><div id="div_block-801-100" class="ct-div-block oxel_horizontal_divider" ><div id="code_block-802-100" class="ct-code-block oxel_horizontal_divider__line" ><!-- --></div><div id="code_block-803-100" class="ct-code-block oxel_horizontal_divider__line" ><!-- --></div></div><div id="div_block-804-100" class="ct-div-block" ><h5 id="text_block-805-100" class="ct-text-block" >Rp 15.000.000,-</h5></div><div id="div_block-806-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-807-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-807-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-808-100" class="ct-text-block oxel_iconlist__row__label" >Rak Depot 8 Kontainer</h4></div><div id="div_block-809-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-810-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-810-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-811-100" class="ct-text-block oxel_iconlist__row__label" >Produk Senilai 6.000.000</h4></div><div id="div_block-812-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-813-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-813-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-814-100" class="ct-text-block oxel_iconlist__row__label" >Desain 3D Interior</h4></div><div id="div_block-815-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-816-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-816-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-817-100" class="ct-text-block oxel_iconlist__row__label" >Lisensi Cleanique Mart</h4></div><div id="div_block-818-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-819-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-819-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-820-100" class="ct-text-block oxel_iconlist__row__label" >Peralatan Produksi</h4></div><div id="div_block-821-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-822-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-822-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-823-100" class="ct-text-block oxel_iconlist__row__label" >Include Biaya Kirim</h4></div><div id="div_block-824-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-825-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-825-100"><use xlink:href="#FontAwesomeicon-close"></use></svg></div><h4 id="text_block-826-100" class="ct-text-block oxel_iconlist__row__label" >Peralatan Packing</h4></div><div id="div_block-827-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-828-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-828-100"><use xlink:href="#FontAwesomeicon-close"></use></svg></div><h4 id="text_block-829-100" class="ct-text-block oxel_iconlist__row__label" >Set-Up Marketplace</h4></div><div id="div_block-830-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-831-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-831-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-832-100" class="ct-text-block oxel_iconlist__row__label" >Media Promo Cetak</h4></div><div id="div_block-833-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-834-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-834-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-835-100" class="ct-text-block oxel_iconlist__row__label" >Instalasi Media Promo&nbsp;<br>Cetak di Lokasi</h4></div><div id="div_block-836-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-837-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-837-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-838-100" class="ct-text-block oxel_iconlist__row__label" >Training Chemical&nbsp;<br>dan Bisnis<br></h4></div><div id="div_block-839-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-840-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-840-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-841-100" class="ct-text-block oxel_iconlist__row__label" >Landing Page SEO<br>Friendly</h4></div><div id="div_block-842-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-843-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-843-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-844-100" class="ct-text-block oxel_iconlist__row__label" >Listing &amp; Optimasi<br>Google Maps<br></h4></div><div id="div_block-845-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-846-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-846-100"><use xlink:href="#FontAwesomeicon-close"></use></svg></div><h4 id="text_block-847-100" class="ct-text-block oxel_iconlist__row__label" >Set-Up dan Optimasi<br>Sosmed</h4></div><div id="div_block-848-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-849-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-849-100"><use xlink:href="#FontAwesomeicon-close"></use></svg></div><h4 id="text_block-850-100" class="ct-text-block oxel_iconlist__row__label" >Filter UV<br></h4></div><a id="link-851-100" class="ct-link" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mohon+Informasi+untuk+Promo+Paket+Starter+%2ACleanique%20Mart%20%2A&#038;type=phone_number&#038;app_absent=0" target="_blank" rel="nofollow" ><h5 id="text_block-852-100" class="ct-text-block" >ORDER SEKARANG&nbsp;</h5></a></div><div id="div_block-853-100" class="ct-div-block" ><h2 id="headline-854-100" class="ct-headline">PAKET KING</h2><div id="div_block-855-100" class="ct-div-block oxel_horizontal_divider" ><div id="code_block-856-100" class="ct-code-block oxel_horizontal_divider__line" ><!-- --></div><div id="code_block-857-100" class="ct-code-block oxel_horizontal_divider__line" ><!-- --></div></div><div id="div_block-858-100" class="ct-div-block" ><h5 id="text_block-1406-100" class="ct-text-block" >Rp 30.000.000,-</h5><h5 id="text_block-859-100" class="ct-text-block" >Rp 27.500.000,-</h5></div><div id="div_block-860-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-861-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-861-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-862-100" class="ct-text-block oxel_iconlist__row__label" >Rak Depot&nbsp;8 Kontainer</h4></div><div id="div_block-863-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-864-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-864-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-865-100" class="ct-text-block oxel_iconlist__row__label" >Produk Senilai 8.000.000</h4></div><div id="div_block-866-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-867-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-867-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-868-100" class="ct-text-block oxel_iconlist__row__label" >Desain 3D Interior</h4></div><div id="div_block-869-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-870-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-870-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-871-100" class="ct-text-block oxel_iconlist__row__label" >Lisensi Cleanique Mart</h4></div><div id="div_block-872-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-873-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-873-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-874-100" class="ct-text-block oxel_iconlist__row__label" >Peralatan Produksi</h4></div><div id="div_block-875-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-876-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-876-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-877-100" class="ct-text-block oxel_iconlist__row__label" >Include Biaya Kirim</h4></div><div id="div_block-878-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-879-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-879-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-880-100" class="ct-text-block oxel_iconlist__row__label" >Peralatan Packing</h4></div><div id="div_block-881-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-882-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-882-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-883-100" class="ct-text-block oxel_iconlist__row__label" >Set-Up Marketplace</h4></div><div id="div_block-884-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-885-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-885-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-886-100" class="ct-text-block oxel_iconlist__row__label" >Media Promo Cetak</h4></div><div id="div_block-887-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-888-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-888-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-889-100" class="ct-text-block oxel_iconlist__row__label" >Instalasi Media Promo&nbsp;<br>Cetak di Lokasi</h4></div><div id="div_block-890-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-891-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-891-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-892-100" class="ct-text-block oxel_iconlist__row__label" >Training Chemical&nbsp;<br>dan Bisnis<br></h4></div><div id="div_block-893-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-894-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-894-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-895-100" class="ct-text-block oxel_iconlist__row__label" >Landing Page SEO<br>Friendly</h4></div><div id="div_block-896-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-897-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-897-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-898-100" class="ct-text-block oxel_iconlist__row__label" >Listing &amp; Optimasi<br>Google Maps<br></h4></div><div id="div_block-899-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-900-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-900-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-901-100" class="ct-text-block oxel_iconlist__row__label" >Set-Up dan Optimasi<br>Sosmed</h4></div><div id="div_block-902-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-903-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-903-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-904-100" class="ct-text-block oxel_iconlist__row__label" >Filter UV<br></h4></div><img  id="image-905-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/Hanya-untuk-10-orang-pertama.svg" class="ct-image" srcset="" sizes="(max-width: 111px) 100vw, 111px" /><a id="link-906-100" class="ct-link" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mohon+Informasi+untuk+Promo+Paket+King+%2ACleanique%20Mart%20%20%2A&#038;type=phone_number&#038;app_absent=0" target="_blank"  ><h5 id="text_block-907-100" class="ct-text-block" >ORDER SEKARANG</h5></a></div></div></div></div></section><section id="section-1021-100" class=" ct-section" ><div class="ct-section-inner-wrap"><div id="new_columns-1022-100" class="ct-new-columns" ><div id="div_block-1023-100" class="ct-div-block" ><h2 id="headline-1025-100" class="ct-headline atomic-secondary-heading">Cara Bergabung</h2><div id="div_block-1027-100" class="ct-div-block oxel_iconlist" ><div id="div_block-1028-100" class="ct-div-block oxel_iconlist__row nav" ><div id="green_icon" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-green_icon"><use xlink:href="#FontAwesomeicon-check-circle"></use></svg></div><div id="text_block-1030-100" class="ct-text-block oxel_iconlist__row__label" >Isi formulir pendaftaran</div></div><div id="div_block-1031-100" class="ct-div-block oxel_iconlist__row nav" ><div id="green_icon" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-green_icon"><use xlink:href="#FontAwesomeicon-check-circle"></use></svg></div><div id="text_block-1033-100" class="ct-text-block oxel_iconlist__row__label" >Pilih paket sesuai yang anda inginkan</div></div><div id="div_block-1086-100" class="ct-div-block oxel_iconlist__row nav" ><div id="green_icon" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-green_icon"><use xlink:href="#FontAwesomeicon-check-circle"></use></svg></div><div id="text_block-1088-100" class="ct-text-block oxel_iconlist__row__label" >Menjadwalkan presentasi &amp; Survey Lokasi</div></div><div id="div_block-1091-100" class="ct-div-block oxel_iconlist__row nav" ><div id="green_icon" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-green_icon"><use xlink:href="#FontAwesomeicon-check-circle"></use></svg></div><div id="text_block-1093-100" class="ct-text-block oxel_iconlist__row__label" >DP tanda jadi minimal <b>50%</b> dimuka</div></div></div><a id="link-1326-100" class="ct-link oxel_icon_button__container" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mau+Minta+Informasi+Tentang+Mitra+Cleanique+Mart%2A&#038;type=phone_number&#038;app_absent=0" target="_self" rel="nofollow"  role="button"><div id="fancy_icon-1327-100" class="ct-fancy-icon oxel_icon_button_icon" ><svg id="svg-fancy_icon-1327-100"><use xlink:href="#FontAwesomeicon-whatsapp"></use></svg></div><div id="text_block-1328-100" class="ct-text-block oxel_icon_button_text" >HUBUNGI KAMI</div></a></div><div id="div_block-1040-100" class="ct-div-block" ><img  id="image-1041-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/hero-section.webp" class="ct-image bottom-img" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/hero-section.webp 1000w, <?php echo esc_url($theme_uri); ?>/assets/images/hero-section-300x156.webp 300w, <?php echo esc_url($theme_uri); ?>/assets/images/hero-section-768x400.webp 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div></div></div></section><section id="section-1110-100" class=" ct-section" ><div class="ct-section-inner-wrap"><div id="div_block-1111-100" class="ct-div-block" ><h2 id="headline-1112-100" class="ct-headline atomic-secondary-heading">Tertarik untuk buka usaha bisnis dengan Cleanique Mart di area Anda?</h2><div id="text_block-1228-100" class="ct-text-block atomic-subheading" >Hubungi kami sekarang juga di nomor WhatsApp di bawah ini<br><b></b></div><div id="div_block-1238-100" class="ct-div-block" ><a id="link-1332-100" class="ct-link oxel_icon_button__container" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mau+Minta+Informasi+Tentang+Mitra+Cleanique+Mart%2A&#038;type=phone_number&#038;app_absent=0"  rel="nofollow"  role="button"><div id="fancy_icon-1333-100" class="ct-fancy-icon oxel_icon_button_icon" ><svg id="svg-fancy_icon-1333-100"><use xlink:href="#FontAwesomeicon-whatsapp"></use></svg></div><div id="text_block-1334-100" class="ct-text-block oxel_icon_button_text" >CUSTOMER SERVICE</div></a></div></div></div></section>
+		<!-- Script for Mobile Review Slideover Navigation -->
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const prevBtn = document.querySelector('.cm-review-prev-btn');
+			const nextBtn = document.querySelector('.cm-review-next-btn');
+			const reviewGrid = document.getElementById('cm-gallery-review');
+			if (prevBtn && nextBtn && reviewGrid) {
+				prevBtn.addEventListener('click', function() {
+					reviewGrid.scrollBy({ left: -270, behavior: 'smooth' });
+				});
+				nextBtn.addEventListener('click', function() {
+					reviewGrid.scrollBy({ left: 270, behavior: 'smooth' });
+				});
+			}
+		});
+		</script>
+            </div><a id="link-1348-100" class="ct-link oxel_icon_button__container" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mau+Minta+Informasi+Tentang+Mitra+Cleanique+Mart%2A&#038;type=phone_number&#038;app_absent=0" target="_self" rel="nofollow"  role="button"><div id="fancy_icon-1349-100" class="ct-fancy-icon oxel_icon_button_icon" ><svg id="svg-fancy_icon-1349-100"><use xlink:href="#FontAwesomeicon-whatsapp"></use></svg></div><div id="text_block-1350-100" class="ct-text-block oxel_icon_button_text" >HUBUNGI KAMI</div></a></div></section><section id="section-908-100" class=" ct-section" ><div class="ct-section-inner-wrap"><div id="div_block-763-100" class="ct-div-block" ><h2 id="headline-764-100" class="ct-headline atomic-secondary-heading">Pilihan Paket&nbsp;<br>Yang Kami Tawarkan</h2><div id="div_block-798-100" class="ct-div-block" ><div id="div_block-799-100" class="ct-div-block" ><h2 id="headline-800-100" class="ct-headline">PAKET STARTER</h2><div id="div_block-801-100" class="ct-div-block oxel_horizontal_divider" ><div id="code_block-802-100" class="ct-code-block oxel_horizontal_divider__line" ><!-- --></div><div id="code_block-803-100" class="ct-code-block oxel_horizontal_divider__line" ><!-- --></div></div><div id="div_block-804-100" class="ct-div-block" ><h5 id="text_block-805-100" class="ct-text-block" >Rp 15.000.000,-</h5></div><div id="div_block-806-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-807-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-807-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-808-100" class="ct-text-block oxel_iconlist__row__label" >Rak Depot 8 Kontainer</h4></div><div id="div_block-809-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-810-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-810-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-811-100" class="ct-text-block oxel_iconlist__row__label" >Produk Senilai 6.000.000</h4></div><div id="div_block-812-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-813-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-813-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-814-100" class="ct-text-block oxel_iconlist__row__label" >Desain 3D Interior</h4></div><div id="div_block-815-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-816-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-816-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-817-100" class="ct-text-block oxel_iconlist__row__label" >Lisensi Cleanique Mart</h4></div><div id="div_block-818-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-819-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-819-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-820-100" class="ct-text-block oxel_iconlist__row__label" >Peralatan Produksi</h4></div><div id="div_block-821-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-822-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-822-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-823-100" class="ct-text-block oxel_iconlist__row__label" >Include Biaya Kirim</h4></div><div id="div_block-824-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-825-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-825-100"><use xlink:href="#FontAwesomeicon-close"></use></svg></div><h4 id="text_block-826-100" class="ct-text-block oxel_iconlist__row__label" >Peralatan Packing</h4></div><div id="div_block-827-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-828-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-828-100"><use xlink:href="#FontAwesomeicon-close"></use></svg></div><h4 id="text_block-829-100" class="ct-text-block oxel_iconlist__row__label" >Set-Up Marketplace</h4></div><div id="div_block-830-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-831-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-831-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-832-100" class="ct-text-block oxel_iconlist__row__label" >Media Promo Cetak</h4></div><div id="div_block-833-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-834-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-834-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-835-100" class="ct-text-block oxel_iconlist__row__label" >Instalasi Media Promo&nbsp;<br>Cetak di Lokasi</h4></div><div id="div_block-836-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-837-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-837-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-838-100" class="ct-text-block oxel_iconlist__row__label" >Training Chemical&nbsp;<br>dan Bisnis<br></h4></div><div id="div_block-839-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-840-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-840-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-841-100" class="ct-text-block oxel_iconlist__row__label" >Landing Page SEO<br>Friendly</h4></div><div id="div_block-842-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-843-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-843-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-844-100" class="ct-text-block oxel_iconlist__row__label" >Listing &amp; Optimasi<br>Google Maps<br></h4></div><div id="div_block-845-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-846-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-846-100"><use xlink:href="#FontAwesomeicon-close"></use></svg></div><h4 id="text_block-847-100" class="ct-text-block oxel_iconlist__row__label" >Set-Up dan Optimasi<br>Sosmed</h4></div><div id="div_block-848-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-849-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-849-100"><use xlink:href="#FontAwesomeicon-close"></use></svg></div><h4 id="text_block-850-100" class="ct-text-block oxel_iconlist__row__label" >Filter UV<br></h4></div><a id="link-851-100" class="ct-link" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mohon+Informasi+untuk+Promo+Paket+Starter+%2ACleanique%20Mart%20%2A&#038;type=phone_number&#038;app_absent=0" target="_blank" rel="nofollow" ><h5 id="text_block-852-100" class="ct-text-block" >ORDER SEKARANG&nbsp;</h5></a></div><div id="div_block-853-100" class="ct-div-block" ><h2 id="headline-854-100" class="ct-headline">PAKET KING</h2><div id="div_block-855-100" class="ct-div-block oxel_horizontal_divider" ><div id="code_block-856-100" class="ct-code-block oxel_horizontal_divider__line" ><!-- --></div><div id="code_block-857-100" class="ct-code-block oxel_horizontal_divider__line" ><!-- --></div></div><div id="div_block-858-100" class="ct-div-block" ><h5 id="text_block-1406-100" class="ct-text-block" >Rp 30.000.000,-</h5><h5 id="text_block-859-100" class="ct-text-block" >Rp 27.500.000,-</h5></div><div id="div_block-860-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-861-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-861-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-862-100" class="ct-text-block oxel_iconlist__row__label" >Rak Depot&nbsp;8 Kontainer</h4></div><div id="div_block-863-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-864-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-864-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-865-100" class="ct-text-block oxel_iconlist__row__label" >Produk Senilai 8.000.000</h4></div><div id="div_block-866-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-867-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-867-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-868-100" class="ct-text-block oxel_iconlist__row__label" >Desain 3D Interior</h4></div><div id="div_block-869-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-870-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-870-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-871-100" class="ct-text-block oxel_iconlist__row__label" >Lisensi Cleanique Mart</h4></div><div id="div_block-872-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-873-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-873-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-874-100" class="ct-text-block oxel_iconlist__row__label" >Peralatan Produksi</h4></div><div id="div_block-875-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-876-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-876-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-877-100" class="ct-text-block oxel_iconlist__row__label" >Include Biaya Kirim</h4></div><div id="div_block-878-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-879-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-879-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-880-100" class="ct-text-block oxel_iconlist__row__label" >Peralatan Packing</h4></div><div id="div_block-881-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-882-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-882-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-883-100" class="ct-text-block oxel_iconlist__row__label" >Set-Up Marketplace</h4></div><div id="div_block-884-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-885-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-885-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-886-100" class="ct-text-block oxel_iconlist__row__label" >Media Promo Cetak</h4></div><div id="div_block-887-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-888-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-888-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-889-100" class="ct-text-block oxel_iconlist__row__label" >Instalasi Media Promo&nbsp;<br>Cetak di Lokasi</h4></div><div id="div_block-890-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-891-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-891-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-892-100" class="ct-text-block oxel_iconlist__row__label" >Training Chemical&nbsp;<br>dan Bisnis<br></h4></div><div id="div_block-893-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-894-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-894-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-895-100" class="ct-text-block oxel_iconlist__row__label" >Landing Page SEO<br>Friendly</h4></div><div id="div_block-896-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-897-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-897-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-898-100" class="ct-text-block oxel_iconlist__row__label" >Listing &amp; Optimasi<br>Google Maps<br></h4></div><div id="div_block-899-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-900-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-900-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-901-100" class="ct-text-block oxel_iconlist__row__label" >Set-Up dan Optimasi<br>Sosmed</h4></div><div id="div_block-902-100" class="ct-div-block oxel_iconlist__row oxel_iconlist__row--dark" ><div id="fancy_icon-903-100" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-fancy_icon-903-100"><use xlink:href="#FontAwesomeicon-check"></use></svg></div><h4 id="text_block-904-100" class="ct-text-block oxel_iconlist__row__label" >Filter UV<br></h4></div><img  id="image-905-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/Hanya-untuk-10-orang-pertama.svg" class="ct-image" srcset="" sizes="(max-width: 111px) 100vw, 111px" /><a id="link-906-100" class="ct-link" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mohon+Informasi+untuk+Promo+Paket+King+%2ACleanique%20Mart%20%20%2A&#038;type=phone_number&#038;app_absent=0" target="_blank"  ><h5 id="text_block-907-100" class="ct-text-block" >ORDER SEKARANG</h5></a></div></div></div></div></section><section id="section-1021-100" class=" ct-section" ><div class="ct-section-inner-wrap"><div id="new_columns-1022-100" class="ct-new-columns" ><div id="div_block-1023-100" class="ct-div-block" ><h2 id="headline-1025-100" class="ct-headline atomic-secondary-heading">Cara Bergabung</h2><div id="div_block-1027-100" class="ct-div-block oxel_iconlist" ><div id="div_block-1028-100" class="ct-div-block oxel_iconlist__row nav" ><div id="green_icon" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-green_icon"><use xlink:href="#FontAwesomeicon-check-circle"></use></svg></div><div id="text_block-1030-100" class="ct-text-block oxel_iconlist__row__label" >Isi formulir pendaftaran</div></div><div id="div_block-1031-100" class="ct-div-block oxel_iconlist__row nav" ><div id="green_icon" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-green_icon"><use xlink:href="#FontAwesomeicon-check-circle"></use></svg></div><div id="text_block-1033-100" class="ct-text-block oxel_iconlist__row__label" >Pilih paket sesuai yang anda inginkan</div></div><div id="div_block-1086-100" class="ct-div-block oxel_iconlist__row nav" ><div id="green_icon" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-green_icon"><use xlink:href="#FontAwesomeicon-check-circle"></use></svg></div><div id="text_block-1088-100" class="ct-text-block oxel_iconlist__row__label" >Menjadwalkan presentasi &amp; Survey Lokasi</div></div><div id="div_block-1091-100" class="ct-div-block oxel_iconlist__row nav" ><div id="green_icon" class="ct-fancy-icon oxel_iconlist__row__icon" ><svg id="svg-green_icon"><use xlink:href="#FontAwesomeicon-check-circle"></use></svg></div><div id="text_block-1093-100" class="ct-text-block oxel_iconlist__row__label" >DP tanda jadi minimal <b>50%</b> dimuka</div></div></div><a id="link-1326-100" class="ct-link oxel_icon_button__container" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mau+Minta+Informasi+Tentang+Mitra+Cleanique+Mart%2A&#038;type=phone_number&#038;app_absent=0" target="_self" rel="nofollow"  role="button"><div id="fancy_icon-1327-100" class="ct-fancy-icon oxel_icon_button_icon" ><svg id="svg-fancy_icon-1327-100"><use xlink:href="#FontAwesomeicon-whatsapp"></use></svg></div><div id="text_block-1328-100" class="ct-text-block oxel_icon_button_text" >HUBUNGI KAMI</div></a></div><div id="div_block-1040-100" class="ct-div-block" ><img  id="image-1041-100" alt="" src="<?php echo esc_url($theme_uri); ?>/assets/images/hero-section.webp" class="ct-image bottom-img" srcset="<?php echo esc_url($theme_uri); ?>/assets/images/hero-section.webp 1000w, <?php echo esc_url($theme_uri); ?>/assets/images/hero-section-300x156.webp 300w, <?php echo esc_url($theme_uri); ?>/assets/images/hero-section-768x400.webp 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></div></div></div></section><section id="section-1110-100" class=" ct-section" ><div class="ct-section-inner-wrap"><div id="div_block-1111-100" class="ct-div-block" ><h2 id="headline-1112-100" class="ct-headline atomic-secondary-heading">Tertarik untuk buka usaha bisnis dengan Cleanique Mart di area Anda?</h2><div id="text_block-1228-100" class="ct-text-block atomic-subheading" >Hubungi kami sekarang juga di nomor WhatsApp di bawah ini<br><b></b></div><div id="div_block-1238-100" class="ct-div-block" ><a id="link-1332-100" class="ct-link oxel_icon_button__container" href="https://api.whatsapp.com/send/?phone=6287885590088&#038;text=Halo+%2Acleaniquemart.com%2A+Saya+Mau+Minta+Informasi+Tentang+Mitra+Cleanique+Mart%2A&#038;type=phone_number&#038;app_absent=0"  rel="nofollow"  role="button"><div id="fancy_icon-1333-100" class="ct-fancy-icon oxel_icon_button_icon" ><svg id="svg-fancy_icon-1333-100"><use xlink:href="#FontAwesomeicon-whatsapp"></use></svg></div><div id="text_block-1334-100" class="ct-text-block oxel_icon_button_text" >CUSTOMER SERVICE</div></a></div></div></div></section>
 
 <?php
 get_footer();
