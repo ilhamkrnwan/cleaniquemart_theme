@@ -9,15 +9,15 @@
 
 ## 1. Metadata & SEO Spec
 
-| Parameter | Nilai / Konfigurasi |
-| :--- | :--- |
-| **Title Tag** | Peluang Usaha Bisnis 2026 Menjanjikan - Cleanique Mart |
+| Parameter            | Nilai / Konfigurasi                                                                                                              |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| **Title Tag**        | Peluang Usaha Bisnis 2026 Menjanjikan - Cleanique Mart                                                                           |
 | **Meta Description** | Jualan Sabun Curah Dengan Potensi Omzet 50+ Juta/Bulan!. Produk gampang laku Cocok untuk pemula, minim resiko, pasti balik modal |
-| **Target Keyword** | Peluang usaha 2026, peluang usaha sabun curah, bisnis depo sabun, distributor kimia laundry |
-| **Open Graph Title** | Peluang Usaha Bisnis 2026 Menjanjikan - Cleanique Mart |
-| **Open Graph Desc** | Jualan Sabun Curah Dengan Potensi Omzet 50+ Juta/Bulan!. Produk gampang laku Cocok untuk pemula, minim resiko, pasti balik modal |
-| **Canonical URL** | `https://cleaniquemart.com/` |
-| **Schema Types** | `Organization`, `WebSite`, `LocalBusiness`, `FAQPage` |
+| **Target Keyword**   | Peluang usaha 2026, peluang usaha sabun curah, bisnis depo sabun, distributor kimia laundry                                      |
+| **Open Graph Title** | Peluang Usaha Bisnis 2026 Menjanjikan - Cleanique Mart                                                                           |
+| **Open Graph Desc**  | Jualan Sabun Curah Dengan Potensi Omzet 50+ Juta/Bulan!. Produk gampang laku Cocok untuk pemula, minim resiko, pasti balik modal |
+| **Canonical URL**    | `https://cleaniquemart.com/`                                                                                                     |
+| **Schema Types**     | `Organization`, `WebSite`, `LocalBusiness`, `FAQPage`                                                                            |
 
 ---
 
@@ -25,7 +25,7 @@
 
 1. **Top Bar**: Pengumuman Promo Kemitraan & Hotline WhatsApp `087885590088`.
 2. **Navbar**: Logo Cleanique Mart, Menu Utama, Tombol "Konsultasi Gratis".
-3. **Hero Section**: 
+3. **Hero Section**:
    - Badge: `"Peluang Usaha 2026 - Potensi Profit Besar"`.
    - H1: `"Peluang Usaha Aneka Sabun dengan Potensi Omzet 50+ Juta/Bulan!"`.
    - Tombol CTA Primer: `KONSULTASI GRATIS` (ke WhatsApp).
@@ -42,8 +42,8 @@
 8. **Katalog Varian Produk Curah (Jerigen 25 Liter)**:
    - Hand Wash, Deterjen Busa, Deterjen Matic, Parfum Waterbase, Softener, Pelicin Setrika, Sabun Cuci Piring, Pel Lantai.
 9. **Social Proof & Testimoni Mitra Riil**:
-   - Windu Darojat (Mitra Temanggung - 19 thn di household).
-   - Johan Regan Jauw (Mitra Palembang).
+   - Ibu Idha (Mitra Temanggung - 19 thn di household).
+   - Pak Abdul Aziz (Mitra Palembang).
    - Idha (Mitra Maguwoharjo Sleman).
 10. **Kredibilitas Pabrik & Legalitas (PT Indotech Berkah Abadi)**:
     - Pengalaman 13+ tahun (sejak 2011), sertifikat produksi Kemenkes PKRT, hasil uji laboratorium.
@@ -62,13 +62,15 @@
 ## 3. Salinan Teks Lengkap (Wrapped Copywriting)
 
 ### Headline & Hero:
+
 ```text
 Peluang Usaha Aneka Sabun dengan Potensi Omzet 50+ Juta/Bulan!
-Jualan Sabun Curah Dengan Potensi Omzet 50+ Juta/Bulan! 
+Jualan Sabun Curah Dengan Potensi Omzet 50+ Juta/Bulan!
 Produk gampang laku, cocok untuk pemula, minim resiko, pasti balik modal.
 ```
 
 ### Agitasi Masalah:
+
 ```text
 Kamu Mau Sukses dalam Bisnis, Tapi...
 - Pernah merasa bingung harus mulai dari mana?
@@ -82,6 +84,7 @@ Peluang besar terlewat begitu saja. Kamu terjebak dalam kehidupan finansial yang
 ```
 
 ### Solusi Cleanique Mart:
+
 ```text
 Cleanique Mart: Bisnis Aneka Sabun Auto Balik Modal!
 Kami menawarkan produk homecare seperti deterjen, sabun, pelembut, dan pewangi yang selalu dibutuhkan oleh konsumen. Dengan inovasi sejak 2011, kami telah menjual lebih dari 1 juta produk, menjadi pilihan utama bagi banyak pelanggan.
@@ -91,15 +94,18 @@ Kami menawarkan produk homecare seperti deterjen, sabun, pelembut, dan pewangi y
 ```
 
 ### Rincian Testimoni Mitra:
-1. **Windu Darojat (Cleanique Mart Temanggung)**:
-   > *"Sudah 19 tahun saya berbisnis pada sektor Household. Namun ketika saya menjadi Mitra Depo Cleanique banyak sekali dukungan yang tidak saya dapatkan di Perusahaan lain."*
-2. **Johan Regan Jauw (Cleanique Mart Palembang)**:
-   > *"Kami sangat mengapresiasi peluang bisnis ini dan berkomitmen untuk mengembangkan jaringan distribusi yang luas serta menyediakan produk chemical laundry dan rumah tangga berkualitas bagi masyarakat Kota Palembang."*
+
+1. **Ibu Idha (Cleanique Mart Pacitan)**:
+   > _"Sudah 19 tahun saya berbisnis pada sektor Household. Namun ketika saya menjadi Mitra Depo Cleanique banyak sekali dukungan yang tidak saya dapatkan di Perusahaan lain."_
+2. **Pak Abdul Aziz (Cleanique Mart Palembang)**:
+   > _"Kami sangat mengapresiasi peluang bisnis ini dan berkomitmen untuk mengembangkan jaringan distribusi yang luas serta menyediakan produk chemical laundry dan rumah tangga berkualitas bagi masyarakat Kota Palembang."_
 3. **Idha (Cleanique Mart Maguwoharjo Sleman)**:
-   > *"Bimbingan Depo Cleanique sangat membantu saya dalam mengembangkan usaha isi ulang sabun. Omzet naik drastis, untung berlimpah!"*
+   > _"Bimbingan Depo Cleanique sangat membantu saya dalam mengembangkan usaha isi ulang sabun. Omzet naik drastis, untung berlimpah!"_
 
 ### Rincian Paket Kemitraan:
+
 #### 1. Paket Starter — Rp 15.000.000,-
+
 - Rak Depot Display Eksklusif 8 Kontainer
 - Pasokan Produk Siap Jual Senilai Rp 6.000.000,-
 - Desain 3D Interior & Tata Letak Toko
@@ -117,6 +123,7 @@ Kami menawarkan produk homecare seperti deterjen, sabun, pelembut, dan pewangi y
 - Filter UV Higienis Air Isi Ulang
 
 #### 2. Paket King — Rp 27.500.000,- (Harga Normal Rp 30.000.000,-)
+
 - Seluruh 15 fasilitas yang ada di Paket Starter
 - Pasokan Produk Siap Jual Lebih Besar Senilai Rp 8.000.000,-
 - Pendampingan Bisnis Intensif & Hak Prioritas Wilayah

@@ -4,18 +4,18 @@
 > **Slug**: `konsentrat-pembersih-lantai-solusi-super-hemat-untuk-lantai-bersih-dan-harum`  
 > **Tanggal Publikasi**: 2025-03-26T07:32:09  
 > **Kategori**: Artikel / Edukasi Produk Cleanique Lab  
-> **Template WordPress Acuan**: `single.php`  
+> **Template WordPress Acuan**: `single.php`
 
 ---
 
 ## 1. Metadata & SEO Spec
 
-| Parameter | Nilai / Konfigurasi |
-| :--- | :--- |
-| **Title Tag** | Konsentrat Pembersih Lantai Solusi Super Hemat Untuk Lantai Bersih dan Harum - Cleanique Mart |
-| **Meta Excerpt** | Membersihkan lantai rumah atau gedung memang menjadi salah satu rutinitas yang tidak bisa dihindari. Namun, bagaimana jika Anda bisa mendapatkan cairan pembersi... |
-| **Canonical URL** | https://cleaniquemart.com/konsentrat-pembersih-lantai-solusi-super-hemat-untuk-lantai-bersih-dan-harum/ |
-| **Schema Types** | `Article`, `BlogPosting`, `Product` |
+| Parameter         | Nilai / Konfigurasi                                                                                                                                                 |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Title Tag**     | Konsentrat Pembersih Lantai Solusi Super Hemat Untuk Lantai Bersih dan Harum - Cleanique Mart                                                                       |
+| **Meta Excerpt**  | Membersihkan lantai rumah atau gedung memang menjadi salah satu rutinitas yang tidak bisa dihindari. Namun, bagaimana jika Anda bisa mendapatkan cairan pembersi... |
+| **Canonical URL** | https://cleaniquemart.com/konsentrat-pembersih-lantai-solusi-super-hemat-untuk-lantai-bersih-dan-harum/                                                             |
+| **Schema Types**  | `Article`, `BlogPosting`, `Product`                                                                                                                                 |
 
 ---
 
@@ -68,7 +68,7 @@ Tuang 1 botol konsentrat ke dalam wadah, lalu tambahkan 0,5 liter air. Aduk hing
 
 Ulangi langkah ini sebanyak 9 kali. Total air yang ditambahkan adalah 4,5 liter, sehingga bersama konsentrat 500 mL, Anda akan mendapatkan 5 liter cairan pel lantai siap pakai.
 
-### 4. Konsentrat  Pembersih Lantai Siap Digunakan
+### 4. Konsentrat Pembersih Lantai Siap Digunakan
 
 Setelah tercampur rata, cairan siap digunakan untuk mengepel lantai Anda. Simpel, bukan?
 
@@ -116,7 +116,7 @@ Di tengah banyaknya pilihan pembersih lantai di pasaran, Cleanique Lab menonjol 
 
 Konsentrat Pembersih Lantai Cleanique Lab 500 mL yang bisa menjadi 5 liter cairan pel lantai adalah investasi kecil dengan manfaat besar. dengan harga terjangkau, Anda mendapatkan lantai bersih, bebas kotoran dan bakteri, serta wangi lemon yang menyegarkan. Cara penggunaannya yang mudah dan fleksibilitasnya untuk berbagai kebutuhan menjadikan produk ini wajib ada di daftar belanja Anda. Jadi, tunggu apa lagi? Segera dapatkan konsentrat pembersih lantai Cleanique Lab dan rasakan sendiri manfaatnya untuk kebersihan lantai Anda!
 
-Tunggu apa lagi? Segera dapatkan **Konsentrat Pembersih Lantai** di Mitra-mitra kami di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](https://cleaniquemart.com/cleanique-mart-demak-2) , [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Temanggung 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Temanggung 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/).
+Tunggu apa lagi? Segera dapatkan **Konsentrat Pembersih Lantai** di Mitra-mitra kami di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](https://cleaniquemart.com/cleanique-mart-demak-2) , [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Pacitan 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Pacitan 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/).
 
 ---
 

@@ -28,11 +28,12 @@ $theme_uri = get_template_directory_uri();
 	<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-universal.css">
 	<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-11.css">
 	<?php if ( is_front_page() ) : ?>
-		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-100.css">
+		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-100.css?v=<?php echo CLEANIQUEMART_VERSION; ?>">
 	<?php elseif ( is_page( 'about' ) || is_page( 'tentang-kami' ) || is_page_template( 'page-about.php' ) ) : ?>
 		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-156.css">
 	<?php elseif ( is_page( 'kemitraan-cleanique-mart' ) || is_page( 'ide-bisnis-yang-menguntungkan-2026' ) || is_page( 'ide-usaha-yang-menjanjikan-2026' ) || is_page( 'usaha-sampingan-yang-menjanjikan-2026' ) || is_page_template( 'page-landing-kemitraan.php' ) || is_page_template( 'page-ide-bisnis-yang-menguntungkan-2026.php' ) || is_page_template( 'page-ide-usaha-yang-menjanjikan-2026.php' ) || is_page_template( 'page-usaha-sampingan-yang-menjanjikan-2026.php' ) || is_page_template( 'page-kemitraan-cleanique-mart.php' ) ) : ?>
 		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-472.css">
+		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/landing-page-enhancements.css?v=<?php echo CLEANIQUEMART_VERSION; ?>">
 	<?php elseif ( is_page( 'mitra-cleanique-mart' ) || is_page_template( 'page-mitra.php' ) || is_page_template( 'page-kemitraan-paket-starter.php' ) || is_page_template( 'page-kemitraan-paket-king.php' ) || is_page( 'paket-starter' ) || is_page( 'paket-king' ) ) : ?>
 		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-162.css">
 	<?php elseif ( is_page( 'contact-us' ) || is_page( 'kontak' ) || is_page_template( 'page-contact.php' ) ) : ?>
@@ -45,13 +46,18 @@ $theme_uri = get_template_directory_uri();
 	<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/ctc-whatsapp.css">
 	<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/main.css?v=<?php echo CLEANIQUEMART_VERSION; ?>">
 
-	<!-- jQuery -->
+	<!-- jQuery & Unslider Carousel -->
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/unslider.css">
+	<script src="<?php echo esc_url( $theme_uri ); ?>/assets/js/unslider-min.js"></script>
 
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( 'wp-embed-responsive wp-theme-oxygen-is-not-a-theme oxygen-body' ); ?>>
-<?php wp_body_open(); ?>
+<?php
+wp_body_open();
+get_template_part( 'template-parts/svg-defs' );
+?>
 
 <header id="_header-26-11" class="oxy-header-wrapper oxy-sticky-header oxy-header">
 	<div id="_header_row-27-11" class="oxy-header-row">

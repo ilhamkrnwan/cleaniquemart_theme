@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Template Name: Detail Mitra
  *
@@ -156,7 +156,7 @@ $outlets = array(
 	),
 	array(
 		'id'         => 'temanggung-1',
-		'name'       => 'Cleanique Mart Temanggung 1',
+		'name'       => 'Cleanique Mart Pacitan 1',
 		'region'     => 'jateng-diy',
 		'region_lbl' => 'Jawa Tengah & DIY',
 		'city'       => 'Temanggung, Jawa Tengah',
@@ -183,7 +183,7 @@ $outlets = array(
 	),
 	array(
 		'id'         => 'temanggung-2',
-		'name'       => 'Cleanique Mart Temanggung 2',
+		'name'       => 'Cleanique Mart Pacitan 2',
 		'region'     => 'jateng-diy',
 		'region_lbl' => 'Jawa Tengah & DIY',
 		'city'       => 'Temanggung, Jawa Tengah',
@@ -409,7 +409,7 @@ $back_url = home_url( '/mitra-cleanique-mart/' );
 			<div style="display:flex;gap:12px;flex-wrap:wrap;">
 				<a href="<?php echo esc_url( $wa_url ); ?>" target="_blank" rel="noopener noreferrer"
 				   style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:13px 26px;border-radius:999px;font-size:14px;font-weight:800;text-decoration:none;box-shadow:0 6px 20px rgba(37,211,102,0.4);">
-					<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.304A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 0 1-4.076-1.113l-.292-.174-3.038.796.812-2.965-.19-.305A7.96 7.96 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
 					Hubungi via WhatsApp
 				</a>
 				<a href="<?php echo esc_url( $maps_url ); ?>" target="_blank" rel="noopener noreferrer"
@@ -426,7 +426,7 @@ $back_url = home_url( '/mitra-cleanique-mart/' );
 		<div style="max-width:1160px;margin:0 auto;">
 
 			<!-- 2-Column Layout -->
-			<div style="display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:start;">
+			<div class="cm-detail-mitra-grid" style="display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:start;">
 
 				<!-- Kolom Kiri: Detail Lengkap -->
 				<div style="display:flex;flex-direction:column;gap:24px;">
@@ -532,7 +532,7 @@ $back_url = home_url( '/mitra-cleanique-mart/' );
 				</div><!-- Kolom Kiri -->
 
 				<!-- Kolom Kanan: Sidebar Sticky -->
-				<div style="display:flex;flex-direction:column;gap:20px;position:-webkit-sticky;position:sticky;top:90px;align-self:flex-start;">
+				<div class="cm-detail-mitra-sidebar" style="display:flex;flex-direction:column;gap:20px;position:-webkit-sticky;position:sticky;top:90px;align-self:flex-start;">
 
 					<!-- CTA WhatsApp -->
 					<div style="background:linear-gradient(135deg,#16a34a 0%,#15803d 100%);border-radius:20px;padding:26px;box-shadow:0 8px 24px rgba(22,163,74,0.3);color:#fff;text-align:center;">
@@ -540,7 +540,7 @@ $back_url = home_url( '/mitra-cleanique-mart/' );
 						<h3 style="font-family:'Lexend',sans-serif;font-size:17px;font-weight:800;margin:0 0 14px 0;line-height:1.3;"><?php echo esc_html( $outlet['name'] ); ?></h3>
 						<a href="<?php echo esc_url( $wa_url ); ?>" target="_blank" rel="noopener noreferrer"
 						   style="display:flex;align-items:center;justify-content:center;gap:8px;background:#fff;color:#16a34a;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:800;text-decoration:none;width:100%;box-sizing:border-box;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.304A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 0 1-4.076-1.113l-.292-.174-3.038.796.812-2.965-.19-.305A7.96 7.96 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
 							Chat WA Sekarang
 						</a>
 					</div>

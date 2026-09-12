@@ -1,21 +1,21 @@
-# Dokumentasi Artikel & Formulasi: Sabun Cuci Tangan Cair  Paket Bahan Arai 1 Kg Jadi 15 Liter
+# Dokumentasi Artikel & Formulasi: Sabun Cuci Tangan Cair Paket Bahan Arai 1 Kg Jadi 15 Liter
 
 > **URL Asli**: [https://cleaniquemart.com/sabun-cuci-tangan-cair-dengan-paket-bahan-arai/](https://cleaniquemart.com/sabun-cuci-tangan-cair-dengan-paket-bahan-arai/)  
 > **Slug**: `sabun-cuci-tangan-cair-dengan-paket-bahan-arai`  
 > **Tanggal Publikasi**: 2025-04-07T08:37:43  
 > **Kategori**: Artikel / Edukasi Produk Cleanique Lab  
-> **Template WordPress Acuan**: `single.php`  
+> **Template WordPress Acuan**: `single.php`
 
 ---
 
 ## 1. Metadata & SEO Spec
 
-| Parameter | Nilai / Konfigurasi |
-| :--- | :--- |
-| **Title Tag** | Sabun Cuci Tangan Cair  Paket Bahan Arai 1 Kg Jadi 15 Liter - Cleanique Mart |
-| **Meta Excerpt** | Sabun cuci tangan merupakan salah satu kebutuhan sehari-hari yang sangat penting untuk menjaga kebersihan dan kesehatan. Di tengah meningkatnya kesadaran akan p... |
-| **Canonical URL** | https://cleaniquemart.com/sabun-cuci-tangan-cair-dengan-paket-bahan-arai/ |
-| **Schema Types** | `Article`, `BlogPosting`, `Product` |
+| Parameter         | Nilai / Konfigurasi                                                                                                                                                 |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Title Tag**     | Sabun Cuci Tangan Cair Paket Bahan Arai 1 Kg Jadi 15 Liter - Cleanique Mart                                                                                         |
+| **Meta Excerpt**  | Sabun cuci tangan merupakan salah satu kebutuhan sehari-hari yang sangat penting untuk menjaga kebersihan dan kesehatan. Di tengah meningkatnya kesadaran akan p... |
+| **Canonical URL** | https://cleaniquemart.com/sabun-cuci-tangan-cair-dengan-paket-bahan-arai/                                                                                           |
+| **Schema Types**  | `Article`, `BlogPosting`, `Product`                                                                                                                                 |
 
 ---
 
@@ -114,7 +114,7 @@ Aroma strawberry tidak hanya memberikan kesan segar, tetapi juga memiliki daya t
 
 Arai Paket Bahan Sabun Cuci Tangan Cair 1 Kg Jadi 15 Liter Aroma Strawberry adalah solusi cerdas bagi Anda yang ingin membuat sabun cuci tangan berkualitas dengan cara yang mudah dan hemat. Produk ini menawarkan kepraktisan, efisiensi, dan aroma yang menyenangkan dalam satu paket. Baik untuk kebutuhan pribadi maupun bisnis, Arai bisa menjadi pilihan terbaik Anda.
 
-Jadi, tunggu apa lagi? Segera pesan paket sabun cuci tangan ini dan nikmati manfaatnya sekarang juga! Untuk informasi lebih lanjut atau pemesanan bisa di mitra-mitra kami di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](https://cleaniquemart.com/cleanique-mart-demak-2), [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Temanggung 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Temanggung 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/).
+Jadi, tunggu apa lagi? Segera pesan paket sabun cuci tangan ini dan nikmati manfaatnya sekarang juga! Untuk informasi lebih lanjut atau pemesanan bisa di mitra-mitra kami di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](https://cleaniquemart.com/cleanique-mart-demak-2), [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Pacitan 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Pacitan 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/).
 
 ---
 

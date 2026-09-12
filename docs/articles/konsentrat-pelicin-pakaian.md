@@ -4,18 +4,18 @@
 > **Slug**: `konsentrat-pelicin-pakaian-praktis-hemat-dan-wangi`  
 > **Tanggal Publikasi**: 2025-03-18T08:37:02  
 > **Kategori**: Artikel / Edukasi Produk Cleanique Lab  
-> **Template WordPress Acuan**: `single.php`  
+> **Template WordPress Acuan**: `single.php`
 
 ---
 
 ## 1. Metadata & SEO Spec
 
-| Parameter | Nilai / Konfigurasi |
-| :--- | :--- |
-| **Title Tag** | Konsentrat Pelicin Pakaian: Praktis, Hemat, dan Wangi - Cleanique Mart |
-| **Meta Excerpt** | Apakah Anda sedang mencari solusi praktis untuk menjaga pakaian tetap rapi, lembut, dan wangi tahan lama? Konsentrat Pelicin Pakaian Cleanique Lab hadir sebagai... |
-| **Canonical URL** | https://cleaniquemart.com/konsentrat-pelicin-pakaian-praktis-hemat-dan-wangi/ |
-| **Schema Types** | `Article`, `BlogPosting`, `Product` |
+| Parameter         | Nilai / Konfigurasi                                                                                                                                                 |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Title Tag**     | Konsentrat Pelicin Pakaian: Praktis, Hemat, dan Wangi - Cleanique Mart                                                                                              |
+| **Meta Excerpt**  | Apakah Anda sedang mencari solusi praktis untuk menjaga pakaian tetap rapi, lembut, dan wangi tahan lama? Konsentrat Pelicin Pakaian Cleanique Lab hadir sebagai... |
+| **Canonical URL** | https://cleaniquemart.com/konsentrat-pelicin-pakaian-praktis-hemat-dan-wangi/                                                                                       |
+| **Schema Types**  | `Article`, `BlogPosting`, `Product`                                                                                                                                 |
 
 ---
 
@@ -104,7 +104,7 @@ Cleanique Lab dikenal dengan standar kualitasnya yang tinggi. Konsentrat ini dir
 
 Konsentrat Pelicin Pakaian Cleanique Lab adalah solusi ideal bagi siapa saja yang menginginkan pakaian rapi, lembut, dan wangi tanpa harus mengeluarkan banyak biaya atau tenaga. Dari satu botol konsentrat, Anda bisa menghasilkan 5 liter cairan pelicin dengan aroma Sakura Fresh yang memikat. Pengolahannya mudah, penggunaannya praktis, dan hasilnya memuaskan semua dalam satu paket hemat dan efisien.
 
-Jika Anda tertarik untuk mencoba, . Jadikan Konsentrat Pelicin Pakaian Cleanique Lab sebagai bagian dari rutinitas perawatan pakaian Anda,  Temukan produk Konsentrat Pelicin Pakaian Cleanique Lab di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](/cleanique-mart-demak-2), [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Temanggung 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Temanggung 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/). Dan nikmati sensasi pakaian yang selalu segar dan rapi setiap hari!
+Jika Anda tertarik untuk mencoba, . Jadikan Konsentrat Pelicin Pakaian Cleanique Lab sebagai bagian dari rutinitas perawatan pakaian Anda,  Temukan produk Konsentrat Pelicin Pakaian Cleanique Lab di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](/cleanique-mart-demak-2), [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Pacitan 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Pacitan 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/). Dan nikmati sensasi pakaian yang selalu segar dan rapi setiap hari!
 
 ---
 

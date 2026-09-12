@@ -4,18 +4,18 @@
 > **Slug**: `paket-bahan-pewangi-laundry`  
 > **Tanggal Publikasi**: 2025-03-17T07:46:18  
 > **Kategori**: Artikel / Edukasi Produk Cleanique Lab  
-> **Template WordPress Acuan**: `single.php`  
+> **Template WordPress Acuan**: `single.php`
 
 ---
 
 ## 1. Metadata & SEO Spec
 
-| Parameter | Nilai / Konfigurasi |
-| :--- | :--- |
-| **Title Tag** | Paket Bahan Pewangi Laundry Essenz Solusi Cerdas untuk Kebutuhan Laundry Anda - Cleanique Mart |
-| **Meta Excerpt** | Mencari solusi pewangi laundry yang hemat, berkualitas, dan tahan lama? Bahan Pewangi Laundry Essenz dari Cleanique Lab adalah jawaban tepat untuk Anda. Dengan ... |
-| **Canonical URL** | https://cleaniquemart.com/paket-bahan-pewangi-laundry/ |
-| **Schema Types** | `Article`, `BlogPosting`, `Product` |
+| Parameter         | Nilai / Konfigurasi                                                                                                                                                 |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Title Tag**     | Paket Bahan Pewangi Laundry Essenz Solusi Cerdas untuk Kebutuhan Laundry Anda - Cleanique Mart                                                                      |
+| **Meta Excerpt**  | Mencari solusi pewangi laundry yang hemat, berkualitas, dan tahan lama? Bahan Pewangi Laundry Essenz dari Cleanique Lab adalah jawaban tepat untuk Anda. Dengan ... |
+| **Canonical URL** | https://cleaniquemart.com/paket-bahan-pewangi-laundry/                                                                                                              |
+| **Schema Types**  | `Article`, `BlogPosting`, `Product`                                                                                                                                 |
 
 ---
 
@@ -30,7 +30,7 @@
 
 ## 3. Konten Lengkap Artikel (Wrapped Body Content)
 
-Mencari solusi pewangi laundry yang hemat, berkualitas, dan tahan lama? Bahan Pewangi Laundry  Essenz dari [Cleanique Lab](http://cleaniquelab.com) adalah jawaban tepat untuk Anda. Dengan satu paket bahan seberat 800 gram, Anda dapat menghasilkan 8 liter pewangi laundry waterbase yang memiliki aroma segar dan tahan lama. Mari kita telusuri lebih dalam mengapa produk ini menjadi pilihan favorit banyak orang.
+Mencari solusi pewangi laundry yang hemat, berkualitas, dan tahan lama? Bahan Pewangi Laundry Essenz dari [Cleanique Lab](http://cleaniquelab.com) adalah jawaban tepat untuk Anda. Dengan satu paket bahan seberat 800 gram, Anda dapat menghasilkan 8 liter pewangi laundry waterbase yang memiliki aroma segar dan tahan lama. Mari kita telusuri lebih dalam mengapa produk ini menjadi pilihan favorit banyak orang.
 
 ## Keunggulan Paket Bahan Pewangi Laundry Essenz
 
@@ -86,9 +86,9 @@ Mencari solusi pewangi laundry yang hemat, berkualitas, dan tahan lama? Bahan Pe
 
 - Lavender
 
-Bahan Pewangi Laundry  Essenz adalah solusi hemat. Dengan satu paket bahan seberat 800 gram, Anda dapat menghasilkan 8 liter pewangi laundry waterbase yang memiliki aroma segar dan tahan lama. Dapatkan hasil maksimal dengan biaya minimal!
+Bahan Pewangi Laundry Essenz adalah solusi hemat. Dengan satu paket bahan seberat 800 gram, Anda dapat menghasilkan 8 liter pewangi laundry waterbase yang memiliki aroma segar dan tahan lama. Dapatkan hasil maksimal dengan biaya minimal!
 
-Ingin merasakan manfaat Bahan Pewangi Laundry Essenz? Temukan produk Bahan Pewangi Laundry di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](/cleanique-mart-demak-2), [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Temanggung 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Temanggung 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/).  Tunggu apalagi?? Ayo Pesan Sekarang!
+Ingin merasakan manfaat Bahan Pewangi Laundry Essenz? Temukan produk Bahan Pewangi Laundry di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](/cleanique-mart-demak-2), [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Pacitan 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Pacitan 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/).  Tunggu apalagi?? Ayo Pesan Sekarang!
 
 ---
 

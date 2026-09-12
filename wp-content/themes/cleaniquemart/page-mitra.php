@@ -155,7 +155,7 @@ $outlets = array(
 	),
 	array(
 		'id'         => 'temanggung-1',
-		'name'       => 'Cleanique Mart Temanggung 1',
+		'name'       => 'Cleanique Mart Pacitan 1',
 		'region'     => 'jateng-diy',
 		'region_lbl' => 'Jawa Tengah & DIY',
 		'city'       => 'Temanggung, Jawa Tengah',
@@ -182,7 +182,7 @@ $outlets = array(
 	),
 	array(
 		'id'         => 'temanggung-2',
-		'name'       => 'Cleanique Mart Temanggung 2',
+		'name'       => 'Cleanique Mart Pacitan 2',
 		'region'     => 'jateng-diy',
 		'region_lbl' => 'Jawa Tengah & DIY',
 		'city'       => 'Temanggung, Jawa Tengah',
@@ -375,52 +375,7 @@ $outlets = array(
 		</div>
 	</section>
 
-	<!-- Enriched Overview Statistics Section -->
-	<section style="background:#ffffff;padding:40px 20px 20px 20px;">
-		<div style="max-width:1160px;margin:0 auto;">
-			<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:20px;">
-				<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px;">
-					<div style="width:48px;height:48px;border-radius:12px;background:#e0e7ff;display:flex;align-items:center;justify-content:center;color:#0c00ff;flex-shrink:0;">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-					</div>
-					<div>
-						<div style="font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;">12+ Cabang</div>
-						<div style="font-size:13px;color:#64748b;margin-top:4px;">Aktif Melayani Pembelian Curah</div>
-					</div>
-				</div>
 
-				<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px;">
-					<div style="width:48px;height:48px;border-radius:12px;background:#dcfce7;display:flex;align-items:center;justify-content:center;color:#16a34a;flex-shrink:0;">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-					</div>
-					<div>
-						<div style="font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;">100% Legal PKRT</div>
-						<div style="font-size:13px;color:#64748b;margin-top:4px;">Izin Kemenkes RI &amp; Halal Resmi</div>
-					</div>
-				</div>
-
-				<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px;">
-					<div style="width:48px;height:48px;border-radius:12px;background:#fef3c7;display:flex;align-items:center;justify-content:center;color:#d97706;flex-shrink:0;">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-					</div>
-					<div>
-						<div style="font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;">3 Pulau Besar</div>
-						<div style="font-size:13px;color:#64748b;margin-top:4px;">Jawa, Sumatera, dan Terus Bertambah</div>
-					</div>
-				</div>
-
-				<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px;">
-					<div style="width:48px;height:48px;border-radius:12px;background:#e0f2fe;display:flex;align-items:center;justify-content:center;color:#0284c7;flex-shrink:0;">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-					</div>
-					<div>
-						<div style="font-size:24px;font-weight:800;color:#0f172a;line-height:1.1;">Radius 3 Km</div>
-						<div style="font-size:13px;color:#64748b;margin-top:4px;">Proteksi Wilayah Eksklusif Mitra</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- Interactive Search & Region Filter Toolbar -->
 	<section style="background:#ffffff;padding:20px 20px 30px 20px;border-bottom:1px solid #f1f5f9;">
@@ -493,88 +448,39 @@ $outlets = array(
 										onmouseover="this.style.transform='scale(1.06)'"
 										onmouseout="this.style.transform='scale(1)'"
 									/>
-									<span style="position:absolute;bottom:12px;right:12px;background:rgba(15,23,42,0.75);color:#ffffff;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:5px;backdrop-filter:blur(4px);pointer-events:none;">
-										<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-										Perbesar
-									</span>
 								</a>
 
-								<!-- Region Badge overlay -->
-								<span style="position:absolute;top:12px;left:12px;background:#0c00ff;color:#ffffff;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+								<!-- Region / Location Badge overlay -->
+								<span style="position:absolute;top:12px;left:12px;background:#0c00ff;color:#ffffff;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 2px 6px rgba(0,0,0,0.2);display:inline-flex;align-items:center;gap:4px;">
+									<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 									<?php echo esc_html( $o['region_lbl'] ); ?>
 								</span>
 							</div>
 
 							<!-- Card Content -->
-							<div style="padding:22px 20px 16px 20px;">
-								<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
-									<span style="display:inline-flex;align-items:center;gap:4px;color:#16a34a;background:#dcfce7;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">
-										<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-										Mitra Resmi Terverifikasi
-									</span>
-								</div>
-
+							<div style="padding:22px 20px 18px 20px;">
 								<h2 style="font-family:'Lexend',sans-serif;font-size:19px;font-weight:700;color:#0f172a;margin:0 0 10px 0;line-height:1.3;">
 									<?php echo esc_html( $o['name'] ); ?>
 								</h2>
 
-								<p style="font-size:13.5px;color:#475569;line-height:1.6;margin:0 0 14px 0;display:flex;align-items:flex-start;gap:8px;">
+								<p style="font-size:13.5px;color:#475569;line-height:1.6;margin:0;display:flex;align-items:flex-start;gap:8px;">
 									<svg style="flex-shrink:0;color:#0c00ff;margin-top:2px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 									<span><?php echo esc_html( $o['addr'] ); ?></span>
 								</p>
-
-								<div style="font-size:12px;color:#64748b;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:8px;margin-bottom:12px;">
-									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-									<span>Buka Setiap Hari: <strong>08.00 – 20.00 WIB</strong></span>
-								</div>
-
-								<!-- Quick Service Chips -->
-								<div style="display:flex;flex-wrap:wrap;gap:6px;">
-									<span class="cm-mitra-quick-badge">Isi Ulang Curah</span>
-									<span class="cm-mitra-quick-badge">30 Parfum</span>
-									<span class="cm-mitra-quick-badge">QRIS Ready</span>
-								</div>
 							</div>
 						</div>
 
 						<!-- Card Actions (Always pinned to bottom) -->
-						<div style="padding:0 20px 22px 20px;display:flex;flex-direction:column;gap:10px;">
+						<div style="padding:0 20px 22px 20px;">
 							<a 
 								href="<?php echo esc_url( home_url( '/detail-mitra/?mitra=' . $o['id'] ) ); ?>"
 								class="cm-btn-detail-mitra"
-								style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:#0c00ff;color:#ffffff;padding:11px 16px;border-radius:10px;font-size:13.5px;font-weight:700;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(12,0,255,0.2);transition:all 0.2s;text-decoration:none;box-sizing:border-box;"
+								style="width:100%;display:flex;align-items:center;justify-content:center;background:#0c00ff;color:#ffffff;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:700;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(12,0,255,0.2);transition:all 0.2s;text-decoration:none;box-sizing:border-box;"
 								onmouseover="this.style.background='#0900cc';this.style.transform='translateY(-1px)';"
 								onmouseout="this.style.background='#0c00ff';this.style.transform='none';"
 							>
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
 								Lihat Detail Mitra
 							</a>
-
-							<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-								<a 
-									href="<?php echo esc_url( $wa_url ); ?>" 
-									target="_blank" 
-									rel="noopener noreferrer"
-									style="display:flex;align-items:center;justify-content:center;gap:6px;background:#25D366;color:#ffffff;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;transition:background 0.2s;text-align:center;"
-									onmouseover="this.style.background='#1eb857'"
-									onmouseout="this.style.background='#25D366'"
-								>
-									<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-									Chat WA
-								</a>
-
-								<a 
-									href="<?php echo esc_url( $gmaps_url ); ?>" 
-									target="_blank" 
-									rel="noopener noreferrer"
-									style="display:flex;align-items:center;justify-content:center;gap:6px;background:#ffffff;border:1.5px solid #0c00ff;color:#0c00ff;padding:9px 12px;border-radius:8px;font-size:12.5px;font-weight:700;text-decoration:none;transition:all 0.2s;text-align:center;"
-									onmouseover="this.style.background='#0c00ff';this.style.color='#ffffff';"
-									onmouseout="this.style.background='#ffffff';this.style.color='#0c00ff';"
-								>
-									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
-									Petunjuk
-								</a>
-							</div>
 						</div>
 					</div>
 				<?php endforeach; ?>
@@ -630,7 +536,7 @@ $outlets = array(
 					onmouseover="this.style.transform='translateY(-2px)'"
 					onmouseout="this.style.transform='translateY(0)'"
 				>
-					<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.304A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 0 1-4.076-1.113l-.292-.174-3.038.796.812-2.965-.19-.305A7.96 7.96 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
 					Cek Kuota Wilayah Anda via WhatsApp
 				</a>
 			</div>
@@ -643,60 +549,6 @@ $outlets = array(
 
 <script>
 jQuery(document).ready(function($) {
-	// Raw outlet data (untuk filter & search)
-	var cmOutlets = <?php echo wp_json_encode( $outlets ); ?>;
-	var imgDir = <?php echo wp_json_encode( $img_dir ); ?>;
-
-	// Interactive Filter Tabs
-	$('.cm-filter-btn').on('click', function() {
-		$('.cm-filter-btn').removeClass('active').css({
-			'background': '#ffffff',
-			'color': '#475569',
-			'border-color': '#cbd5e1'
-		});
-		$(this).addClass('active').css({
-			'background': '#0c00ff',
-			'color': '#ffffff',
-			'border-color': '#0c00ff'
-		});
-
-		var filter = $(this).data('filter');
-		var searchTerm = $('#cm-outlet-search').val().toLowerCase().trim();
-		filterOutlets(filter, searchTerm);
-	});
-
-	// Live Search Input
-	$('#cm-outlet-search').on('input', function() {
-		var searchTerm = $(this).val().toLowerCase().trim();
-		var activeFilter = $('.cm-filter-btn.active').data('filter');
-		filterOutlets(activeFilter, searchTerm);
-	});
-
-	function filterOutlets(region, search) {
-		var visibleCount = 0;
-		$('.cm-outlet-item').each(function() {
-			var itemRegion = $(this).data('region');
-			var itemSearch = $(this).data('search');
-
-			var matchRegion = (region === 'all' || itemRegion === region);
-			var matchSearch = (!search || itemSearch.indexOf(search) > -1);
-
-			if (matchRegion && matchSearch) {
-				$(this).fadeIn(200);
-				visibleCount++;
-			} else {
-				$(this).hide();
-			}
-		});
-
-		if (visibleCount === 0) {
-			$('#cm-no-results').fadeIn(200);
-		} else {
-			$('#cm-no-results').hide();
-		}
-	}
-});
-</script>
 
 	// Interactive Filter Tabs
 	$('.cm-filter-btn').on('click', function() {

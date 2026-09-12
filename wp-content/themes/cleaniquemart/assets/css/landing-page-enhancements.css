@@ -1,3 +1,15 @@
+
+/* Hard safety guard against any broken unslider/sliders */
+.cm-landing-page-wrap .ct-slider,
+.cm-landing-page-wrap .oxygen-unslider-container,
+.cm-landing-page-wrap .unslider,
+.cm-landing-page-wrap #slider-30-472,
+.cm-landing-page-wrap #slider-229-472 {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
 /**
  * Cleanique Mart - Dedicated Landing Page Visual Enhancements
  * Applied to:
@@ -621,6 +633,290 @@
     margin: 0 auto 20px;
 }
 
+
+/* ==========================================================================
+   2B. BUKTI TRANSAKSI & PEMBELIAN NYATA GALLERY (#_gallery-61-472)
+   ========================================================================== */
+#section-16-472 #new_columns-23-472 {
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+#section-16-472 #div_block-24-472 {
+    width: 100% !important;
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+#section-16-472 #headline-25-472 {
+    font-size: clamp(24px, 3.2vw, 36px) !important;
+    line-height: 1.3 !important;
+    color: #0f172a !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+}
+
+#section-16-472 #headline-25-472 #span-26-472 {
+    color: #0284c7 !important;
+}
+
+#section-16-472 #headline-27-472 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #0369a1 !important;
+    margin: 0 auto 16px !important;
+    text-align: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: #e0f2fe !important;
+    padding: 6px 18px !important;
+    border-radius: 9999px !important;
+    border: 1px solid #bae6fd !important;
+}
+
+#section-16-472 #text_block-28-472 {
+    font-size: 15.5px !important;
+    line-height: 1.7 !important;
+    color: #475569 !important;
+    text-align: center !important;
+    max-width: 780px !important;
+    margin: 0 auto 10px !important;
+}
+
+#section-16-472 #new_columns-59-472 {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+#section-16-472 #div_block-60-472 {
+    width: 100% !important;
+}
+
+#section-16-472 #_gallery-61-472 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    max-width: 1160px !important;
+    margin: 25px auto 30px !important;
+    padding: 0 !important;
+}
+
+/* ==========================================================================
+   REVIEW MARKETPLACE (#section-222-472 / #_gallery-228-472)
+   ========================================================================== */
+#section-222-472 {
+    background: #f8fafc !important;
+    padding: 80px 20px !important;
+}
+
+#section-222-472 .ct-section-inner-wrap {
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+}
+
+#section-222-472 #headline-223-472 {
+    font-size: clamp(26px, 3.5vw, 38px) !important;
+    color: #0f172a !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+}
+
+#section-222-472 #_gallery-228-472 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 22px !important;
+    max-width: 1080px !important;
+    margin: 0 auto 30px !important;
+    padding: 0 !important;
+}
+
+/* ==========================================================================
+   CARDS & THUMBNAILS FOR ALL GALLERIES
+   ========================================================================== */
+.cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07) !important;
+    border: 1px solid #e2e8f0 !important;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease !important;
+    display: block !important;
+    position: relative !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15) !important;
+    border-color: #38bdf8 !important;
+}
+
+.cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item figure.oxy-gallery-item-contents {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    position: relative !important;
+    overflow: hidden !important;
+    height: 250px !important;
+    background: #f1f5f9 !important;
+}
+
+.cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 250px !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    display: block !important;
+    transition: transform 0.4s ease !important;
+    border-radius: 0 !important;
+}
+
+.cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item:hover img {
+    transform: scale(1.06) !important;
+}
+
+.cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item figcaption {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.92) 100%) !important;
+    color: #ffffff !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    padding: 24px 10px 10px !important;
+    text-align: center !important;
+    display: block !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.01em !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+    transition: opacity 0.2s ease !important;
+}
+
+/* Varian Produk Grid fix */
+#section-249-472 #div_block-252-472 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+}
+
+#section-249-472 #div_block-252-472 > .ct-div-block {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 18px !important;
+    padding: 20px 16px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+#section-249-472 #div_block-252-472 > .ct-div-block:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 16px 32px rgba(12, 0, 255, 0.1) !important;
+    border-color: rgba(12, 0, 255, 0.3) !important;
+    background: #ffffff !important;
+}
+
+/* Modal Lightbox */
+.cm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: cmFadeIn 0.25s ease;
+}
+
+.cm-modal-container {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: cmZoomIn 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cm-modal-container img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+}
+
+.cm-modal-caption {
+    margin-top: 12px;
+    color: #ffffff;
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 18px;
+    border-radius: 9999px;
+}
+
+.cm-modal-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #0f172a;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+    z-index: 10;
+}
+
+.cm-modal-close:hover {
+    transform: scale(1.1);
+    background: #f1f5f9;
+}
+
+@keyframes cmFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes cmZoomIn {
+    from { transform: scale(0.92); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
 /* ==========================================================================
    10. MOBILE & TABLET RESPONSIVE FIXES
    ========================================================================== */
@@ -688,5 +984,77 @@
 
     #section-332-472 #div_block-337-472 {
         grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* Gallery responsive overrides */
+@media (max-width: 1024px) {
+    #section-16-472 #_gallery-61-472 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    #section-222-472 #_gallery-228-472 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    #section-249-472 #div_block-252-472 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #section-16-472 #div_block-17-472 {
+        margin-top: -120px !important;
+        padding: 26px 20px !important;
+    }
+    #section-16-472 #new_columns-59-472 {
+        display: block !important;
+    }
+    #section-16-472 #_gallery-61-472 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+    }
+    #section-222-472 #_gallery-228-472 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+    }
+    #section-249-472 #div_block-252-472 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+    }
+    .cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item figure.oxy-gallery-item-contents {
+        height: 200px !important;
+    }
+    .cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item img {
+        max-height: 200px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #section-16-472 #_gallery-61-472 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    #section-222-472 #_gallery-228-472 {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 14px !important;
+    }
+    #section-249-472 #div_block-252-472 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    .cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item figure.oxy-gallery-item-contents {
+        height: 180px !important;
+    }
+    .cm-landing-page-wrap .oxy-gallery-grid .oxy-gallery-item img {
+        max-height: 180px !important;
+    }
+    .cm-modal-close {
+        top: -12px;
+        right: -12px;
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
     }
 }

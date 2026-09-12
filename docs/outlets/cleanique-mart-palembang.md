@@ -10,30 +10,30 @@
 
 ## 1. Metadata & Local SEO Spec
 
-| Parameter | Nilai / Konfigurasi |
-| :--- | :--- |
-| **Title Tag** | Cleanique Mart Palembang - Pusat Isi Ulang Sabun & Kimia Laundry Palembang |
-| **Meta Description** | Cari tempat isi ulang sabun curah, deterjen laundry, softener, dan parfum pakaian terlengkap di Palembang? Hubungi Cleanique Mart Palembang! Hemat & berkualitas pabrik. |
-| **Target Keywords** | pusat isi ulang sabun Palembang, parfum laundry Palembang, sabun cuci piring Palembang, deterjen laundry Palembang, pewangi laundry Palembang |
-| **Target Audience** | Pemilik laundry kiloan, pengusaha rumah makan/resto, dan warga rumah tangga di wilayah Palembang dan sekitarnya |
-| **Alamat Resmi** | Jl. Pipa Reja No. 31C, Pipa Jaya, Kec. Kemuning, Kota Palembang, Sumatera Selatan 30128 |
-| **Pengelola / Mitra** | Johan Regan Jauw |
-| **Kontak WhatsApp** | 087885590088 |
-| **Schema Types** | `LocalBusiness`, `Store`, `PostalAddress`, `GeoCoordinates` |
+| Parameter             | Nilai / Konfigurasi                                                                                                                                                      |
+| :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Title Tag**         | Cleanique Mart Palembang - Pusat Isi Ulang Sabun & Kimia Laundry Palembang                                                                                               |
+| **Meta Description**  | Cari tempat isi ulang sabun curah, deterjen laundry, softener, dan parfum pakaian terlengkap di Palembang? Hubungi Cleanique Mart Palembang! Hemat & berkualitas pabrik. |
+| **Target Keywords**   | pusat isi ulang sabun Palembang, parfum laundry Palembang, sabun cuci piring Palembang, deterjen laundry Palembang, pewangi laundry Palembang                            |
+| **Target Audience**   | Pemilik laundry kiloan, pengusaha rumah makan/resto, dan warga rumah tangga di wilayah Palembang dan sekitarnya                                                          |
+| **Alamat Resmi**      | Jl. Pipa Reja No. 31C, Pipa Jaya, Kec. Kemuning, Kota Palembang, Sumatera Selatan 30128                                                                                  |
+| **Pengelola / Mitra** | Pak Abdul Aziz                                                                                                                                                           |
+| **Kontak WhatsApp**   | 087885590088                                                                                                                                                             |
+| **Schema Types**      | `LocalBusiness`, `Store`, `PostalAddress`, `GeoCoordinates`                                                                                                              |
 
 ---
 
 ## 2. Struktur Section & Wireframe Layout
 
 1. **Local Hero Header**:
-   - H1: *"Cleanique Mart Palembang"*
-   - Subheadline: *"Hanya Disini pusat isi ulang sabun di Palembang paling lengkap !!!"*
+   - H1: _"Cleanique Mart Palembang"_
+   - Subheadline: _"Hanya Disini pusat isi ulang sabun di Palembang paling lengkap !!!"_
    - Tombol Aksi Langsung: `WHATSAPP CABANG PALEMBANG`
 2. **Section 1: Pusat Isi Ulang Sabun Palembang**:
    - Menjelaskan ketersediaan deterjen matic rendah busa untuk mesin cuci, deterjen extra busa cuci manual, softener wangi, sabun cuci piring konsentrat, dan paket bahan sabun hemat di Palembang.
 3. **Section 2: Parfum Laundry Palembang (Koleksi 30 Aroma Premium)**:
    - Menampilkan daftar lengkap 30 aroma parfum pakaian waterbase & solvent grade A:
-     *Apple Green, Aqua Fresh, Baby Orchid, Bond, Bougenville, Bubble Gum, Bvlgary Extreme, Dunhill Blue, Exotic Green, Green Tea, J-Lo Luxury, Lavender, Melon, Molto Blue, Ocean Fresh, Orchid Floral, Orchid Smooth, Orchid Mystique, Orchid Passion, Orchid Love, Polo, Phylux, Phoenix, Sakura, Snappy, Strawberry, Vanilla, Violet, Lily, Kopi*.
+     _Apple Green, Aqua Fresh, Baby Orchid, Bond, Bougenville, Bubble Gum, Bvlgary Extreme, Dunhill Blue, Exotic Green, Green Tea, J-Lo Luxury, Lavender, Melon, Molto Blue, Ocean Fresh, Orchid Floral, Orchid Smooth, Orchid Mystique, Orchid Passion, Orchid Love, Polo, Phylux, Phoenix, Sakura, Snappy, Strawberry, Vanilla, Violet, Lily, Kopi_.
 4. **Section 3: Sabun Cuci Piring Palembang (Solusi Usaha Kuliner & Rumah Tangga)**:
    - Formula konsentrat ekstrak jeruk nipis, efektif meluruhkan lemak minyak, lembut di kulit, dan aman untuk peralatan makan restoran/warung di Palembang.
 5. **Section 4: Deterjen & Pewangi Laundry Khusus Bisnis Kiloan**:
@@ -78,7 +78,7 @@ Kontak Pemesanan WhatsApp: 087885590088
   - `_outlet_address`: `Jl. Pipa Reja No. 31C, Pipa Jaya, Kec. Kemuning, Kota Palembang, Sumatera Selatan 30128`
   - `_outlet_phone_wa`: `087885590088`
   - `_outlet_gmaps_url`: `https://maps.google.com/?q=Jl+Pipa+Reja+No+31C+Pipa+Jaya+Palembang`
-  - `_outlet_manager`: `Johan Regan Jauw`
+  - `_outlet_manager`: `Pak Abdul Aziz`
 - **Format Pesan WhatsApp Lokal**:
   ```
   Halo Cleanique Mart Palembang, saya ingin memesan produk isi ulang sabun / parfum laundry di outlet Anda. Mohon info ketersediaan stok di Palembang.

@@ -26,12 +26,12 @@ $wa_url  = cleaniquemart_get_wa_url( 'Halo *cleaniquemart.com* Saya Mau Minta In
 
 		<!-- Mitra Cards Grid -->
 		<div class="cm-mitra-grid">
-			<!-- Mitra 1: Windu Darojat (Temanggung) -->
+			<!-- Mitra 1: Ibu Idha (Temanggung) -->
 			<div class="cm-mitra-card">
 				<div class="cm-mitra-visual">
 					<img 
 						src="https://cleaniquemart.com/wp-content/uploads/2025/03/temanggung.webp" 
-						alt="Cleanique Mart Temanggung - Windu Darojat"
+						alt="Cleanique Mart Pacitan - Ibu Idha"
 						loading="lazy"
 						class="cm-mitra-img"
 						onerror="this.src='<?php echo esc_url( $img_dir . 'WhatsApp-Image-2022-06-06-at-11.33.29-1.jpeg' ); ?>';"
@@ -45,19 +45,19 @@ $wa_url  = cleaniquemart_get_wa_url( 'Halo *cleaniquemart.com* Saya Mau Minta In
 					<div class="cm-mitra-author">
 						<div class="cm-mitra-avatar">WD</div>
 						<div>
-							<h3 class="cm-mitra-name">Windu Darojat</h3>
-							<p class="cm-mitra-role">Mitra Cleanique Mart Temanggung (2 Cabang)</p>
+							<h3 class="cm-mitra-name">Ibu Idha</h3>
+							<p class="cm-mitra-role">Mitra Cleanique Mart Pacitan (2 Cabang)</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- Mitra 2: Johan Regan Jauw (Palembang) -->
+			<!-- Mitra 2: Pak Abdul Aziz (Palembang) -->
 			<div class="cm-mitra-card">
 				<div class="cm-mitra-visual">
 					<img 
 						src="https://cleaniquemart.com/wp-content/uploads/2025/03/palembang.webp" 
-						alt="Cleanique Mart Palembang - Johan Regan Jauw"
+						alt="Cleanique Mart Palembang - Pak Abdul Aziz"
 						loading="lazy"
 						class="cm-mitra-img"
 						onerror="this.src='<?php echo esc_url( $img_dir . 'Salinan-DEPO-CLEANIQUE-FULL-STD-640x640.png' ); ?>';"
@@ -71,7 +71,7 @@ $wa_url  = cleaniquemart_get_wa_url( 'Halo *cleaniquemart.com* Saya Mau Minta In
 					<div class="cm-mitra-author">
 						<div class="cm-mitra-avatar" style="background:var(--cm-emerald-600);">JR</div>
 						<div>
-							<h3 class="cm-mitra-name">Johan Regan Jauw</h3>
+							<h3 class="cm-mitra-name">Pak Abdul Aziz</h3>
 							<p class="cm-mitra-role">Mitra Cleanique Mart Palembang (Kemuning)</p>
 						</div>
 					</div>

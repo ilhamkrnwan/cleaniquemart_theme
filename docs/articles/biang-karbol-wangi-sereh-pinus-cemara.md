@@ -4,18 +4,18 @@
 > **Slug**: `biang-karbol-wangi-sereh-pinus-cemara-5-liter`  
 > **Tanggal Publikasi**: 2025-10-29T07:00:44  
 > **Kategori**: Artikel / Edukasi Produk Cleanique Lab  
-> **Template WordPress Acuan**: `single.php`  
+> **Template WordPress Acuan**: `single.php`
 
 ---
 
 ## 1. Metadata & SEO Spec
 
-| Parameter | Nilai / Konfigurasi |
-| :--- | :--- |
-| **Title Tag** | Biang Karbol Wangi Sereh Pinus Cemara, Solusi Hemat & Efektif Jadi 5 Liter - Cleanique Mart |
-| **Meta Excerpt** | Ingin rumah selalu bersih, harum, dan bebas kuman? Kini hadir Konsentrat Biang Karbol Wangi Sereh & Pinus Cemara Cleanique Lab, pembersih lantai serbaguna yang ... |
-| **Canonical URL** | https://cleaniquemart.com/biang-karbol-wangi-sereh-pinus-cemara-5-liter/ |
-| **Schema Types** | `Article`, `BlogPosting`, `Product` |
+| Parameter         | Nilai / Konfigurasi                                                                                                                                                 |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Title Tag**     | Biang Karbol Wangi Sereh Pinus Cemara, Solusi Hemat & Efektif Jadi 5 Liter - Cleanique Mart                                                                         |
+| **Meta Excerpt**  | Ingin rumah selalu bersih, harum, dan bebas kuman? Kini hadir Konsentrat Biang Karbol Wangi Sereh & Pinus Cemara Cleanique Lab, pembersih lantai serbaguna yang ... |
+| **Canonical URL** | https://cleaniquemart.com/biang-karbol-wangi-sereh-pinus-cemara-5-liter/                                                                                            |
+| **Schema Types**  | `Article`, `BlogPosting`, `Product`                                                                                                                                 |
 
 ---
 
@@ -40,7 +40,7 @@ Ingin rumah selalu bersih, harum, dan bebas kuman? Kini hadir Konsentrat Biang K
 
 - Hanya dengan 500 ml konsentrat, Anda bisa menghasilkan hingga 5 liter karbol siap pakai.
 
-- Praktis untuk isi ulang (*refill*) dan sangat ekonomis untuk penggunaan sehari-hari.
+- Praktis untuk isi ulang (_refill_) dan sangat ekonomis untuk penggunaan sehari-hari.
 
 ### 2. Efisien Ongkos Kirim
 
@@ -98,7 +98,7 @@ Selain biang karbol, Cleanique Lab juga menyediakan berbagai konsentrat pembersi
 
 - [Biang sabun cuci piring](https://cleaniquemart.com/biang-sabun-cuci-piring-konsentrat/)
 
-Tunggu apa lagi? Segera dapatkan **Biang Karbol Cleanique Lab** di Mitra-mitra kami di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](https://cleaniquemart.com/cleanique-mart-demak-2) , [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Temanggung 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Temanggung 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](https://cleaniquemart.com/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/).
+Tunggu apa lagi? Segera dapatkan **Biang Karbol Cleanique Lab** di Mitra-mitra kami di [Cleanique Mart Palembang](https://cleaniquemart.com/cleanique-mart-palembang), [Cleanique Mart Depok](https://cleaniquemart.com/cleanique-mart-depok), [Cleanique Mart Malang](https://cleaniquemart.com/cleanique-mart-malang), [Cleanique Mart Situbondo](https://cleaniquemart.com/cleanique-mart-situbondo-3), [Cleanique Mart Demak](https://cleaniquemart.com/cleanique-mart-demak-2) , [Cleanique Mart Maguwoharjo](https://cleaniquemart.com/cleanique-mart-tajem-maguwoharjo/), [Cleanique Mart Pacitan 1](https://cleaniquemart.com/cleanique-mart-temanggung-1/), [Cleanique Mart Pacitan 2](https://cleaniquemart.com/cleanique-mart-temanggung-2/), [Cleanique Mart Karanganyar](https://cleaniquemart.com/cleanique-mart-karanganyar-2/), [Cleanique Mart Boyolali](https://cleaniquemart.com/cleanique-mart-boyolali/), [Cleanique Mart Jambi](https://cleaniquemart.com/cleanique-mart-jambi) dan [Cleanique Mart Jakarta Timur](https://cleaniquemart.com/cleanique-mart-jakarta-timur/).
 
 ---
 

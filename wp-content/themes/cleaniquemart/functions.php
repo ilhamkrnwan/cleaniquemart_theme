@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'CLEANIQUEMART_VERSION', '2.0.0' );
+define( 'CLEANIQUEMART_VERSION', '2.0.8' );
 define( 'CLEANIQUEMART_DIR', get_template_directory() );
 define( 'CLEANIQUEMART_URI', get_template_directory_uri() );
 

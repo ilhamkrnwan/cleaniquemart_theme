@@ -114,12 +114,12 @@ const outlets = [
   },
   {
     slug: 'cleanique-mart-temanggung',
-    title: 'Cleanique Mart Temanggung (Cabang 1 & 2)',
+    title: 'Cleanique Mart Pacitan (Cabang 1 & 2)',
     city: 'Temanggung',
     province: 'Jawa Tengah',
     address: 'Cabang 1: Jl. WR. Supratman No. 34, Dongkelan Utara, Jampiroso, Temanggung 56212 | Cabang 2: Jl. Megatan No. 4 Dusun Nglarangan RT 02/04 Candi Mulyo, Kedu, Temanggung',
     postalCode: '56212',
-    manager: 'Windu Darojat',
+    manager: 'Ibu Idha',
     phone: '087885590088',
     gmaps: 'https://maps.google.com/?q=Jl+WR+Supratman+No+34+Temanggung'
   }

@@ -22,6 +22,7 @@
 Cleanique Mart adalah jaringan kemitraan ritel dan depot isi ulang sabun curah, kimia laundry, dan pembersih rumah tangga berkualitas tinggi di bawah naungan **PT Indotech Berkah Abadi** (berpengalaman lebih dari 13 tahun sejak 2011 di industri PKRT).
 
 ### 5 Pilar Ekosistem Sinergi:
+
 1. **Cleanique Mart** (`cleaniquemart.com`): Jaringan kemitraan depot isi ulang sabun curah, chemical laundry, dan perbekalan kebersihan rumah tangga & B2B.
 2. **Cleanique Lab** (`cleaniquelab.com`): Pusat formulasi, riset, pengujian laboratorium, dan sertifikasi Halal MUI serta izin edar Kemenkes RI (PKRT).
 3. **Cleanique Academy** (`cleaniqueacademy.com`): Pusat edukasi, pelatihan formulasi sabun, SOP operasional depot, dan strategi pemasaran digital bagi para mitra.
@@ -29,9 +30,10 @@ Cleanique Mart adalah jaringan kemitraan ritel dan depot isi ulang sabun curah, 
 5. **Orchid Care / Orchid Brand** (`orchidbrand.id`): Merek manufaktur langsung kimia laundry premium berbasis standar IFRA dan sertifikasi mutu terpercaya.
 
 ### Target Audiens & Persona:
+
 - **Calon Mitra Depot (B2B/Franchise)**: Calon pengusaha pemula, ibu rumah tangga, pengusaha laundry, toko kelontong, dan pebisnis lokal yang ingin memiliki usaha depot sabun curah mandiri tanpa royalti dengan modal mulai Rp 15 Juta.
 - **Pengusaha Usaha Jasa (B2B Commercial)**: Pemilik laundry kiloan/satuan, hotel, restoran, katering, rumah sakit, dan perkantoran yang membutuhkan pasokan kimia pembersih rutin dalam jerigen 25 Liter dengan harga pabrik langsung.
-- **Konsumen Rumah Tangga (B2C Retail)**: Keluarga yang ingin menghemat biaya belanja sabun bulanan hingga 60% melalui produk biang konsentrat dan isi ulang (*refill*) ramah lingkungan (*zero waste*).
+- **Konsumen Rumah Tangga (B2C Retail)**: Keluarga yang ingin menghemat biaya belanja sabun bulanan hingga 60% melalui produk biang konsentrat dan isi ulang (_refill_) ramah lingkungan (_zero waste_).
 
 ---
 
@@ -67,8 +69,8 @@ cleaniquemart.com
 │   ├── Cleanique Mart Karanganyar [/cleanique-mart-karanganyar-2/]
 │   ├── Cleanique Mart Demak [/cleanique-mart-demak-2/]
 │   ├── Cleanique Mart Situbondo [/cleanique-mart-situbondo-3/]
-│   ├── Cleanique Mart Temanggung 1 [/cleanique-mart-temanggung-1/]
-│   └── Cleanique Mart Temanggung 2 [/cleanique-mart-temanggung-2/]
+│   ├── Cleanique Mart Pacitan 1 [/cleanique-mart-temanggung-1/]
+│   └── Cleanique Mart Pacitan 2 [/cleanique-mart-temanggung-2/]
 │
 └── Artikel Edukasi Formulasi & Katalog Produk
     ├── Biang Karbol Wangi Sereh Pinus Cemara 5 Liter
@@ -148,7 +150,7 @@ Untuk mereproduksi dan meningkatkan fungsionalitas `cleaniquemart.com` ke dalam 
 
 1. **Cleaniquemart Theme (`cleaniquemart-theme`)**:
    - Berbasis arsitektur **Pure CSS & Vanilla JS Modern** (PageSpeed 95+, 0 dependensi jQuery/Elementor).
-   - Menangani seluruh presentasi visual, hierarki layout, typography responsive (`Plus Jakarta Sans` & `Inter`), skema warna pabrik (*Deep Navy*, *Clean Cyan*, *Emerald*, *Gold*), micro-interaction, dan sticky mobile CTA.
+   - Menangani seluruh presentasi visual, hierarki layout, typography responsive (`Plus Jakarta Sans` & `Inter`), skema warna pabrik (_Deep Navy_, _Clean Cyan_, _Emerald_, _Gold_), micro-interaction, dan sticky mobile CTA.
    - Baca panduan lengkap: [THEME_ARCHITECTURE.md](file:///c:/laragon/www/cleaniquemart/docs/THEME_ARCHITECTURE.md)
 
 2. **Cleaniquemart Core Plugin (`cleaniquemart-core`)**:
@@ -163,13 +165,14 @@ Untuk mereproduksi dan meningkatkan fungsionalitas `cleaniquemart.com` ke dalam 
 ## 💬 Strategi Konversi & Lead Generation
 
 Seluruh halaman didesain dengan tujuan utama mengalirkan calon mitra dan pembeli ke WhatsApp resmi:
+
 - **WhatsApp Hotline**: `+6287885590088` (atau `087885590088`)
 - **Download Proposal URL**: Google Drive Proposal Kemitraan Cleanique Mart
 - **Pesan Otomatis Terstandarisasi**:
-  - *Mitra Umum*: `"Halo *cleaniquemart.com* Saya Mau Minta Informasi Tentang Mitra Cleanique Mart*"`
-  - *Paket Starter*: `"Halo *cleaniquemart.com* Saya Mohon Informasi untuk Promo Paket Starter *Cleanique Mart *"`
-  - *Paket King*: `"Halo *cleaniquemart.com* Saya Mohon Informasi untuk Promo Paket King *Cleanique Mart *"`
-  - *Cabang Lokal*: `"Halo Cleanique Mart [Kota], saya ingin pesan isi ulang sabun..."`
+  - _Mitra Umum_: `"Halo *cleaniquemart.com* Saya Mau Minta Informasi Tentang Mitra Cleanique Mart*"`
+  - _Paket Starter_: `"Halo *cleaniquemart.com* Saya Mohon Informasi untuk Promo Paket Starter *Cleanique Mart *"`
+  - _Paket King_: `"Halo *cleaniquemart.com* Saya Mohon Informasi untuk Promo Paket King *Cleanique Mart *"`
+  - _Cabang Lokal_: `"Halo Cleanique Mart [Kota], saya ingin pesan isi ulang sabun..."`
 
 ---
 
