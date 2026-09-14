@@ -29,6 +29,7 @@ $theme_uri = get_template_directory_uri();
 	<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-11.css">
 	<?php if ( is_front_page() ) : ?>
 		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-100.css?v=<?php echo CLEANIQUEMART_VERSION; ?>">
+		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/front-page.css?v=<?php echo CLEANIQUEMART_VERSION; ?>">
 	<?php elseif ( is_page( 'about' ) || is_page( 'tentang-kami' ) || is_page_template( 'page-about.php' ) ) : ?>
 		<link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/assets/css/oxygen-156.css">
 	<?php elseif ( is_page( 'kemitraan-cleanique-mart' ) || is_page( 'ide-bisnis-yang-menguntungkan-2026' ) || is_page( 'ide-usaha-yang-menjanjikan-2026' ) || is_page( 'usaha-sampingan-yang-menjanjikan-2026' ) || is_page_template( 'page-landing-kemitraan.php' ) || is_page_template( 'page-ide-bisnis-yang-menguntungkan-2026.php' ) || is_page_template( 'page-ide-usaha-yang-menjanjikan-2026.php' ) || is_page_template( 'page-usaha-sampingan-yang-menjanjikan-2026.php' ) || is_page_template( 'page-kemitraan-cleanique-mart.php' ) ) : ?>

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Cleanique Mart Footer Template (Refined, Professional & Faithful)
  *
@@ -385,6 +385,48 @@ $theme_uri = get_template_directory_uri();
 	max-width: 70vw;
 	text-align: center;
 }
+.cm-lightbox-caption strong {
+	color: #38BDF8;
+	font-weight: 700;
+}
+
+/* Lightbox Trigger & Universal Zoom Badge */
+.cm-lightbox-trigger {
+	cursor: pointer !important;
+	position: relative;
+	display: block;
+	text-decoration: none;
+}
+.cm-lightbox-trigger .cm-review-zoom-badge {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	background: rgba(15, 23, 42, 0.82);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	color: #ffffff;
+	font-size: 0.72rem;
+	font-weight: 600;
+	padding: 4px 10px;
+	border-radius: 9999px;
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	opacity: 0;
+	transform: translateY(-4px);
+	transition: opacity 0.22s ease, transform 0.22s ease;
+	pointer-events: none;
+	z-index: 10;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.cm-lightbox-trigger:hover .cm-review-zoom-badge,
+.cm-product-card:hover .cm-review-zoom-badge,
+.cm-feature-card:hover .cm-review-zoom-badge,
+.cm-testimoni-item:hover .cm-review-zoom-badge,
+.cm-review-item:hover .cm-review-zoom-badge {
+	opacity: 1 !important;
+	transform: translateY(0) !important;
+}
 
 @media (max-width: 768px) {
 	.cm-lightbox-close {
@@ -522,7 +564,7 @@ jQuery(document).ready(function($) {
 		if (!currentGallery.length) return;
 		var item = currentGallery[currentIndex];
 		lbImg.attr('src', item.src);
-		lbCaption.text(item.caption || '');
+		lbCaption.html(item.caption || '');
 		if (currentGallery.length > 1) {
 			lbCounter.text((currentIndex + 1) + ' / ' + currentGallery.length).show();
 			$('#cm-lightbox-prev, #cm-lightbox-next').show();
@@ -544,15 +586,15 @@ jQuery(document).ready(function($) {
 		updateLightboxContent();
 	}
 
-	// Click event for all gallery items and image links
-	$(document).on('click', '.oxy-gallery-item, a[href$=".webp"], a[href$=".jpg"], a[href$=".png"], a[href$=".jpeg"], .zoom-img', function(e) {
-		var href = $(this).attr('href');
+	// Click event for all gallery items, lightbox triggers, and image links
+	$(document).on('click', '.cm-lightbox-trigger, .cm-review-lightbox-trigger, .cm-review-item, .oxy-gallery-item, a[href$=".webp"], a[href$=".jpg"], a[href$=".png"], a[href$=".jpeg"], .zoom-img', function(e) {
+		var href = $(this).attr('href') || $(this).attr('data-img') || $(this).find('img').attr('src');
 		// Ignore non-image links or anchors
 		if (!href || href.startsWith('#') || href.indexOf('whatsapp.com') !== -1) return;
 
 		// Check if it's an image file
 		if (!href.match(/\.(webp|jpg|jpeg|png|gif)($|\?)/i)) {
-			// If it's a zoom-img with child img
+			// If it's a trigger with child img
 			var childImg = $(this).find('img');
 			if (childImg.length && childImg.attr('src')) {
 				href = childImg.attr('src');
@@ -563,30 +605,70 @@ jQuery(document).ready(function($) {
 
 		e.preventDefault();
 
+		// Helper to extract clean structured caption
+		function extractCaption(el) {
+			var $el = $(el);
+			var title = $el.attr('data-title') || $el.attr('title') || $el.find('img').attr('alt') || '';
+			var desc = $el.attr('data-desc') || '';
+			if (title && desc) {
+				return '<strong>' + title + '</strong> — ' + desc;
+			} else if (title) {
+				return '<strong>' + title + '</strong>';
+			} else {
+				var fig = $el.find('figcaption').clone();
+				fig.find('.cm-review-cta').remove();
+				var text = fig.text().trim();
+				return text || $el.find('img').attr('alt') || '';
+			}
+		}
+
 		// Build gallery set from parent container if available
-		var parentGallery = $(this).closest('.oxy-gallery, .cm-gallery-grid, [id*="gallery"]');
+		var parentGallery = $(this).closest('.oxy-gallery, .cm-gallery-grid, [id*="gallery"], .cm-features-grid, .cm-testimoni-grid, .cm-review-grid, #div_block-1494-100, #div_block-989-100, .cm-features-wrap, #section-12-100, #section-166-100');
 		var galleryItems = [];
 		var clickedIndex = 0;
 
 		if (parentGallery.length) {
-			var links = parentGallery.find('a.oxy-gallery-item, a:has(img)');
-			links.each(function(i) {
-				var itemHref = $(this).attr('href') || $(this).find('img').attr('src');
-				var itemCaption = $(this).find('figcaption').text() || $(this).find('img').attr('alt') || '';
+			var links = parentGallery.find('a.cm-lightbox-trigger, a.cm-review-lightbox-trigger, a.cm-review-item, a.oxy-gallery-item, a:has(img)');
+			links.each(function() {
+				var itemHref = $(this).attr('href') || $(this).attr('data-img') || $(this).find('img').attr('src');
+				var itemCaption = extractCaption(this);
 				if (itemHref && itemHref.match(/\.(webp|jpg|jpeg|png|gif)($|\?)/i)) {
-					if (itemHref === href) clickedIndex = galleryItems.length;
-					galleryItems.push({ src: itemHref, caption: itemCaption });
+					// Deduplicate if identical image already in gallery set (e.g. desktop + mobile slider in DOM)
+					var exists = false;
+					for (var i = 0; i < galleryItems.length; i++) {
+						if (galleryItems[i].src === itemHref) {
+							exists = true;
+							break;
+						}
+					}
+					if (!exists) {
+						if (itemHref === href) clickedIndex = galleryItems.length;
+						galleryItems.push({ src: itemHref, caption: itemCaption });
+					} else if (itemHref === href && clickedIndex === 0) {
+						for (var j = 0; j < galleryItems.length; j++) {
+							if (galleryItems[j].src === itemHref) {
+								clickedIndex = j;
+								break;
+							}
+						}
+					}
 				}
 			});
 		}
 
 		if (!galleryItems.length) {
-			var cap = $(this).find('img').attr('alt') || $(this).attr('title') || '';
-			galleryItems = [{ src: href, caption: cap }];
+			galleryItems = [{ src: href, caption: extractCaption(this) }];
 			clickedIndex = 0;
 		}
 
 		openLightbox(clickedIndex, galleryItems);
+	});
+
+	// Support clicking anywhere on product cards and feature cards to open lightbox
+	$(document).on('click', '.cm-product-card, .cm-feature-card', function(e) {
+		if ($(e.target).closest('a').length === 0) {
+			$(this).find('.cm-lightbox-trigger').first().trigger('click');
+		}
 	});
 
 	// Close buttons and backdrop click

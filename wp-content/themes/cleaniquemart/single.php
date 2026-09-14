@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Single Post Template (single.php)
  *
@@ -103,7 +103,7 @@ while ( have_posts() ) : the_post();
 						class="zoom-img" 
 						data-caption="<?php echo esc_attr( $post_title ); ?>"
 						style="display:block;width:100%;position:relative;"
-						title="Klik untuk memperbesar gambar"
+						title="<?php echo esc_attr( $post_title ); ?>"
 					>
 						<img 
 							id="image-38-178" 
@@ -116,7 +116,7 @@ while ( have_posts() ) : the_post();
 						/>
 						<span style="position:absolute;bottom:16px;right:16px;background:rgba(15,23,42,0.75);color:#ffffff;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;backdrop-filter:blur(4px);pointer-events:none;">
 							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-							Klik untuk Perbesar
+							Perbesar
 						</span>
 					</a>
 				</div>

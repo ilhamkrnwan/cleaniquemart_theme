@@ -438,7 +438,7 @@ $outlets = array(
 									class="zoom-img" 
 									data-caption="<?php echo esc_attr( $o['name'] . ' — ' . $o['city'] ); ?>"
 									style="display:block;width:100%;height:100%;position:relative;"
-									title="Klik untuk memperbesar foto toko"
+									title="<?php echo esc_attr( $o['name'] ); ?>"
 								>
 									<img 
 										src="<?php echo esc_url( $img_url ); ?>" 
